@@ -1,0 +1,85 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+
+[Configurations]
+compile=MIPS_design
+
+[Library]
+MIPS_design=.\MIPS_design\MIPS_design.lib
+
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=0
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+fileopenfolder=C:\My_Designs\MIPS_projeto\MIPS_design\src
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+
+[LocalVhdlSets]
+CompileWithDebug=0
+
+[$LibMap$]
+MIPS_design=.
+Active_lib=
+
+[SpecTracer]
+WindowVisible=0
+
+[HierarchyViewer]
+HierarchyInformation=testbench|test|0  
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/imem.vhd=-1
+/mux2.vhd=-1
+/signext.vhd=-1
+/sl2.vhd=-1
+/regfile.vhd=-1
+/maindec.vhd=-1
+/dmem.vhd=-1
+/flopr.vhd=-1
+/alu.vhd=-1
+/aludec.vhd=-1
+/adder.vhd=-1
+/datapath.vhd=-1
+/controller.vhd=-1
+/mips.vhd=-1
+/top.vhd=-1
+/testbench.vhd=-1
+/TestbenchSimulation.awc=-1
+
+[Files.Data]
+.\src\imem.vhd=VHDL Source Code
+.\src\mux2.vhd=VHDL Source Code
+.\src\signext.vhd=VHDL Source Code
+.\src\sl2.vhd=VHDL Source Code
+.\src\regfile.vhd=VHDL Source Code
+.\src\maindec.vhd=VHDL Source Code
+.\src\dmem.vhd=VHDL Source Code
+.\src\flopr.vhd=VHDL Source Code
+.\src\alu.vhd=VHDL Source Code
+.\src\aludec.vhd=VHDL Source Code
+.\src\adder.vhd=VHDL Source Code
+.\src\datapath.vhd=VHDL Source Code
+.\src\controller.vhd=VHDL Source Code
+.\src\mips.vhd=VHDL Source Code
+.\src\top.vhd=VHDL Source Code
+.\src\testbench.vhd=VHDL Source Code
+.\src\TestbenchSimulation.awc=Accelerated Waveform Configuration
+

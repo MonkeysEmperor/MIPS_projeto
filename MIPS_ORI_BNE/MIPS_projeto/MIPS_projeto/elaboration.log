@@ -1,0 +1,51 @@
+Active-HDL 10.5.217.6767 2018-11-04 23:21:51
+
+Elaboration top modules:
+Architecture                  test(testbench)
+
+
+------------------------------------------------------------------------------------------------
+Entity     | Architecture | Library      | Info | Compiler Version        | Compilation Options
+------------------------------------------------------------------------------------------------
+testbench  | test         | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
+top        | test         | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
+mips       | struct       | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
+imem       | behave       | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
+dmem       | behave       | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
+controller | struct       | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
+datapath   | struct       | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
+maindec    | behave       | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
+aludec     | behave       | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
+flopr      | asynchronous | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
+adder      | behave       | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
+sl2        | behave       | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
+mux2       | behave       | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
+regfile    | behave       | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
+signext    | behave       | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
+alu        | behave       | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
+------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------
+VHDL Package              | Library      | Info | Compiler Version        | Compilation Options
+------------------------------------------------------------------------------------------------
+standard                  | std          |      |                         | <unavailable>
+TEXTIO                    | std          |      |                         | <unavailable>
+std_logic_1164            | ieee         |      |                         | <unavailable>
+NUMERIC_STD               | ieee         |      |                         | <unavailable>
+NUMERIC_STD_UNSIGNED      | ieee         |      |                         | <unavailable>
+std_logic_arith           | ieee         |      |                         | <unavailable>
+------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------
+Library                   | Comment
+------------------------------------------------------------------------------------------------
+ieee                      | Standard IEEE packages library
+mips_projeto              | None
+std                       | Standard VHDL library
+------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -O5 testbench test
+
+
+The performance of simulation is reduced. Version Student Edition

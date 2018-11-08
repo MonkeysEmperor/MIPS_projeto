@@ -1,0 +1,33 @@
+Quartus Prime Archive log --	C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_projeto.qarlog
+
+Archive:	C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_projeto.qar
+Date:		Sun Nov 04 20:26:17 2018
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_projeto.qpf
+C:/Users/renan/Documents/FPGA/MIPS_projeto/Waveform.vwf
+C:/Users/renan/Documents/FPGA/MIPS_projeto/adder.vhd
+C:/Users/renan/Documents/FPGA/MIPS_projeto/alu.vhd
+C:/Users/renan/Documents/FPGA/MIPS_projeto/aludec.vhd
+C:/Users/renan/Documents/FPGA/MIPS_projeto/controller.vhd
+C:/Users/renan/Documents/FPGA/MIPS_projeto/datapath.vhd
+C:/Users/renan/Documents/FPGA/MIPS_projeto/dmem.vhd
+C:/Users/renan/Documents/FPGA/MIPS_projeto/flopr.vhd
+C:/Users/renan/Documents/FPGA/MIPS_projeto/imem.vhd
+C:/Users/renan/Documents/FPGA/MIPS_projeto/instrucao_inicial.mif
+C:/Users/renan/Documents/FPGA/MIPS_projeto/maindec.vhd
+C:/Users/renan/Documents/FPGA/MIPS_projeto/mips.vhd
+C:/Users/renan/Documents/FPGA/MIPS_projeto/mipssingle.vhd
+C:/Users/renan/Documents/FPGA/MIPS_projeto/mux2.vhd
+C:/Users/renan/Documents/FPGA/MIPS_projeto/regfile.vhd
+C:/Users/renan/Documents/FPGA/MIPS_projeto/signext.vhd
+C:/Users/renan/Documents/FPGA/MIPS_projeto/sl2.vhd
+C:/Users/renan/Documents/FPGA/MIPS_projeto/testbench.qsf
+C:/Users/renan/Documents/FPGA/MIPS_projeto/testbench.vhd
+C:/Users/renan/Documents/FPGA/MIPS_projeto/top.vhd
+c:/intelfpga_lite/18.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 22 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

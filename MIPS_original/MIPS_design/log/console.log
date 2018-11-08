@@ -1,0 +1,1757 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom -reorder -O3 -e 100 -work MIPS_design -2008  $dsn/src/imem.vhd $dsn/src/mux2.vhd $dsn/src/signext.vhd $dsn/src/sl2.vhd $dsn/src/regfile.vhd $dsn/src/maindec.vhd $dsn/src/dmem.vhd $dsn/src/flopr.vhd $dsn/src/alu.vhd $dsn/src/aludec.vhd $dsn/src/adder.vhd $dsn/src/datapath.vhd $dsn/src/controller.vhd $dsn/src/mips.vhd $dsn/src/top.vhd $dsn/src/testbench.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\imem.vhd
+# Compile Entity "imem"
+# Compile Architecture "behave" of Entity "imem"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\mux2.vhd
+# Compile Entity "mux2"
+# Compile Architecture "behave" of Entity "mux2"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\signext.vhd
+# Compile Entity "signext"
+# Compile Architecture "behave" of Entity "signext"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\sl2.vhd
+# Compile Entity "sl2"
+# Compile Architecture "behave" of Entity "sl2"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\regfile.vhd
+# Compile Entity "regfile"
+# Compile Architecture "behave" of Entity "regfile"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\maindec.vhd
+# Compile Entity "maindec"
+# Compile Architecture "behave" of Entity "maindec"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\dmem.vhd
+# Compile Entity "dmem"
+# Compile Architecture "behave" of Entity "dmem"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\flopr.vhd
+# Compile Entity "flopr"
+# Compile Architecture "asynchronous" of Entity "flopr"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\alu.vhd
+# Compile Entity "alu"
+# Compile Architecture "behave" of Entity "alu"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\aludec.vhd
+# Compile Entity "aludec"
+# Compile Architecture "behave" of Entity "aludec"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\adder.vhd
+# Compile Entity "adder"
+# Compile Architecture "behave" of Entity "adder"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\datapath.vhd
+# Compile Entity "datapath"
+# Compile Architecture "struct" of Entity "datapath"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "struct" of Entity "controller"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\mips.vhd
+# Compile Entity "mips"
+# Compile Architecture "struct" of Entity "mips"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\top.vhd
+# Compile Entity "top"
+# Compile Architecture "test" of Entity "top"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\testbench.vhd
+# Compile Entity "testbench"
+# Compile Architecture "test" of Entity "testbench"
+# Top-level unit(s) detected:
+# Entity => testbench
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# Waveform file 'c:/My_Designs/MIPS_projeto/MIPS_design/src/TestbenchSimulation.awc' connected to 'c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb'.
+# Warning: WAVEFORM: Object matching /testbench/dut/mips1/aluout not found in c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb.
+acom -reorder -O3 -e 100 -work MIPS_design -2008  $dsn/src/imem.vhd $dsn/src/mux2.vhd $dsn/src/signext.vhd $dsn/src/sl2.vhd $dsn/src/regfile.vhd $dsn/src/maindec.vhd $dsn/src/dmem.vhd $dsn/src/flopr.vhd $dsn/src/alu.vhd $dsn/src/aludec.vhd $dsn/src/adder.vhd $dsn/src/datapath.vhd $dsn/src/controller.vhd $dsn/src/mips.vhd $dsn/src/top.vhd $dsn/src/testbench.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\imem.vhd
+# Compile Entity "imem"
+# Compile Architecture "behave" of Entity "imem"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\mux2.vhd
+# Compile Entity "mux2"
+# Compile Architecture "behave" of Entity "mux2"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\signext.vhd
+# Compile Entity "signext"
+# Compile Architecture "behave" of Entity "signext"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\sl2.vhd
+# Compile Entity "sl2"
+# Compile Architecture "behave" of Entity "sl2"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\regfile.vhd
+# Compile Entity "regfile"
+# Compile Architecture "behave" of Entity "regfile"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\maindec.vhd
+# Compile Entity "maindec"
+# Compile Architecture "behave" of Entity "maindec"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\dmem.vhd
+# Compile Entity "dmem"
+# Compile Architecture "behave" of Entity "dmem"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\flopr.vhd
+# Compile Entity "flopr"
+# Compile Architecture "asynchronous" of Entity "flopr"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\alu.vhd
+# Compile Entity "alu"
+# Compile Architecture "behave" of Entity "alu"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\aludec.vhd
+# Compile Entity "aludec"
+# Compile Architecture "behave" of Entity "aludec"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\adder.vhd
+# Compile Entity "adder"
+# Compile Architecture "behave" of Entity "adder"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\datapath.vhd
+# Compile Entity "datapath"
+# Compile Architecture "struct" of Entity "datapath"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "struct" of Entity "controller"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\mips.vhd
+# Compile Entity "mips"
+# Compile Architecture "struct" of Entity "mips"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\top.vhd
+# Compile Entity "top"
+# Compile Architecture "test" of Entity "top"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\testbench.vhd
+# Compile Entity "testbench"
+# Compile Architecture "test" of Entity "testbench"
+# Top-level unit(s) detected:
+# Entity => testbench
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# Warning: WAVEFORM: Object matching /testbench/dut/clk not found in c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom -reorder -O3 -e 100 -work MIPS_design -2008  $dsn/src/imem.vhd $dsn/src/mux2.vhd $dsn/src/signext.vhd $dsn/src/sl2.vhd $dsn/src/regfile.vhd $dsn/src/maindec.vhd $dsn/src/dmem.vhd $dsn/src/flopr.vhd $dsn/src/alu.vhd $dsn/src/aludec.vhd $dsn/src/adder.vhd $dsn/src/datapath.vhd $dsn/src/controller.vhd $dsn/src/mips.vhd $dsn/src/top.vhd $dsn/src/testbench.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\imem.vhd
+# Compile Entity "imem"
+# Compile Architecture "behave" of Entity "imem"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\mux2.vhd
+# Compile Entity "mux2"
+# Compile Architecture "behave" of Entity "mux2"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\signext.vhd
+# Compile Entity "signext"
+# Compile Architecture "behave" of Entity "signext"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\sl2.vhd
+# Compile Entity "sl2"
+# Compile Architecture "behave" of Entity "sl2"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\regfile.vhd
+# Compile Entity "regfile"
+# Compile Architecture "behave" of Entity "regfile"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\maindec.vhd
+# Compile Entity "maindec"
+# Compile Architecture "behave" of Entity "maindec"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\dmem.vhd
+# Compile Entity "dmem"
+# Compile Architecture "behave" of Entity "dmem"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\flopr.vhd
+# Compile Entity "flopr"
+# Compile Architecture "asynchronous" of Entity "flopr"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\alu.vhd
+# Compile Entity "alu"
+# Compile Architecture "behave" of Entity "alu"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\aludec.vhd
+# Compile Entity "aludec"
+# Compile Architecture "behave" of Entity "aludec"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\adder.vhd
+# Compile Entity "adder"
+# Compile Architecture "behave" of Entity "adder"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\datapath.vhd
+# Compile Entity "datapath"
+# Compile Architecture "struct" of Entity "datapath"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "struct" of Entity "controller"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\mips.vhd
+# Compile Entity "mips"
+# Compile Architecture "struct" of Entity "mips"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\top.vhd
+# Compile Entity "top"
+# Compile Architecture "test" of Entity "top"
+# File: c:\My_Designs\MIPS_projeto\MIPS_design\src\testbench.vhd
+# Compile Entity "testbench"
+# Compile Architecture "test" of Entity "testbench"
+# Top-level unit(s) detected:
+# Entity => testbench
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# Warning: WAVEFORM: Object matching /testbench/dut/mips1/cont/jump not found in c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /testbench/dut/mips1/cont/pcsrc not found in c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /testbench/dut/mips1/cont/pcsrc not found in c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /testbench/dut/mips1/cont/pcsrc not found in c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb.
+asim -O5 testbench test
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7248 kB (elbread=1280 elab2=5827 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\MIPS_projeto\MIPS_design\src\wave.asdb
+#  17:38, domingo, 4 de novembro de 2018
+#  Simulation has been initialized
+# Waveform file 'c:/My_Designs/MIPS_projeto/MIPS_design/src/TestbenchSimulation.awc' connected to 'c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb'.
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/imem1,  Process: line__13.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# EXECUTION:: FAILURE: NO ERRORS: Simulation succeeded
+# EXECUTION:: Time: 175 ns,  Iteration: 1,  Instance: /testbench,  Process: line__38.
+# KERNEL: Stopped at time 175 ns + 1.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+run @1us
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 180 ns,  Iteration: 7,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 180 ns,  Iteration: 7,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 185 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 190 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 195 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 200 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 205 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 210 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 215 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 220 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 225 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 230 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 235 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 240 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 245 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 250 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 255 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 260 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 265 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 270 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 275 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 280 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 285 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 290 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 295 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 300 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 305 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 310 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 315 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 320 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 325 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 330 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 335 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 340 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 345 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 350 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 355 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 360 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 365 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 370 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 375 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 380 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 385 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 390 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 395 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 400 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 405 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 410 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 415 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 420 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 425 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 430 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 435 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 440 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 445 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 450 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 455 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 460 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 465 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 470 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 475 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 480 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 485 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 490 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 495 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 500 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 505 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 510 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 515 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 520 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 525 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 530 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 535 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 540 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 545 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 550 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 555 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 560 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 565 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 570 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 575 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 580 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 585 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 590 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 595 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 600 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 605 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 610 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 615 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 620 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 625 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 630 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 635 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 640 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 700 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 700 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 720 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 720 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 760 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 760 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# EXECUTION:: FAILURE: NO ERRORS: Simulation succeeded
+# EXECUTION:: Time: 795 ns,  Iteration: 1,  Instance: /testbench,  Process: line__38.
+# KERNEL: Stopped at time 795 ns + 1.
+run @2us
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 800 ns,  Iteration: 7,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 800 ns,  Iteration: 7,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 805 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 810 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 815 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 820 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 825 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 830 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 835 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 840 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 845 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 850 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 855 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 860 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 865 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 870 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 875 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 880 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 885 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 890 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 895 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 900 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 905 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 910 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 915 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 920 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 925 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 930 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 935 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 940 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 945 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 950 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 955 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 960 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 965 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 970 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 975 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 980 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 985 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 990 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 995 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1 us,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1005 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1010 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1015 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1020 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1025 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1030 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1035 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1040 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1045 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1050 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1055 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1060 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1065 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1070 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1075 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1080 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1085 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1090 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1095 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1100 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1105 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1110 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1115 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1120 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1125 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1130 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1135 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1140 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1145 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1150 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1155 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1160 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1165 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1170 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1175 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1180 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1185 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1190 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1195 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1200 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1205 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1210 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1215 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1220 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1225 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1230 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1235 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1240 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1245 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1250 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1255 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1260 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 1320 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1320 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 1340 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1340 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 1380 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 1380 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# EXECUTION:: FAILURE: NO ERRORS: Simulation succeeded
+# EXECUTION:: Time: 1415 ns,  Iteration: 1,  Instance: /testbench,  Process: line__38.
+# KERNEL: Stopped at time 1415 ns + 1.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 testbench test
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7248 kB (elbread=1280 elab2=5827 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\MIPS_projeto\MIPS_design\src\wave.asdb
+#  17:47, domingo, 4 de novembro de 2018
+#  Simulation has been initialized
+# Waveform file 'c:/My_Designs/MIPS_projeto/MIPS_design/src/TestbenchSimulation.awc' connected to 'c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb'.
+run @5us
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/imem1,  Process: line__13.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# EXECUTION:: FAILURE: NO ERRORS: Simulation succeeded
+# EXECUTION:: Time: 175 ns,  Iteration: 1,  Instance: /testbench,  Process: line__38.
+# KERNEL: Stopped at time 175 ns + 1.
+run @175ns
+# KERNEL: stopped at time: 175 ns
+run @5us
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 180 ns,  Iteration: 7,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 180 ns,  Iteration: 7,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 185 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 190 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 195 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 200 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 205 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 210 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 215 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 220 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 225 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 230 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 235 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 240 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 245 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 250 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 255 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 260 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 265 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 270 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 275 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 280 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 285 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 290 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 295 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 300 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 305 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 310 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 315 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 320 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 325 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 330 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 335 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 340 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 345 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 350 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 355 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 360 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 365 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 370 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 375 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 380 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 385 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 390 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 395 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 400 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 405 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 410 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 415 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 420 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 425 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 430 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 435 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 440 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 445 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 450 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 455 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 460 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 465 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 470 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 475 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 480 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 485 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 490 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 495 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 500 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 505 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 510 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 515 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 520 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 525 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 530 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 535 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 540 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 545 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 550 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 555 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 560 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 565 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 570 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 575 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 580 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 585 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 590 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 595 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 600 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 605 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 610 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 615 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 620 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 625 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 630 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 635 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 640 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 700 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 700 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 720 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 720 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 760 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 760 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# EXECUTION:: FAILURE: NO ERRORS: Simulation succeeded
+# EXECUTION:: Time: 795 ns,  Iteration: 1,  Instance: /testbench,  Process: line__38.
+# KERNEL: Stopped at time 795 ns + 1.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+run @5ns
+# VSIM: Error: 5ns is less than current simulation time.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 testbench test
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7248 kB (elbread=1280 elab2=5827 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\MIPS_projeto\MIPS_design\src\wave.asdb
+#  19:08, domingo, 4 de novembro de 2018
+#  Simulation has been initialized
+# Waveform file 'c:/My_Designs/MIPS_projeto/MIPS_design/src/TestbenchSimulation.awc' connected to 'c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb'.
+run @5us
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/imem1,  Process: line__13.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# EXECUTION:: FAILURE: NO ERRORS: Simulation succeeded
+# EXECUTION:: Time: 175 ns,  Iteration: 1,  Instance: /testbench,  Process: line__38.
+# KERNEL: Stopped at time 175 ns + 1.
+# 1 signal(s) traced.
+run @175ns
+# KERNEL: stopped at time: 175 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 testbench test
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7248 kB (elbread=1280 elab2=5827 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\MIPS_projeto\MIPS_design\src\wave.asdb
+#  19:14, domingo, 4 de novembro de 2018
+#  Simulation has been initialized
+# Waveform file 'c:/My_Designs/MIPS_projeto/MIPS_design/src/TestbenchSimulation.awc' connected to 'c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb'.
+run @5us
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/imem1,  Process: line__13.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# EXECUTION:: FAILURE: NO ERRORS: Simulation succeeded
+# EXECUTION:: Time: 175 ns,  Iteration: 1,  Instance: /testbench,  Process: line__38.
+# KERNEL: Stopped at time 175 ns + 1.
+# 1 signal(s) traced.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 testbench test
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7248 kB (elbread=1280 elab2=5827 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\MIPS_projeto\MIPS_design\src\wave.asdb
+#  19:14, domingo, 4 de novembro de 2018
+#  Simulation has been initialized
+# Waveform file 'c:/My_Designs/MIPS_projeto/MIPS_design/src/TestbenchSimulation.awc' connected to 'c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb'.
+run @5us
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/imem1,  Process: line__13.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# EXECUTION:: FAILURE: NO ERRORS: Simulation succeeded
+# EXECUTION:: Time: 175 ns,  Iteration: 1,  Instance: /testbench,  Process: line__38.
+# KERNEL: Stopped at time 175 ns + 1.
+# 1 signal(s) traced.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 testbench test
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7248 kB (elbread=1280 elab2=5827 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\MIPS_projeto\MIPS_design\src\wave.asdb
+#  19:17, domingo, 4 de novembro de 2018
+#  Simulation has been initialized
+# Waveform file 'c:/My_Designs/MIPS_projeto/MIPS_design/src/TestbenchSimulation.awc' connected to 'c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb'.
+run @5US
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/imem1,  Process: line__13.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# EXECUTION:: FAILURE: NO ERRORS: Simulation succeeded
+# EXECUTION:: Time: 175 ns,  Iteration: 1,  Instance: /testbench,  Process: line__38.
+# KERNEL: Stopped at time 175 ns + 1.
+endsim
+# VSIM: Simulation has finished.
+# Warning: WAVEFORM: Object matching /testbench/dut/mips1/dp/se/a not found in c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /testbench/dut/mips1/dp/se/a not found in c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb.
+asim -O5 testbench test
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7248 kB (elbread=1280 elab2=5827 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\MIPS_projeto\MIPS_design\src\wave.asdb
+#  19:36, domingo, 4 de novembro de 2018
+#  Simulation has been initialized
+# Waveform file 'c:/My_Designs/MIPS_projeto/MIPS_design/src/TestbenchSimulation.awc' connected to 'c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb'.
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/imem1,  Process: line__13.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# EXECUTION:: FAILURE: NO ERRORS: Simulation succeeded
+# EXECUTION:: Time: 175 ns,  Iteration: 1,  Instance: /testbench,  Process: line__38.
+# KERNEL: Stopped at time 175 ns + 1.
+# 1 signal(s) traced.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 testbench test
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7248 kB (elbread=1280 elab2=5827 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\MIPS_projeto\MIPS_design\src\wave.asdb
+#  19:36, domingo, 4 de novembro de 2018
+#  Simulation has been initialized
+# Waveform file 'c:/My_Designs/MIPS_projeto/MIPS_design/src/TestbenchSimulation.awc' connected to 'c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb'.
+run @0fs
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/imem1,  Process: line__13.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: stopped at time: 0 ps
+run @5US
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# EXECUTION:: FAILURE: NO ERRORS: Simulation succeeded
+# EXECUTION:: Time: 175 ns,  Iteration: 1,  Instance: /testbench,  Process: line__38.
+# KERNEL: Stopped at time 175 ns + 1.
+# 1 signal(s) traced.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 testbench test
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7248 kB (elbread=1280 elab2=5827 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\MIPS_projeto\MIPS_design\src\wave.asdb
+#  19:41, domingo, 4 de novembro de 2018
+#  Simulation has been initialized
+# Waveform file 'c:/My_Designs/MIPS_projeto/MIPS_design/src/TestbenchSimulation.awc' connected to 'c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb'.
+run @5US
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/imem1,  Process: line__13.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# EXECUTION:: FAILURE: NO ERRORS: Simulation succeeded
+# EXECUTION:: Time: 175 ns,  Iteration: 1,  Instance: /testbench,  Process: line__38.
+# KERNEL: Stopped at time 175 ns + 1.
+# 1 signal(s) traced.
+run
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 180 ns,  Iteration: 7,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 180 ns,  Iteration: 7,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 185 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 190 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 195 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 200 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 205 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 210 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 215 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 220 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 225 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 230 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 235 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 240 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 245 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 250 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 255 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 260 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 265 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 270 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 275 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 280 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 285 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 290 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 295 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 300 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 305 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 310 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 315 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 320 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 325 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 330 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 335 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 340 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 345 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 350 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 355 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 360 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 365 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 370 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 375 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 380 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 385 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 390 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 395 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 400 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 405 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 410 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 415 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 420 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 425 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 430 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 435 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 440 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 445 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 450 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 455 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 460 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 465 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 470 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 475 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 480 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 485 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 490 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 495 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 500 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 505 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 510 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 515 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 520 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 525 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 530 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 535 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 540 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 545 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 550 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 555 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 560 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 565 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 570 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 575 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 580 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 585 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 590 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 595 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 600 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 605 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 610 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 615 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 620 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 625 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 630 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 635 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 640 ns,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 700 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 700 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 720 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 720 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 760 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 760 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# EXECUTION:: FAILURE: NO ERRORS: Simulation succeeded
+# EXECUTION:: Time: 795 ns,  Iteration: 1,  Instance: /testbench,  Process: line__38.
+# KERNEL: Stopped at time 795 ns + 1.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 testbench test
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7248 kB (elbread=1280 elab2=5827 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\MIPS_projeto\MIPS_design\src\wave.asdb
+#  19:47, domingo, 4 de novembro de 2018
+#  Simulation has been initialized
+# Waveform file 'c:/My_Designs/MIPS_projeto/MIPS_design/src/TestbenchSimulation.awc' connected to 'c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb'.
+run @5us
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/imem1,  Process: line__13.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# EXECUTION:: FAILURE: NO ERRORS: Simulation succeeded
+# EXECUTION:: Time: 175 ns,  Iteration: 1,  Instance: /testbench,  Process: line__38.
+# KERNEL: Stopped at time 175 ns + 1.
+# 1 signal(s) traced.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 testbench test
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7248 kB (elbread=1280 elab2=5827 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\MIPS_projeto\MIPS_design\src\wave.asdb
+#  19:48, domingo, 4 de novembro de 2018
+#  Simulation has been initialized
+# Waveform file 'c:/My_Designs/MIPS_projeto/MIPS_design/src/TestbenchSimulation.awc' connected to 'c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb'.
+run @5us
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/imem1,  Process: line__13.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# EXECUTION:: FAILURE: NO ERRORS: Simulation succeeded
+# EXECUTION:: Time: 175 ns,  Iteration: 1,  Instance: /testbench,  Process: line__38.
+# KERNEL: Stopped at time 175 ns + 1.
+# 1 signal(s) traced.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 testbench test
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7248 kB (elbread=1280 elab2=5827 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\MIPS_projeto\MIPS_design\src\wave.asdb
+#  19:51, domingo, 4 de novembro de 2018
+#  Simulation has been initialized
+# Waveform file 'c:/My_Designs/MIPS_projeto/MIPS_design/src/TestbenchSimulation.awc' connected to 'c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb'.
+run @5us
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/imem1,  Process: line__13.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# EXECUTION:: FAILURE: NO ERRORS: Simulation succeeded
+# EXECUTION:: Time: 175 ns,  Iteration: 1,  Instance: /testbench,  Process: line__38.
+# KERNEL: Stopped at time 175 ns + 1.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 testbench test
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7248 kB (elbread=1280 elab2=5827 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\MIPS_projeto\MIPS_design\src\wave.asdb
+#  20:02, domingo, 4 de novembro de 2018
+#  Simulation has been initialized
+# Waveform file 'c:/My_Designs/MIPS_projeto/MIPS_design/src/TestbenchSimulation.awc' connected to 'c:/My_Designs/MIPS_projeto/MIPS_design/src/wave.asdb'.
+run @5us
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/rf,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/imem1,  Process: line__13.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 80 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 100 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# KERNEL: WARNING: NUMERIC_STD."=": metavalue detected, returning FALSE
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/mips1/dp/mainalu,  Process: line__29.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 140 ns,  Iteration: 5,  Instance: /testbench/dut/dmem1,  Process: line__14.
+# EXECUTION:: FAILURE: NO ERRORS: Simulation succeeded
+# EXECUTION:: Time: 175 ns,  Iteration: 1,  Instance: /testbench,  Process: line__38.
+# KERNEL: Stopped at time 175 ns + 1.
+endsim
+# VSIM: Simulation has finished.
+# Error:  You do not have valid license to use workspace with more than one design. Contact Aldec for ordering information sales@aldec.com
+# Adding file c:\My_Designs\MIPS_projeto\MIPS_design\src\TestbenchSimulation.awc ... Done

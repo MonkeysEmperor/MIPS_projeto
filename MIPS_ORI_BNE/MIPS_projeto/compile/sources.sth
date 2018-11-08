@@ -1,0 +1,27 @@
+[Files List]
+C:\Aldec\Active-HDL-Student-Edition\vlib\std/src/standard.vhd=S
+C:\Aldec\Active-HDL-Student-Edition\vlib\std/src/textio.vhd=S
+C:\Aldec\Active-HDL-Student-Edition\vlib\ieee/src/std_logic_1164.vhdl=S
+C:\Aldec\Active-HDL-Student-Edition\vlib\ieee/src/std_logic_1164-body.vhdl=S
+C:\Aldec\Active-HDL-Student-Edition\vlib\ieee/src/numeric_std.vhdl=S
+C:\Aldec\Active-HDL-Student-Edition\vlib\ieee/src/numeric_std-body.vhdl=S
+C:\Aldec\Active-HDL-Student-Edition\vlib\ieee/src/numeric_std_unsigned.vhdl=S
+C:\Aldec\Active-HDL-Student-Edition\vlib\ieee/src/numeric_std_unsigned-body.vhdl=S
+C:\Aldec\Active-HDL-Student-Edition\vlib\ieee/src/arith_p.vhd=S
+C:\Aldec\Active-HDL-Student-Edition\vlib\ieee/src/arith_b.vhd=S
+C:\My_Designs\MIPS_projeto_2\MIPS_projeto/src/alu.vhd=S
+C:\My_Designs\MIPS_projeto_2\MIPS_projeto/src/mux2.vhd=S
+C:\My_Designs\MIPS_projeto_2\MIPS_projeto/src/signext.vhd=S
+C:\My_Designs\MIPS_projeto_2\MIPS_projeto/src/regfile.vhd=S
+C:\My_Designs\MIPS_projeto_2\MIPS_projeto/src/adder.vhd=S
+C:\My_Designs\MIPS_projeto_2\MIPS_projeto/src/sl2.vhd=S
+C:\My_Designs\MIPS_projeto_2\MIPS_projeto/src/flopr.vhd=S
+C:\My_Designs\MIPS_projeto_2\MIPS_projeto/src/aludec.vhd=S
+C:\My_Designs\MIPS_projeto_2\MIPS_projeto/src/maindec.vhd=S
+C:\My_Designs\MIPS_projeto_2\MIPS_projeto/src/datapath.vhd=S
+C:\My_Designs\MIPS_projeto_2\MIPS_projeto/src/controller.vhd=S
+C:\My_Designs\MIPS_projeto_2\MIPS_projeto/src/dmem.vhd=S
+C:\My_Designs\MIPS_projeto_2\MIPS_projeto/src/imem.vhd=S
+C:\My_Designs\MIPS_projeto_2\MIPS_projeto/src/mips.vhd=S
+C:\My_Designs\MIPS_projeto_2\MIPS_projeto/src/top.vhd=S
+C:\My_Designs\MIPS_projeto_2\MIPS_projeto/src/testbench.vhd=S

@@ -1,0 +1,10 @@
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+mips_design=1
+[Designs]
+mips_design=.\MIPS_design\MIPS_design.adf
