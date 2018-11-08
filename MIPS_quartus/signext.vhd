@@ -1,18 +1,23 @@
 
 library IEEE; use IEEE.STD_LOGIC_1164.all;
-use IEEE.NUMERIC_STD.all;
 
 entity signext is -- sign extender
   port(a: in  STD_LOGIC_VECTOR(15 downto 0);
+  	   c: in  STD_LOGIC; -- c = '0' arit, c = '1' logical
        y: out STD_LOGIC_VECTOR(31 downto 0));
 end;
 
-architecture behave of signext is
-	signal s_pos, s_neg : std_logic_vector(15 downto 0);
-begin
-	s_pos <= std_logic_vector(to_unsigned(    0,16));
-	s_neg <= std_logic_vector(to_unsigned(65535,16));
+architecture behave of signext is 
+	signal s_0, s_1, s_temp : STD_LOGIC_VECTOR(31 downto 0);
+begin  
+	s_0 <= X"0000" & a;
+	s_1 <= X"ffff" & a;	
 	
 	with a(15) select
-		y <= s_neg & a when '1', s_pos & a when '0';
+		s_temp 	<= s_1 when '1',
+						s_0 when others;
+	
+	with c select	
+		y <= 	s_0 when '1', 
+				s_temp when others;
 end;

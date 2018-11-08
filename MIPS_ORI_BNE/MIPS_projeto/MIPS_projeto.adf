@@ -24,7 +24,7 @@ LANGUAGE=VHDL
 REFRESH_FLOW=1
 FLOWTOOLS=NONE
 FAMILY=
-fileopenfolder=C:\My_Designs\MIPS_projeto_2\MIPS_projeto\src
+fileopenfolder=C:\Users\renan\Documents\FPGA\Arquitetura\MIPS_projeto\MIPS_pipeline\MIPS_projeto\src
 
 [LocalVerilogSets]
 EnableSLP=1
@@ -41,47 +41,15 @@ Active_lib=
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=testbench|test|0 
+HierarchyInformation= 
 ShowHide=ShowTopLevel
 Selected=
 
 [Files]
-/imem.vhd=-1
-/mux2.vhd=-1
-/signext.vhd=-1
-/sl2.vhd=-1
-/regfile.vhd=-1
-/maindec.vhd=-1
-/dmem.vhd=-1
-/flopr.vhd=-1
-/alu.vhd=-1
-/aludec.vhd=-1
-/adder.vhd=-1
-/datapath.vhd=-1
-/controller.vhd=-1
-/mips.vhd=-1
-/top.vhd=-1
-/memfile.dat=-1
-/testbench.vhd=-1
-/TesteInclusoes.awc=-1
+/..\..\..\MIPS_pipeline\MIPS_projeto\src\adder.vhd=-1
+/registrador_n.vhd=-1
 
 [Files.Data]
-.\src\imem.vhd=VHDL Source Code
-.\src\mux2.vhd=VHDL Source Code
-.\src\signext.vhd=VHDL Source Code
-.\src\sl2.vhd=VHDL Source Code
-.\src\regfile.vhd=VHDL Source Code
-.\src\maindec.vhd=VHDL Source Code
-.\src\dmem.vhd=VHDL Source Code
-.\src\flopr.vhd=VHDL Source Code
-.\src\alu.vhd=VHDL Source Code
-.\src\aludec.vhd=VHDL Source Code
-.\src\adder.vhd=VHDL Source Code
-.\src\datapath.vhd=VHDL Source Code
-.\src\controller.vhd=VHDL Source Code
-.\src\mips.vhd=VHDL Source Code
-.\src\top.vhd=VHDL Source Code
-.\src\memfile.dat=External File
-.\src\testbench.vhd=VHDL Source Code
-.\src\TesteInclusoes.awc=Accelerated Waveform Configuration
+.\..\..\MIPS_pipeline\MIPS_projeto\src\adder.vhd=VHDL Source Code
+.\src\registrador_n.vhd=VHDL Source Code
 
