@@ -1,0 +1,46 @@
+Active-HDL 10.5.217.6767 2018-11-09 11:41:32
+
+Elaboration top modules:
+Architecture                  test(testbench)
+
+
+-----------------------------------------------------------------------------------------------------
+Entity        | Architecture  | Library       | Info | Compiler Version        | Compilation Options
+-----------------------------------------------------------------------------------------------------
+testbench     | test          | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+top           | test          | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+mips          | struct        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+imem          | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+dmem          | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+controller    | struct        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+datapath      | struct        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+maindec       | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+aludec        | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+mux2          | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+flopr         | asynchronous  | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+adder         | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+registrador_n | registrador_n | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+regfile       | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+signext       | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+sl2           | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+alu           | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+-----------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------
+VHDL Package                  | Library       | Info | Compiler Version        | Compilation Options
+-----------------------------------------------------------------------------------------------------
+standard                      | std           |      |                         | <unavailable>
+TEXTIO                        | std           |      |                         | <unavailable>
+std_logic_1164                | ieee          |      |                         | <unavailable>
+NUMERIC_STD                   | ieee          |      |                         | <unavailable>
+NUMERIC_STD_UNSIGNED          | ieee          |      |                         | <unavailable>
+std_logic_arith               | ieee          |      |                         | <unavailable>
+-----------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------
+Library                       | Comment
+-----------------------------------------------------------------------------------------------------
+ieee                          | Standard IEEE packages library
+MIPS_pipeline                 | None
+std                           | Standard VHDL library
+-----------------------------------------------------------------------------------------------------

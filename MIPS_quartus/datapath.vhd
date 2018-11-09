@@ -5,11 +5,12 @@ use IEEE.STD_LOGIC_ARITH.all;
 
 entity datapath is  -- MIPS datapath
 	port(	clk, reset, c:     in  STD_LOGIC;
-			memtoreg, pcsrc:   in  STD_LOGIC;
+			memtoreg, branch:  in  STD_LOGIC;
 			alusrc, regdst:    in  STD_LOGIC;
 			regwrite, jump:    in  STD_LOGIC;
+		 	memwrite:			in std_logic;
+			memwritepip:		out std_logic;
 			alucontrol:        in  STD_LOGIC_VECTOR(2 downto 0);
-			zero:              out STD_LOGIC;
 			pc:                buffer STD_LOGIC_VECTOR(31 downto 0);
 			instr:             in  STD_LOGIC_VECTOR(31 downto 0);
 			aluout, writedata: buffer STD_LOGIC_VECTOR(31 downto 0);
@@ -44,7 +45,7 @@ architecture struct of datapath is
 	
 	component signext													 
 		port(	a: in  STD_LOGIC_VECTOR(15 downto 0);
-	   			c: in  STD_LOGIC; -- c = '0' arit/signed, c = '1' logical/unsigned
+	   			c: in  STD_LOGIC; -- c = '0' arit, c = '1' logical
 	   			y: out STD_LOGIC_VECTOR(31 downto 0));
 	end component;	
   
@@ -76,13 +77,13 @@ architecture struct of datapath is
 	signal signimm, signimmsh: STD_LOGIC_VECTOR(31 downto 0);
 	signal srca, srcb, result: STD_LOGIC_VECTOR(31 downto 0);
 	signal s_aluout, s_writedata : std_logic_vector(31 downto 0);
-	signal s_zero : std_logic;
+	signal s_zero, pcsrc : std_logic;
   
 	--sinais pos pipeline						   				   
 	signal s_if  : std_logic_vector( 63 downto 0); 
-	signal s_id  : std_logic_vector(133 downto 0);  
-	signal s_ex  : std_logic_vector(102 downto 0);
-	signal s_mem : std_logic_vector( 69 downto 0);
+	signal s_id  : std_logic_vector(141 downto 0);  
+	signal s_ex  : std_logic_vector(106 downto 0);
+	signal s_mem : std_logic_vector( 70 downto 0);
 begin
  
 	pcbrmux: mux2 
@@ -128,12 +129,15 @@ begin
 	-- Jump  
 	pcjump <= s_if(63 downto 60) & s_if(25 downto 0) & "00"; -- endereço jump
 	
-	----------------------------------
+	----------------------------------	
+	-- alusource (141) | alucontrol (140 downto 138)||
+	-- inst0 (137) | branch (136) | memwrite (135) || memtoreg (134)
 	-- Pcplus4 (133 downto 102)|Reg1 (101 downto 70)|Reg2 (69 downto 38)|
-	-- Imediate (37 dwonto 6) | WriteAddress (5 downto 1) | WriteEnable (0)
+	-- Imediate (37 dwonto 6)| WriteAddress (5 downto 1) | WriteEnable (0)
 	id_reg : registrador_n
-		generic map(134)
+		generic map(142)
 		port map(	clk, reset, '1',
+					alusrc & alucontrol & s_if(0) & branch & memwrite & memtoreg &
 					s_if(63 downto 32) & srca & s_writedata & signimm & writereg & regwrite,
 	  				s_id);
 	----------------------------------
@@ -154,31 +158,36 @@ begin
 		port map(s_id(101 downto 70), srcb, alucontrol, s_aluout, s_zero);
 		   
 	----------------------------------
+	-- inst0 (106) | branch (105) | memwrite (104) || memtoreg (103)
 	-- PcBranch (102 downto 71)| zero (70)| AluOut (69 downto 38)| Reg2 (37 downto 6)|
 	-- WriteAddress (5 downto 1) | WriteEnable (0)
 	ex_reg : registrador_n
-		generic map(103)
+		generic map(107)
 		port map(	clk, reset, '1',
-					pcbranch & s_zero & s_aluout & s_id(69 downto 38) & s_id(5 downto 0),
+					s_id(137 downto 134) & pcbranch & s_zero & s_aluout & s_id(69 downto 38) & s_id(5 downto 0),
 	  				s_ex);
 	----------------------------------
-	
-	zero		<= s_ex(70);
+									 
+	memwritepip <= s_ex(104);
+	pcsrc 		<= s_ex(105) and (s_ex(70) xor s_ex(106));
 	aluout 		<= s_ex(69 downto 38);
 	writedata 	<= s_ex(37 downto 6);
 	      
 	----------------------------------
+	-- memtoreg (70)
 	-- ReadData (69 downto 38) | AluOut (37 downto 6) |
 	-- WriteAddress (5 downto 1) | WriteEnable (0)
 	mem_reg : registrador_n
-		generic map(70)
+		generic map(71)
 		port map(	clk, reset, '1',
-					readdata & s_ex(69 downto 38) & s_ex(5 downto 0),
+					s_ex(103) & readdata & s_ex(69 downto 38) & s_ex(5 downto 0),
 	  				s_mem);
 	----------------------------------
 	
-	resmux: mux2 generic map(32) port map(s_mem(37 downto 6), s_mem(69 downto 38), 
-	                                    memtoreg, result); 
+	resmux: mux2 
+		generic map(32) 
+		port map(	s_mem(37 downto 6), s_mem(69 downto 38), 
+	              	s_mem(70), result); 
 				
 end;
   

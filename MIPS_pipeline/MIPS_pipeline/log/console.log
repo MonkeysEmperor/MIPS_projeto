@@ -1,0 +1,824 @@
+# Design: Design MIPS_pipeline already active.
+# 
+# DESIGN: Default Design Language: VHDL
+# DESIGN: Default BDE Language: VHDL
+# DESIGN: Flow Manager: Not Defined
+acom -reorder -O3 -e 100 -work MIPS_pipeline -2008  $dsn/src/adder.vhd $dsn/src/alu.vhd $dsn/src/aludec.vhd $dsn/src/controller.vhd $dsn/src/datapath.vhd $dsn/src/dmem.vhd $dsn/src/flopr.vhd $dsn/src/imem.vhd $dsn/src/maindec.vhd $dsn/src/mips.vhd $dsn/src/mux2.vhd $dsn/src/regfile.vhd $dsn/src/registrador_n.vhd $dsn/src/signext.vhd $dsn/src/sl2.vhd $dsn/src/testbench.vhd $dsn/src/top.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\adder.vhd
+# Compile Entity "adder"
+# Compile Architecture "behave" of Entity "adder"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\alu.vhd
+# Compile Entity "alu"
+# Compile Architecture "behave" of Entity "alu"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\aludec.vhd
+# Compile Entity "aludec"
+# Compile Architecture "behave" of Entity "aludec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "struct" of Entity "controller"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Entity "datapath"
+# Compile Architecture "struct" of Entity "datapath"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\dmem.vhd
+# Compile Entity "dmem"
+# Compile Architecture "behave" of Entity "dmem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\flopr.vhd
+# Compile Entity "flopr"
+# Compile Architecture "asynchronous" of Entity "flopr"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\imem.vhd
+# Compile Entity "imem"
+# Compile Architecture "behave" of Entity "imem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\maindec.vhd
+# Compile Entity "maindec"
+# Compile Architecture "behave" of Entity "maindec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mips.vhd
+# Compile Entity "mips"
+# Compile Architecture "struct" of Entity "mips"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mux2.vhd
+# Compile Entity "mux2"
+# Compile Architecture "behave" of Entity "mux2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\regfile.vhd
+# Compile Entity "regfile"
+# Compile Architecture "behave" of Entity "regfile"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\registrador_n.vhd
+# Compile Entity "registrador_n"
+# Compile Architecture "registrador_n" of Entity "registrador_n"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\signext.vhd
+# Compile Entity "signext"
+# Compile Architecture "behave" of Entity "signext"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\sl2.vhd
+# Compile Entity "sl2"
+# Compile Architecture "behave" of Entity "sl2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\testbench.vhd
+# Compile Entity "testbench"
+# Compile Architecture "test" of Entity "testbench"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\top.vhd
+# Compile Entity "top"
+# Compile Architecture "test" of Entity "top"
+# Incorrect order of units detected.
+# Automatic reorder and incremental recompilation of required units in progress.
+# Top-level unit(s) detected:
+# Entity => testbench
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Architecture "struct" of Entity "datapath"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Architecture "struct" of Entity "controller"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\testbench.vhd
+# Compile Architecture "test" of Entity "testbench"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.3 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom -reorder -O3 -e 100 -work MIPS_pipeline -2008  $dsn/src/imem.vhd $dsn/src/regfile.vhd $dsn/src/signext.vhd $dsn/src/sl2.vhd $dsn/src/registrador_n.vhd $dsn/src/mux2.vhd $dsn/src/maindec.vhd $dsn/src/dmem.vhd $dsn/src/flopr.vhd $dsn/src/alu.vhd $dsn/src/aludec.vhd $dsn/src/adder.vhd $dsn/src/datapath.vhd $dsn/src/controller.vhd $dsn/src/mips.vhd $dsn/src/top.vhd $dsn/src/testbench.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\imem.vhd
+# Compile Entity "imem"
+# Compile Architecture "behave" of Entity "imem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\regfile.vhd
+# Compile Entity "regfile"
+# Compile Architecture "behave" of Entity "regfile"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\signext.vhd
+# Compile Entity "signext"
+# Compile Architecture "behave" of Entity "signext"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\sl2.vhd
+# Compile Entity "sl2"
+# Compile Architecture "behave" of Entity "sl2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\registrador_n.vhd
+# Compile Entity "registrador_n"
+# Compile Architecture "registrador_n" of Entity "registrador_n"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mux2.vhd
+# Compile Entity "mux2"
+# Compile Architecture "behave" of Entity "mux2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\maindec.vhd
+# Compile Entity "maindec"
+# Compile Architecture "behave" of Entity "maindec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\dmem.vhd
+# Compile Entity "dmem"
+# Compile Architecture "behave" of Entity "dmem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\flopr.vhd
+# Compile Entity "flopr"
+# Compile Architecture "asynchronous" of Entity "flopr"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\alu.vhd
+# Compile Entity "alu"
+# Compile Architecture "behave" of Entity "alu"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\aludec.vhd
+# Compile Entity "aludec"
+# Compile Architecture "behave" of Entity "aludec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\adder.vhd
+# Compile Entity "adder"
+# Compile Architecture "behave" of Entity "adder"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Entity "datapath"
+# Compile Architecture "struct" of Entity "datapath"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "struct" of Entity "controller"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mips.vhd
+# Compile Entity "mips"
+# Compile Architecture "struct" of Entity "mips"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\top.vhd
+# Compile Entity "top"
+# Compile Architecture "test" of Entity "top"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\testbench.vhd
+# Compile Entity "testbench"
+# Compile Architecture "test" of Entity "testbench"
+# Incorrect order of units detected.
+# Automatic reorder and incremental recompilation of required units in progress.
+# Top-level unit(s) detected:
+# Entity => testbench
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Architecture "struct" of Entity "controller"
+# Error: COMP96_0122: controller.vhd : (30, 3): Symbol "branch" has already been declared in this scope.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Architecture "struct" of Entity "datapath"
+# Error: COMP96_0078: datapath.vhd : (89, 31): Unknown identifier "pcsrc".
+# Error: COMP96_0078: datapath.vhd : (167, 2): Unknown identifier "zero".
+# Error: COMP96_0133: datapath.vhd : (167, 2): Cannot find object declaration.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mips.vhd
+# Compile Architecture "struct" of Entity "mips"
+# Warning: ELAB1_0026: mips.vhd : (42, 0): There is no default binding for component "datapath". (Port "pcsrc" is not on the entity).
+# Error: COMP96_0414: mips.vhd : (43, 57): Actual of mode 'in' cannot be assigned to formal "pc" of mode 'buffer'.
+# Error: COMP96_0414: mips.vhd : (44, 44): Actual of mode 'in' cannot be assigned to formal "writedata" of mode 'buffer'.
+# Error: COMP96_0100: mips.vhd : (43, 53): Actual parameter type in port map does not match the type of the formal port 'zero'.
+# Error: COMP96_0207: mips.vhd : (42, 3): No actual specified for local port "readdata".
+# Compile failure 8 Errors 1 Warnings  Analysis time :  0.2 [s]
+acom -reorder -O3 -e 100 -work MIPS_pipeline -2008  $dsn/src/imem.vhd $dsn/src/regfile.vhd $dsn/src/signext.vhd $dsn/src/sl2.vhd $dsn/src/registrador_n.vhd $dsn/src/mux2.vhd $dsn/src/maindec.vhd $dsn/src/dmem.vhd $dsn/src/flopr.vhd $dsn/src/alu.vhd $dsn/src/aludec.vhd $dsn/src/adder.vhd $dsn/src/datapath.vhd $dsn/src/controller.vhd $dsn/src/mips.vhd $dsn/src/top.vhd $dsn/src/testbench.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\imem.vhd
+# Compile Entity "imem"
+# Compile Architecture "behave" of Entity "imem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\regfile.vhd
+# Compile Entity "regfile"
+# Compile Architecture "behave" of Entity "regfile"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\signext.vhd
+# Compile Entity "signext"
+# Compile Architecture "behave" of Entity "signext"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\sl2.vhd
+# Compile Entity "sl2"
+# Compile Architecture "behave" of Entity "sl2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\registrador_n.vhd
+# Compile Entity "registrador_n"
+# Compile Architecture "registrador_n" of Entity "registrador_n"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mux2.vhd
+# Compile Entity "mux2"
+# Compile Architecture "behave" of Entity "mux2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\maindec.vhd
+# Compile Entity "maindec"
+# Compile Architecture "behave" of Entity "maindec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\dmem.vhd
+# Compile Entity "dmem"
+# Compile Architecture "behave" of Entity "dmem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\flopr.vhd
+# Compile Entity "flopr"
+# Compile Architecture "asynchronous" of Entity "flopr"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\alu.vhd
+# Compile Entity "alu"
+# Compile Architecture "behave" of Entity "alu"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\aludec.vhd
+# Compile Entity "aludec"
+# Compile Architecture "behave" of Entity "aludec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\adder.vhd
+# Compile Entity "adder"
+# Compile Architecture "behave" of Entity "adder"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Entity "datapath"
+# Compile Architecture "struct" of Entity "datapath"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "struct" of Entity "controller"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mips.vhd
+# Compile Entity "mips"
+# Compile Architecture "struct" of Entity "mips"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\top.vhd
+# Compile Entity "top"
+# Compile Architecture "test" of Entity "top"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\testbench.vhd
+# Compile Entity "testbench"
+# Compile Architecture "test" of Entity "testbench"
+# Incorrect order of units detected.
+# Automatic reorder and incremental recompilation of required units in progress.
+# Top-level unit(s) detected:
+# Entity => testbench
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Architecture "struct" of Entity "controller"
+# Error: COMP96_0122: controller.vhd : (30, 3): Symbol "branch" has already been declared in this scope.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Architecture "struct" of Entity "datapath"
+# Error: COMP96_0078: datapath.vhd : (89, 31): Unknown identifier "pcsrc".
+# Error: COMP96_0078: datapath.vhd : (167, 2): Unknown identifier "zero".
+# Error: COMP96_0133: datapath.vhd : (167, 2): Cannot find object declaration.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom -reorder -O3 -e 100 -work MIPS_pipeline -2008  $dsn/src/imem.vhd $dsn/src/regfile.vhd $dsn/src/signext.vhd $dsn/src/sl2.vhd $dsn/src/registrador_n.vhd $dsn/src/mux2.vhd $dsn/src/maindec.vhd $dsn/src/dmem.vhd $dsn/src/flopr.vhd $dsn/src/alu.vhd $dsn/src/aludec.vhd $dsn/src/adder.vhd $dsn/src/datapath.vhd $dsn/src/controller.vhd $dsn/src/mips.vhd $dsn/src/top.vhd $dsn/src/testbench.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\imem.vhd
+# Compile Entity "imem"
+# Compile Architecture "behave" of Entity "imem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\regfile.vhd
+# Compile Entity "regfile"
+# Compile Architecture "behave" of Entity "regfile"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\signext.vhd
+# Compile Entity "signext"
+# Compile Architecture "behave" of Entity "signext"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\sl2.vhd
+# Compile Entity "sl2"
+# Compile Architecture "behave" of Entity "sl2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\registrador_n.vhd
+# Compile Entity "registrador_n"
+# Compile Architecture "registrador_n" of Entity "registrador_n"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mux2.vhd
+# Compile Entity "mux2"
+# Compile Architecture "behave" of Entity "mux2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\maindec.vhd
+# Compile Entity "maindec"
+# Compile Architecture "behave" of Entity "maindec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\dmem.vhd
+# Compile Entity "dmem"
+# Compile Architecture "behave" of Entity "dmem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\flopr.vhd
+# Compile Entity "flopr"
+# Compile Architecture "asynchronous" of Entity "flopr"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\alu.vhd
+# Compile Entity "alu"
+# Compile Architecture "behave" of Entity "alu"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\aludec.vhd
+# Compile Entity "aludec"
+# Compile Architecture "behave" of Entity "aludec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\adder.vhd
+# Compile Entity "adder"
+# Compile Architecture "behave" of Entity "adder"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Entity "datapath"
+# Compile Architecture "struct" of Entity "datapath"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "struct" of Entity "controller"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mips.vhd
+# Compile Entity "mips"
+# Compile Architecture "struct" of Entity "mips"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\top.vhd
+# Compile Entity "top"
+# Compile Architecture "test" of Entity "top"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\testbench.vhd
+# Compile Entity "testbench"
+# Compile Architecture "test" of Entity "testbench"
+# Incorrect order of units detected.
+# Automatic reorder and incremental recompilation of required units in progress.
+# Top-level unit(s) detected:
+# Entity => flopr
+# Entity => regfile
+# Entity => signext
+# Entity => testbench
+# Entity => sl2
+# Entity => registrador_n
+# Entity => mux2
+# Entity => alu
+# Entity => adder
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Architecture "struct" of Entity "datapath"
+# Error: COMP96_0015: datapath.vhd : (168, 19): ')' expected.
+# Error: COMP96_0019: datapath.vhd : (169, 2): Keyword 'when' expected.
+# Error: COMP96_0015: datapath.vhd : (169, 2): ';' expected.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Architecture "struct" of Entity "controller"
+# Error: COMP96_0122: controller.vhd : (30, 3): Symbol "branch" has already been declared in this scope.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.3 [s]
+acom -reorder -O3 -e 100 -work MIPS_pipeline -2008  $dsn/src/imem.vhd $dsn/src/regfile.vhd $dsn/src/signext.vhd $dsn/src/sl2.vhd $dsn/src/registrador_n.vhd $dsn/src/mux2.vhd $dsn/src/maindec.vhd $dsn/src/dmem.vhd $dsn/src/flopr.vhd $dsn/src/alu.vhd $dsn/src/aludec.vhd $dsn/src/adder.vhd $dsn/src/datapath.vhd $dsn/src/controller.vhd $dsn/src/mips.vhd $dsn/src/top.vhd $dsn/src/testbench.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\imem.vhd
+# Compile Entity "imem"
+# Compile Architecture "behave" of Entity "imem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\regfile.vhd
+# Compile Entity "regfile"
+# Compile Architecture "behave" of Entity "regfile"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\signext.vhd
+# Compile Entity "signext"
+# Compile Architecture "behave" of Entity "signext"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\sl2.vhd
+# Compile Entity "sl2"
+# Compile Architecture "behave" of Entity "sl2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\registrador_n.vhd
+# Compile Entity "registrador_n"
+# Compile Architecture "registrador_n" of Entity "registrador_n"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mux2.vhd
+# Compile Entity "mux2"
+# Compile Architecture "behave" of Entity "mux2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\maindec.vhd
+# Compile Entity "maindec"
+# Compile Architecture "behave" of Entity "maindec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\dmem.vhd
+# Compile Entity "dmem"
+# Compile Architecture "behave" of Entity "dmem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\flopr.vhd
+# Compile Entity "flopr"
+# Compile Architecture "asynchronous" of Entity "flopr"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\alu.vhd
+# Compile Entity "alu"
+# Compile Architecture "behave" of Entity "alu"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\aludec.vhd
+# Compile Entity "aludec"
+# Compile Architecture "behave" of Entity "aludec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\adder.vhd
+# Compile Entity "adder"
+# Compile Architecture "behave" of Entity "adder"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Entity "datapath"
+# Compile Architecture "struct" of Entity "datapath"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "struct" of Entity "controller"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mips.vhd
+# Compile Entity "mips"
+# Compile Architecture "struct" of Entity "mips"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\top.vhd
+# Compile Entity "top"
+# Compile Architecture "test" of Entity "top"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\testbench.vhd
+# Compile Entity "testbench"
+# Compile Architecture "test" of Entity "testbench"
+# Incorrect order of units detected.
+# Automatic reorder and incremental recompilation of required units in progress.
+# Top-level unit(s) detected:
+# Entity => testbench
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Architecture "struct" of Entity "controller"
+# Error: COMP96_0122: controller.vhd : (30, 3): Symbol "branch" has already been declared in this scope.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Architecture "struct" of Entity "datapath"
+# Error: COMP96_0078: datapath.vhd : (137, 47): Unknown identifier "memwrite".
+# Error: COMP96_0078: datapath.vhd : (167, 25): Unknown identifier "zero".
+# Error: COMP96_0133: datapath.vhd : (167, 25): Cannot find object declaration.
+# Error: COMP96_0077: datapath.vhd : (167, 13): Undefined type of expression. Expected type 'STD_ULOGIC'.
+# Error: COMP96_0078: datapath.vhd : (168, 2): Unknown identifier "zero".
+# Error: COMP96_0133: datapath.vhd : (168, 2): Cannot find object declaration.
+# Compile failure 7 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom -reorder -O3 -e 100 -work MIPS_pipeline -2008  $dsn/src/imem.vhd $dsn/src/regfile.vhd $dsn/src/signext.vhd $dsn/src/sl2.vhd $dsn/src/registrador_n.vhd $dsn/src/mux2.vhd $dsn/src/maindec.vhd $dsn/src/dmem.vhd $dsn/src/flopr.vhd $dsn/src/alu.vhd $dsn/src/aludec.vhd $dsn/src/adder.vhd $dsn/src/datapath.vhd $dsn/src/controller.vhd $dsn/src/mips.vhd $dsn/src/top.vhd $dsn/src/testbench.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\imem.vhd
+# Compile Entity "imem"
+# Compile Architecture "behave" of Entity "imem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\regfile.vhd
+# Compile Entity "regfile"
+# Compile Architecture "behave" of Entity "regfile"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\signext.vhd
+# Compile Entity "signext"
+# Compile Architecture "behave" of Entity "signext"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\sl2.vhd
+# Compile Entity "sl2"
+# Compile Architecture "behave" of Entity "sl2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\registrador_n.vhd
+# Compile Entity "registrador_n"
+# Compile Architecture "registrador_n" of Entity "registrador_n"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mux2.vhd
+# Compile Entity "mux2"
+# Compile Architecture "behave" of Entity "mux2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\maindec.vhd
+# Compile Entity "maindec"
+# Compile Architecture "behave" of Entity "maindec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\dmem.vhd
+# Compile Entity "dmem"
+# Compile Architecture "behave" of Entity "dmem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\flopr.vhd
+# Compile Entity "flopr"
+# Compile Architecture "asynchronous" of Entity "flopr"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\alu.vhd
+# Compile Entity "alu"
+# Compile Architecture "behave" of Entity "alu"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\aludec.vhd
+# Compile Entity "aludec"
+# Compile Architecture "behave" of Entity "aludec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\adder.vhd
+# Compile Entity "adder"
+# Compile Architecture "behave" of Entity "adder"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Entity "datapath"
+# Compile Architecture "struct" of Entity "datapath"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "struct" of Entity "controller"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mips.vhd
+# Compile Entity "mips"
+# Compile Architecture "struct" of Entity "mips"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\top.vhd
+# Compile Entity "top"
+# Compile Architecture "test" of Entity "top"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\testbench.vhd
+# Compile Entity "testbench"
+# Compile Architecture "test" of Entity "testbench"
+# Incorrect order of units detected.
+# Automatic reorder and incremental recompilation of required units in progress.
+# Top-level unit(s) detected:
+# Entity => testbench
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Architecture "struct" of Entity "controller"
+# Error: COMP96_0122: controller.vhd : (30, 3): Symbol "branch" has already been declared in this scope.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Architecture "struct" of Entity "datapath"
+# Error: COMP96_0078: datapath.vhd : (137, 47): Unknown identifier "memwrite".
+# Error: COMP96_0078: datapath.vhd : (168, 2): Unknown identifier "zero".
+# Error: COMP96_0133: datapath.vhd : (168, 2): Cannot find object declaration.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom -reorder -O3 -e 100 -work MIPS_pipeline -2008  $dsn/src/imem.vhd $dsn/src/regfile.vhd $dsn/src/signext.vhd $dsn/src/sl2.vhd $dsn/src/registrador_n.vhd $dsn/src/mux2.vhd $dsn/src/maindec.vhd $dsn/src/dmem.vhd $dsn/src/flopr.vhd $dsn/src/alu.vhd $dsn/src/aludec.vhd $dsn/src/adder.vhd $dsn/src/datapath.vhd $dsn/src/controller.vhd $dsn/src/mips.vhd $dsn/src/top.vhd $dsn/src/testbench.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\imem.vhd
+# Compile Entity "imem"
+# Compile Architecture "behave" of Entity "imem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\regfile.vhd
+# Compile Entity "regfile"
+# Compile Architecture "behave" of Entity "regfile"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\signext.vhd
+# Compile Entity "signext"
+# Compile Architecture "behave" of Entity "signext"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\sl2.vhd
+# Compile Entity "sl2"
+# Compile Architecture "behave" of Entity "sl2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\registrador_n.vhd
+# Compile Entity "registrador_n"
+# Compile Architecture "registrador_n" of Entity "registrador_n"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mux2.vhd
+# Compile Entity "mux2"
+# Compile Architecture "behave" of Entity "mux2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\maindec.vhd
+# Compile Entity "maindec"
+# Compile Architecture "behave" of Entity "maindec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\dmem.vhd
+# Compile Entity "dmem"
+# Compile Architecture "behave" of Entity "dmem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\flopr.vhd
+# Compile Entity "flopr"
+# Compile Architecture "asynchronous" of Entity "flopr"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\alu.vhd
+# Compile Entity "alu"
+# Compile Architecture "behave" of Entity "alu"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\aludec.vhd
+# Compile Entity "aludec"
+# Compile Architecture "behave" of Entity "aludec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\adder.vhd
+# Compile Entity "adder"
+# Compile Architecture "behave" of Entity "adder"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Entity "datapath"
+# Compile Architecture "struct" of Entity "datapath"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "struct" of Entity "controller"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mips.vhd
+# Compile Entity "mips"
+# Compile Architecture "struct" of Entity "mips"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\top.vhd
+# Compile Entity "top"
+# Compile Architecture "test" of Entity "top"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\testbench.vhd
+# Compile Entity "testbench"
+# Compile Architecture "test" of Entity "testbench"
+# Incorrect order of units detected.
+# Automatic reorder and incremental recompilation of required units in progress.
+# Top-level unit(s) detected:
+# Entity => testbench
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Architecture "struct" of Entity "controller"
+# Error: COMP96_0122: controller.vhd : (30, 3): Symbol "branch" has already been declared in this scope.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Architecture "struct" of Entity "datapath"
+# Error: COMP96_0078: datapath.vhd : (137, 47): Unknown identifier "memwrite".
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.3 [s]
+# ULM: Warning: ULM_0021 Architecture `struct' of entity `MIPS_pipeline.controller' is not up-to-date. Please recompile file `C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline/src/controller.vhd'.
+# ULM: Warning: ULM_0021 Architecture `struct' of entity `MIPS_pipeline.controller' is not up-to-date. Please recompile file `C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline/src/controller.vhd'.
+# ULM: Warning: ULM_0021 Architecture `struct' of entity `MIPS_pipeline.datapath' is not up-to-date. Please recompile file `C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline/src/datapath.vhd'.
+# ULM: Warning: ULM_0021 Architecture `struct' of entity `MIPS_pipeline.datapath' is not up-to-date. Please recompile file `C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline/src/datapath.vhd'.
+acom -reorder -O3 -e 100 -work MIPS_pipeline -2008  $dsn/src/imem.vhd $dsn/src/regfile.vhd $dsn/src/signext.vhd $dsn/src/sl2.vhd $dsn/src/registrador_n.vhd $dsn/src/mux2.vhd $dsn/src/maindec.vhd $dsn/src/dmem.vhd $dsn/src/flopr.vhd $dsn/src/alu.vhd $dsn/src/aludec.vhd $dsn/src/adder.vhd $dsn/src/datapath.vhd $dsn/src/controller.vhd $dsn/src/mips.vhd $dsn/src/top.vhd $dsn/src/testbench.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\imem.vhd
+# Compile Entity "imem"
+# Compile Architecture "behave" of Entity "imem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\regfile.vhd
+# Compile Entity "regfile"
+# Compile Architecture "behave" of Entity "regfile"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\signext.vhd
+# Compile Entity "signext"
+# Compile Architecture "behave" of Entity "signext"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\sl2.vhd
+# Compile Entity "sl2"
+# Compile Architecture "behave" of Entity "sl2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\registrador_n.vhd
+# Compile Entity "registrador_n"
+# Compile Architecture "registrador_n" of Entity "registrador_n"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mux2.vhd
+# Compile Entity "mux2"
+# Compile Architecture "behave" of Entity "mux2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\maindec.vhd
+# Compile Entity "maindec"
+# Compile Architecture "behave" of Entity "maindec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\dmem.vhd
+# Compile Entity "dmem"
+# Compile Architecture "behave" of Entity "dmem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\flopr.vhd
+# Compile Entity "flopr"
+# Compile Architecture "asynchronous" of Entity "flopr"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\alu.vhd
+# Compile Entity "alu"
+# Compile Architecture "behave" of Entity "alu"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\aludec.vhd
+# Compile Entity "aludec"
+# Compile Architecture "behave" of Entity "aludec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\adder.vhd
+# Compile Entity "adder"
+# Compile Architecture "behave" of Entity "adder"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Entity "datapath"
+# Compile Architecture "struct" of Entity "datapath"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "struct" of Entity "controller"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mips.vhd
+# Compile Entity "mips"
+# Compile Architecture "struct" of Entity "mips"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\top.vhd
+# Compile Entity "top"
+# Compile Architecture "test" of Entity "top"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\testbench.vhd
+# Compile Entity "testbench"
+# Compile Architecture "test" of Entity "testbench"
+# Incorrect order of units detected.
+# Automatic reorder and incremental recompilation of required units in progress.
+# Top-level unit(s) detected:
+# Entity => testbench
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Architecture "struct" of Entity "controller"
+# Error: COMP96_0122: controller.vhd : (30, 3): Symbol "branch" has already been declared in this scope.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom -reorder -O3 -e 100 -work MIPS_pipeline -2008  $dsn/src/imem.vhd $dsn/src/regfile.vhd $dsn/src/signext.vhd $dsn/src/sl2.vhd $dsn/src/registrador_n.vhd $dsn/src/mux2.vhd $dsn/src/maindec.vhd $dsn/src/dmem.vhd $dsn/src/flopr.vhd $dsn/src/alu.vhd $dsn/src/aludec.vhd $dsn/src/adder.vhd $dsn/src/datapath.vhd $dsn/src/controller.vhd $dsn/src/mips.vhd $dsn/src/top.vhd $dsn/src/testbench.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\imem.vhd
+# Compile Entity "imem"
+# Compile Architecture "behave" of Entity "imem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\regfile.vhd
+# Compile Entity "regfile"
+# Compile Architecture "behave" of Entity "regfile"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\signext.vhd
+# Compile Entity "signext"
+# Compile Architecture "behave" of Entity "signext"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\sl2.vhd
+# Compile Entity "sl2"
+# Compile Architecture "behave" of Entity "sl2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\registrador_n.vhd
+# Compile Entity "registrador_n"
+# Compile Architecture "registrador_n" of Entity "registrador_n"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mux2.vhd
+# Compile Entity "mux2"
+# Compile Architecture "behave" of Entity "mux2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\maindec.vhd
+# Compile Entity "maindec"
+# Compile Architecture "behave" of Entity "maindec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\dmem.vhd
+# Compile Entity "dmem"
+# Compile Architecture "behave" of Entity "dmem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\flopr.vhd
+# Compile Entity "flopr"
+# Compile Architecture "asynchronous" of Entity "flopr"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\alu.vhd
+# Compile Entity "alu"
+# Compile Architecture "behave" of Entity "alu"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\aludec.vhd
+# Compile Entity "aludec"
+# Compile Architecture "behave" of Entity "aludec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\adder.vhd
+# Compile Entity "adder"
+# Compile Architecture "behave" of Entity "adder"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Entity "datapath"
+# Compile Architecture "struct" of Entity "datapath"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "struct" of Entity "controller"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mips.vhd
+# Compile Entity "mips"
+# Compile Architecture "struct" of Entity "mips"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\top.vhd
+# Compile Entity "top"
+# Compile Architecture "test" of Entity "top"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\testbench.vhd
+# Compile Entity "testbench"
+# Compile Architecture "test" of Entity "testbench"
+# Top-level unit(s) detected:
+# Entity => testbench
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom -reorder -O3 -e 100 -work MIPS_pipeline -2008  $dsn/src/imem.vhd $dsn/src/regfile.vhd $dsn/src/signext.vhd $dsn/src/sl2.vhd $dsn/src/registrador_n.vhd $dsn/src/mux2.vhd $dsn/src/maindec.vhd $dsn/src/dmem.vhd $dsn/src/flopr.vhd $dsn/src/alu.vhd $dsn/src/aludec.vhd $dsn/src/adder.vhd $dsn/src/datapath.vhd $dsn/src/controller.vhd $dsn/src/mips.vhd $dsn/src/top.vhd $dsn/src/testbench.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\imem.vhd
+# Compile Entity "imem"
+# Compile Architecture "behave" of Entity "imem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\regfile.vhd
+# Compile Entity "regfile"
+# Compile Architecture "behave" of Entity "regfile"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\signext.vhd
+# Compile Entity "signext"
+# Compile Architecture "behave" of Entity "signext"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\sl2.vhd
+# Compile Entity "sl2"
+# Compile Architecture "behave" of Entity "sl2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\registrador_n.vhd
+# Compile Entity "registrador_n"
+# Compile Architecture "registrador_n" of Entity "registrador_n"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mux2.vhd
+# Compile Entity "mux2"
+# Compile Architecture "behave" of Entity "mux2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\maindec.vhd
+# Compile Entity "maindec"
+# Compile Architecture "behave" of Entity "maindec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\dmem.vhd
+# Compile Entity "dmem"
+# Compile Architecture "behave" of Entity "dmem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\flopr.vhd
+# Compile Entity "flopr"
+# Compile Architecture "asynchronous" of Entity "flopr"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\alu.vhd
+# Compile Entity "alu"
+# Compile Architecture "behave" of Entity "alu"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\aludec.vhd
+# Compile Entity "aludec"
+# Compile Architecture "behave" of Entity "aludec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\adder.vhd
+# Compile Entity "adder"
+# Compile Architecture "behave" of Entity "adder"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Entity "datapath"
+# Compile Architecture "struct" of Entity "datapath"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "struct" of Entity "controller"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mips.vhd
+# Compile Entity "mips"
+# Compile Architecture "struct" of Entity "mips"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\top.vhd
+# Compile Entity "top"
+# Compile Architecture "test" of Entity "top"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\testbench.vhd
+# Compile Entity "testbench"
+# Compile Architecture "test" of Entity "testbench"
+# Top-level unit(s) detected:
+# Entity => flopr
+# Entity => regfile
+# Entity => signext
+# Entity => testbench
+# Entity => sl2
+# Entity => registrador_n
+# Entity => mux2
+# Entity => alu
+# Entity => adder
+# Error: COMP96_0015: datapath.vhd : (171, 50): ')' expected.
+# Error: COMP96_0019: datapath.vhd : (172, 2): Keyword 'when' expected.
+# Error: COMP96_0015: datapath.vhd : (172, 2): ';' expected.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom -reorder -O3 -e 100 -work MIPS_pipeline -2008  $dsn/src/imem.vhd $dsn/src/regfile.vhd $dsn/src/signext.vhd $dsn/src/sl2.vhd $dsn/src/registrador_n.vhd $dsn/src/mux2.vhd $dsn/src/maindec.vhd $dsn/src/dmem.vhd $dsn/src/flopr.vhd $dsn/src/alu.vhd $dsn/src/aludec.vhd $dsn/src/adder.vhd $dsn/src/datapath.vhd $dsn/src/controller.vhd $dsn/src/mips.vhd $dsn/src/top.vhd $dsn/src/testbench.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\imem.vhd
+# Compile Entity "imem"
+# Compile Architecture "behave" of Entity "imem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\regfile.vhd
+# Compile Entity "regfile"
+# Compile Architecture "behave" of Entity "regfile"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\signext.vhd
+# Compile Entity "signext"
+# Compile Architecture "behave" of Entity "signext"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\sl2.vhd
+# Compile Entity "sl2"
+# Compile Architecture "behave" of Entity "sl2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\registrador_n.vhd
+# Compile Entity "registrador_n"
+# Compile Architecture "registrador_n" of Entity "registrador_n"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mux2.vhd
+# Compile Entity "mux2"
+# Compile Architecture "behave" of Entity "mux2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\maindec.vhd
+# Compile Entity "maindec"
+# Compile Architecture "behave" of Entity "maindec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\dmem.vhd
+# Compile Entity "dmem"
+# Compile Architecture "behave" of Entity "dmem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\flopr.vhd
+# Compile Entity "flopr"
+# Compile Architecture "asynchronous" of Entity "flopr"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\alu.vhd
+# Compile Entity "alu"
+# Compile Architecture "behave" of Entity "alu"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\aludec.vhd
+# Compile Entity "aludec"
+# Compile Architecture "behave" of Entity "aludec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\adder.vhd
+# Compile Entity "adder"
+# Compile Architecture "behave" of Entity "adder"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Entity "datapath"
+# Compile Architecture "struct" of Entity "datapath"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "struct" of Entity "controller"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mips.vhd
+# Compile Entity "mips"
+# Compile Architecture "struct" of Entity "mips"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\top.vhd
+# Compile Entity "top"
+# Compile Architecture "test" of Entity "top"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\testbench.vhd
+# Compile Entity "testbench"
+# Compile Architecture "test" of Entity "testbench"
+# Top-level unit(s) detected:
+# Entity => testbench
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.3 [s]
+acom -reorder -O3 -e 100 -work MIPS_pipeline -2008  $dsn/src/imem.vhd $dsn/src/regfile.vhd $dsn/src/signext.vhd $dsn/src/sl2.vhd $dsn/src/registrador_n.vhd $dsn/src/mux2.vhd $dsn/src/maindec.vhd $dsn/src/dmem.vhd $dsn/src/flopr.vhd $dsn/src/alu.vhd $dsn/src/aludec.vhd $dsn/src/adder.vhd $dsn/src/datapath.vhd $dsn/src/controller.vhd $dsn/src/mips.vhd $dsn/src/top.vhd $dsn/src/testbench.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\imem.vhd
+# Compile Entity "imem"
+# Compile Architecture "behave" of Entity "imem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\regfile.vhd
+# Compile Entity "regfile"
+# Compile Architecture "behave" of Entity "regfile"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\signext.vhd
+# Compile Entity "signext"
+# Compile Architecture "behave" of Entity "signext"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\sl2.vhd
+# Compile Entity "sl2"
+# Compile Architecture "behave" of Entity "sl2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\registrador_n.vhd
+# Compile Entity "registrador_n"
+# Compile Architecture "registrador_n" of Entity "registrador_n"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mux2.vhd
+# Compile Entity "mux2"
+# Compile Architecture "behave" of Entity "mux2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\maindec.vhd
+# Compile Entity "maindec"
+# Compile Architecture "behave" of Entity "maindec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\dmem.vhd
+# Compile Entity "dmem"
+# Compile Architecture "behave" of Entity "dmem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\flopr.vhd
+# Compile Entity "flopr"
+# Compile Architecture "asynchronous" of Entity "flopr"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\alu.vhd
+# Compile Entity "alu"
+# Compile Architecture "behave" of Entity "alu"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\aludec.vhd
+# Compile Entity "aludec"
+# Compile Architecture "behave" of Entity "aludec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\adder.vhd
+# Compile Entity "adder"
+# Compile Architecture "behave" of Entity "adder"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Entity "datapath"
+# Compile Architecture "struct" of Entity "datapath"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "struct" of Entity "controller"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mips.vhd
+# Compile Entity "mips"
+# Compile Architecture "struct" of Entity "mips"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\top.vhd
+# Compile Entity "top"
+# Compile Architecture "test" of Entity "top"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\testbench.vhd
+# Compile Entity "testbench"
+# Compile Architecture "test" of Entity "testbench"
+# Top-level unit(s) detected:
+# Entity => testbench
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom -reorder -O3 -e 100 -work MIPS_pipeline -2008  $dsn/src/imem.vhd $dsn/src/regfile.vhd $dsn/src/signext.vhd $dsn/src/sl2.vhd $dsn/src/registrador_n.vhd $dsn/src/mux2.vhd $dsn/src/maindec.vhd $dsn/src/dmem.vhd $dsn/src/flopr.vhd $dsn/src/alu.vhd $dsn/src/aludec.vhd $dsn/src/adder.vhd $dsn/src/datapath.vhd $dsn/src/controller.vhd $dsn/src/mips.vhd $dsn/src/top.vhd $dsn/src/testbench.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\imem.vhd
+# Compile Entity "imem"
+# Compile Architecture "behave" of Entity "imem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\regfile.vhd
+# Compile Entity "regfile"
+# Compile Architecture "behave" of Entity "regfile"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\signext.vhd
+# Compile Entity "signext"
+# Compile Architecture "behave" of Entity "signext"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\sl2.vhd
+# Compile Entity "sl2"
+# Compile Architecture "behave" of Entity "sl2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\registrador_n.vhd
+# Compile Entity "registrador_n"
+# Compile Architecture "registrador_n" of Entity "registrador_n"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\mux2.vhd
+# Compile Entity "mux2"
+# Compile Architecture "behave" of Entity "mux2"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\maindec.vhd
+# Compile Entity "maindec"
+# Compile Architecture "behave" of Entity "maindec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\dmem.vhd
+# Compile Entity "dmem"
+# Compile Architecture "behave" of Entity "dmem"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\flopr.vhd
+# Compile Entity "flopr"
+# Compile Architecture "asynchronous" of Entity "flopr"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\alu.vhd
+# Compile Entity "alu"
+# Compile Architecture "behave" of Entity "alu"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\aludec.vhd
+# Compile Entity "aludec"
+# Compile Architecture "behave" of Entity "aludec"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\adder.vhd
+# Compile Entity "adder"
+# Compile Architecture "behave" of Entity "adder"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline\src\datapath.vhd
+# Compile Entity "datapath"
+# C
