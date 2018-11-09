@@ -8,21 +8,20 @@ entity aludec is -- ALU control decoder
 end;
 
 architecture behave of aludec is
-	signal s_alucontrol : std_logic_vector(2 downto 0);
-	
-begin 
- 
-	with funct select
-		s_alucontrol <= 	"010" when "100000", -- add 
-								"110" when "100010", -- sub
-								"000" when "100100", -- and
-								"001" when "100101", -- or
-								"111" when "101010", -- slt
-								"011" when others; 	-- ???
-	
-	with aluop select
-      alucontrol <= 	"010" 			when "00", 		-- add (for lw/sw/addi)
-							"110" 			when "01", 		-- sub (for beq)
-							s_alucontrol	when others;	-- R-type instructions
-							
+begin
+  process(aluop,funct) begin
+    case aluop is
+		when "00" => alucontrol <= "010"; -- add (for lw/sw/addi)
+		when "01" => alucontrol <= "110"; -- sub (for beq/bne)
+		when "11" => alucontrol <= "001"; -- or  (for ori)
+		when others => case funct is      -- R-type instructions
+                         when "100000" => alucontrol <= "010"; -- add 
+                         when "100010" => alucontrol <= "110"; -- sub
+                         when "100100" => alucontrol <= "000"; -- and
+                         when "100101" => alucontrol <= "001"; -- or
+                         when "101010" => alucontrol <= "111"; -- slt
+                         when  others  => alucontrol <= "---"; -- ???
+                     end case;
+    end case;
+  end process;
 end;

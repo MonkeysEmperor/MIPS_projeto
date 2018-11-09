@@ -44,7 +44,7 @@ architecture struct of datapath is
 	
 	component signext													 
 		port(	a: in  STD_LOGIC_VECTOR(15 downto 0);
-	   			c: in  STD_LOGIC; -- c = '0' arit, c = '1' logical
+	   			c: in  STD_LOGIC; -- c = '0' arit/signed, c = '1' logical/unsigned
 	   			y: out STD_LOGIC_VECTOR(31 downto 0));
 	end component;	
   
