@@ -1,4 +1,4 @@
-Active-HDL 10.5.217.6767 2018-11-09 23:10:03
+Active-HDL 10.5.217.6767 2018-11-10 19:08:28
 
 Elaboration top modules:
 Architecture                  test(testbench)
@@ -7,23 +7,23 @@ Architecture                  test(testbench)
 -----------------------------------------------------------------------------------------------------
 Entity        | Architecture  | Library       | Info | Compiler Version        | Compilation Options
 -----------------------------------------------------------------------------------------------------
-testbench     | test          | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
-top           | test          | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
-mips          | struct        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
-imem          | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
-dmem          | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
-controller    | struct        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
-datapath      | struct        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
-maindec       | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
-aludec        | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
-mux2          | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
-registrador_n | registrador_n | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
-adder         | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
-regfile       | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
-signext       | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
-sl2           | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
-alu           | behave        | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
-hazarddec     | hazarddec_arc | MIPS_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+testbench     | test          | mips_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+top           | test          | mips_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+mips          | struct        | mips_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+imem          | behave        | mips_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+dmem          | behave        | mips_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+controller    | struct        | mips_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+datapath      | struct        | mips_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+maindec       | behave        | mips_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+aludec        | behave        | mips_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+mux2          | behave        | mips_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+registrador_n | registrador_n | mips_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+adder         | behave        | mips_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+regfile       | behave        | mips_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+signext       | behave        | mips_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+sl2           | behave        | mips_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+alu           | behave        | mips_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
+hazarddec     | hazarddec_arc | mips_pipeline |      | 10.5.217.6767 (Windows) | -O3 -2008
 -----------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------
@@ -41,7 +41,7 @@ std_logic_arith               | ieee          |      |                         |
 Library                       | Comment
 -----------------------------------------------------------------------------------------------------
 ieee                          | Standard IEEE packages library
-MIPS_pipeline                 | None
+mips_pipeline                 | None
 std                           | Standard VHDL library
 -----------------------------------------------------------------------------------------------------
 

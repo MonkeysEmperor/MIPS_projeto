@@ -77,3 +77,9 @@ Active_lib=
 .\src\testbench.vhd=VHDL Source Code
 .\src\TestbenchSimulation.awc=Accelerated Waveform Configuration
 
+[SpecTracer]
+WindowVisible=0
+[HierarchyViewer]
+HierarchyInformation=testbench|test|0  
+ShowHide=ShowTopLevel
+Selected=

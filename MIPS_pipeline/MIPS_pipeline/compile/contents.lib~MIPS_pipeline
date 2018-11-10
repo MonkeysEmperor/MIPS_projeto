@@ -1,4 +1,4 @@
-66
+120
 ~E 1 "./../src/adder.vhd" 5 adder
 ~A 1 "./../src/adder.vhd" 10 behave
 ~E 1 "./../src/alu.vhd" 6 alu
@@ -14,7 +14,7 @@
 ~E 1 "./../src/flopr.vhd" 5 flopr
 ~A 1 "./../src/flopr.vhd" 12 asynchronous
 ~E 1 "./../src/hazzarddec.vhd" 6 hazarddec
-~A 1 "./../src/hazzarddec.vhd" 13 hazarddec_arc
+~A 1 "./../src/hazzarddec.vhd" 14 hazarddec_arc
 ~E 1 "./../src/imem.vhd" 6 imem
 ~A 1 "./../src/imem.vhd" 11 behave
 ~E 1 "./../src/maindec.vhd" 4 maindec

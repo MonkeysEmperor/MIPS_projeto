@@ -8,8 +8,8 @@ entity datapath is  -- MIPS datapath
 			memtoreg, branch:  in  STD_LOGIC;
 			alusrc, regdst:    in  STD_LOGIC;
 			regwrite, jump:    in  STD_LOGIC;
-		 	memwrite:			in std_logic;
-			memwritepip:		out std_logic;
+		 	memwrite:		   in  std_logic;
+			memwritepip:	   out std_logic;
 			alucontrol:        in  STD_LOGIC_VECTOR(2 downto 0);
 			pc:                buffer STD_LOGIC_VECTOR(31 downto 0);
 			instr:             in  STD_LOGIC_VECTOR(31 downto 0);
@@ -67,9 +67,10 @@ architecture struct of datapath is
 	
 	component hazarddec is
 		port(	branch, branch_id, branch_ex		: in  std_logic;
-				jump, memwrite, alusrc, wid, wex	: in  std_logic;
-				r1, r2, rid, rex					: in  std_logic_vector(4 downto 0);
-				enablepc, flushid					: out std_logic);
+		    pcsrc, pcsrc_mem					: in  std_logic;
+			jump, jumpid, memwrite, alusrc, wid, wex	: in  std_logic;
+			r1, r2, rid, rex					: in  std_logic_vector(4 downto 0);
+			enablepc, flushid, enableif			: out std_logic);
 	end component;
   
 	signal writereg:           STD_LOGIC_VECTOR(4 downto 0);
@@ -83,15 +84,16 @@ architecture struct of datapath is
   
 	--sinais pos pipeline						   				   
 	signal s_if  : std_logic_vector( 63 downto 0); 
-	signal s_id  : std_logic_vector(141 downto 0);  
+	signal s_id  : std_logic_vector(142 downto 0);  
 	signal s_ex  : std_logic_vector(106 downto 0);
-	signal s_mem : std_logic_vector( 70 downto 0);
+	signal s_mem : std_logic_vector( 71 downto 0);
 	
 	signal s_rid, s_rex : std_logic_vector(4 downto 0);
 	
 	-- hazard control unity
-	signal s_enable_pc, s_flush_id : std_logic;	
-	signal s_control_id : std_logic_vector(8 downto 0);
+	signal s_enable_pc, s_flush_id, s_enable_if, s_pcsrc_mem : std_logic;	
+	signal s_control_id : std_logic_vector(9 downto 0);
+	signal s_jump : std_logic;
 begin
  
 	pcbrmux: mux2 
@@ -100,7 +102,7 @@ begin
 		
 	pcmux: mux2 
 		generic map(32) 
-		port map(pcnextbr, pcjump, jump, pcnext);
+		port map(pcnextbr, pcjump, s_jump, pcnext);
 																				 
 	pcreg: registrador_n
 		generic map(32)
@@ -115,7 +117,7 @@ begin
 	-- PcPlus4 (63 downto 32) |Instruction (31 downto 0)
 	if_reg : registrador_n
 		generic map(64)
-		port map(	clk, reset, s_enable_pc,
+		port map(	clk, reset, s_enable_if,
 					pcplus4 & instr,
 	  				s_if);
 	----------------------------------
@@ -141,24 +143,25 @@ begin
 	  
 	-- Jump  
 	pcjump <= s_if(63 downto 60) & s_if(25 downto 0) & "00"; -- endereço jump 
+	s_jump <= jump and not s_flush_id;
 	
 	--flush	
 	 flush_id_mux: mux2 
-		generic map(9) 
-		port map(	alusrc & alucontrol & s_if(0) & branch & memwrite & memtoreg & regwrite, 
-					'0' & X"00", 
+		generic map(10) 
+		port map(	jump & alusrc & alucontrol & s_if(26) & branch & memwrite & memtoreg & regwrite, 
+					"00" & X"00", 
 					s_flush_id, s_control_id); 
 					
 	----------------------------------	
-	-- alusource (141) | alucontrol (140 downto 138)||
+	-- jump (142) | alusource (141) | alucontrol (140 downto 138)||
 	-- inst0 (137) | branch (136) | memwrite (135) || memtoreg (134)
 	-- Pcplus4 (133 downto 102)|Reg1 (101 downto 70)|Reg2 (69 downto 38)|
 	-- Imediate (37 dwonto 6)| WriteAddress (5 downto 1) | WriteEnable (0)
 	
 	id_reg : registrador_n
-		generic map(142)
+		generic map(143)
 		port map(	clk, reset, '1',
-					s_control_id(8 downto 1) &
+					s_control_id(9 downto 1) &
 					s_if(63 downto 32) & srca & s_writedata & signimm & writereg & s_control_id(0),
 	  				s_id);
 	----------------------------------
@@ -173,10 +176,10 @@ begin
 	-- ALU	 
 	srcbmux: mux2 
 		generic map(32) 
-		port map(s_id(69 downto 38), s_id(37 downto 6), alusrc,srcb);	
+		port map(s_id(69 downto 38), s_id(37 downto 6), s_id(141),srcb);	
 	
 	mainalu: alu 
-		port map(s_id(101 downto 70), srcb, alucontrol, s_aluout, s_zero);
+		port map(s_id(101 downto 70), srcb, s_id(140 downto 138), s_aluout, s_zero);
 		   
 	----------------------------------
 	-- inst0 (106) | branch (105) | memwrite (104) || memtoreg (103)
@@ -195,29 +198,30 @@ begin
 	writedata 	<= s_ex(37 downto 6);
 	      
 	----------------------------------
-	-- memtoreg (70)
+	-- pcsrc(71) | memtoreg (70)
 	-- ReadData (69 downto 38) | AluOut (37 downto 6) |
 	-- WriteAddress (5 downto 1) | WriteEnable (0)
 	mem_reg : registrador_n
-		generic map(71)
+		generic map(72)
 		port map(	clk, reset, '1',
-					s_ex(103) & readdata & s_ex(69 downto 38) & s_ex(5 downto 0),
+					pcsrc & s_ex(103) & readdata & s_ex(69 downto 38) & s_ex(5 downto 0),
 	  				s_mem);
 	----------------------------------
 	
 	resmux: mux2 
 		generic map(32) 
 		port map(	s_mem(37 downto 6), s_mem(69 downto 38), 
-		s_mem(70), result);	
+					s_mem(70), result);	
 			
 	----------------------------------
 	-- Hazard control unity
 	
 	haz : hazarddec
-		port map(	branch, s_id(136), s_ex(105),
-					jump, memwrite, alusrc, s_id(0), s_ex(0), 
+	port map(		branch, s_id(136), s_ex(105), 
+					pcsrc, s_mem(71),
+					jump, s_id(142), memwrite, alusrc, s_id(0), s_ex(0), 
 					s_if(25 downto 21), s_if(20 downto 16), s_id(5 downto 1), s_ex(5 downto 1),
-					s_enable_pc, s_flush_id);	
+					s_enable_pc, s_flush_id, s_enable_if);	
 				
 end;
   

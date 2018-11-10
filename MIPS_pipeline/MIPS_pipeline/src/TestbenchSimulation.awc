@@ -6,7 +6,7 @@
     </comment>
     <databases>
         <database id="">*virtual*</database>
-        <database id="f8a9636154f96b0fe65b879871850700">wave.asdb</database>
+        <database id="f8a9636154f9902fe75bac29d7894200">wave.asdb</database>
     </databases>
     <signallists>
         <signallist id="0">
@@ -14,22 +14,41 @@
         <signal>/testbench/reset</signal>
         <signal>/testbench/dut/mips1/pc</signal>
         <signal>/testbench/dut/mips1/instr</signal>
+        <signal>/testbench/dut/mips1/cont/md/op</signal>
+        <signal>/testbench/dut/mips1/dp/funct</signal>
         <signal>/testbench/dut/mips1/dp/rf/ra1</signal>
         <signal>/testbench/dut/mips1/dp/rf/rd1</signal>
         <signal>/testbench/dut/mips1/dp/alusrc</signal>
         <signal>/testbench/dut/mips1/dp/rf/ra2</signal>
         <signal>/testbench/dut/mips1/dp/rf/rd2</signal>
-        <signal>/testbench/dut/mips1/dp/se/y</signal>
+        <signal>/testbench/dut/mips1/dp/signimm</signal>
+        <signal>/testbench/dut/mips1/dp/writereg</signal>
         <signal>/testbench/dut/mips1/dp/mainalu/a</signal>
         <signal>/testbench/dut/mips1/dp/mainalu/b</signal>
+        <signal>/testbench/dut/mips1/dp/mainalu/alucontrol</signal>
         <signal>/testbench/dut/mips1/dp/mainalu/result</signal>
+        <signal>/testbench/dut/mips1/dp/memwritepip</signal>
+        <signal>/testbench/dut/mips1/dp/aluout</signal>
+        <signal>/testbench/dut/mips1/writedata</signal>
+        <signal>/testbench/dut/mips1/dp/readdata</signal>
+        <signal>/testbench/dut/mips1/dp/resmux/d0</signal>
+        <signal>/testbench/dut/mips1/dp/resmux/d1</signal>
+        <signal>/testbench/dut/mips1/dp/rf/we3</signal>
+        <signal>/testbench/dut/mips1/dp/rf/wa3</signal>
+        <signal>/testbench/dut/mips1/dp/rf/wd3</signal>
+        <signal>/testbench/dut/mips1/dp/haz/branch</signal>
+        <signal>/testbench/dut/mips1/dp/haz/branch_id</signal>
+        <signal>/testbench/dut/mips1/dp/haz/branch_ex</signal>
+        <signal>/testbench/dut/mips1/dp/haz/pcsrc</signal>
+        <signal>/testbench/dut/mips1/dp/ex_reg/Q(70)</signal>
+        <signal>/testbench/dut/mips1/dp/haz/pcsrc_mem</signal>
+        <signal>/testbench/dut/mips1/dp/haz/s_conflito</signal>
+        <signal>/testbench/dut/mips1/dp/haz/enablepc</signal>
+        <signal>/testbench/dut/mips1/dp/haz/enableif</signal>
+        <signal>/testbench/dut/mips1/dp/haz/flushid</signal>
         </signallist>
     </signallists>
     <prefbases>
-        <prefbase id="0" >
-            <pref name="End Time" value="304737" />
-            <pref name="Start Time" value="126178" />
-        </prefbase>
     </prefbases>
     <bookmarkbases>
         <bookmarks id="0">
@@ -38,7 +57,7 @@
     </bookmarkbases>
     <cursorbases>
         <cursors id="0">
-            <cursor value="4100" label="Cursor 1" locked="0" />
+            <cursor value="500000" label="Cursor 1" locked="0" />
         </cursors>
     </cursorbases>
     <measurementbases>

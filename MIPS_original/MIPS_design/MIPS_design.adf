@@ -5,7 +5,7 @@ version=4
 Current Config=compile
 
 [Configurations]
-compile=MIPS_design
+compile=mips_design
 
 [Library]
 MIPS_design=.\MIPS_design\MIPS_design.lib
@@ -41,7 +41,7 @@ Active_lib=
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=testbench|test|0    
+HierarchyInformation=testbench|test|0 
 ShowHide=ShowTopLevel
 Selected=
 

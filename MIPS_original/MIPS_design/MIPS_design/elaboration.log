@@ -1,4 +1,4 @@
-Active-HDL 10.5.217.6767 2018-11-08 15:42:18
+Active-HDL 10.5.217.6767 2018-11-10 17:17:22
 
 Elaboration top modules:
 Architecture                  test(testbench)
@@ -43,3 +43,9 @@ ieee                      | Standard IEEE packages library
 mips_design               | None
 std                       | Standard VHDL library
 -----------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -O5 testbench test
+
+
+The performance of simulation is reduced. Version Student Edition

@@ -405,21 +405,18 @@ memtoreg => mux2:flush_id_mux.d0[1]
 branch => mux2:flush_id_mux.d0[3]
 branch => hazarddec:haz.branch
 alusrc => mux2:flush_id_mux.d0[8]
-alusrc => mux2:srcbmux.s
 alusrc => hazarddec:haz.alusrc
 regdst => mux2:wrmux.s
 regwrite => mux2:flush_id_mux.d0[0]
-jump => mux2:pcmux.s
+jump => s_jump.IN1
+jump => mux2:flush_id_mux.d0[9]
 jump => hazarddec:haz.jump
 memwrite => mux2:flush_id_mux.d0[2]
 memwrite => hazarddec:haz.memwrite
 memwritepip <= registrador_n:ex_reg.Q[104]
 alucontrol[0] => mux2:flush_id_mux.d0[5]
-alucontrol[0] => alu:mainalu.alucontrol[0]
 alucontrol[1] => mux2:flush_id_mux.d0[6]
-alucontrol[1] => alu:mainalu.alucontrol[1]
 alucontrol[2] => mux2:flush_id_mux.d0[7]
-alucontrol[2] => alu:mainalu.alucontrol[2]
 pc[0] <= registrador_n:pcreg.Q[0]
 pc[1] <= registrador_n:pcreg.Q[1]
 pc[2] <= registrador_n:pcreg.Q[2]
@@ -1828,6 +1825,7 @@ d0[5] => y.DATAA
 d0[6] => y.DATAA
 d0[7] => y.DATAA
 d0[8] => y.DATAA
+d0[9] => y.DATAA
 d1[0] => y.DATAB
 d1[1] => y.DATAB
 d1[2] => y.DATAB
@@ -1837,6 +1835,8 @@ d1[5] => y.DATAB
 d1[6] => y.DATAB
 d1[7] => y.DATAB
 d1[8] => y.DATAB
+d1[9] => y.DATAB
+s => y.OUTPUTSELECT
 s => y.OUTPUTSELECT
 s => y.OUTPUTSELECT
 s => y.OUTPUTSELECT
@@ -1855,6 +1855,7 @@ y[5] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[6] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[8] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[9] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |testbench|top:dut|mips:mips1|datapath:dp|registrador_n:id_reg
@@ -2000,6 +2001,7 @@ clock => IQ[138].CLK
 clock => IQ[139].CLK
 clock => IQ[140].CLK
 clock => IQ[141].CLK
+clock => IQ[142].CLK
 clear => IQ[0].ACLR
 clear => IQ[1].ACLR
 clear => IQ[2].ACLR
@@ -2142,6 +2144,8 @@ clear => IQ[138].ACLR
 clear => IQ[139].ACLR
 clear => IQ[140].ACLR
 clear => IQ[141].ACLR
+clear => IQ[142].ACLR
+enable => IQ[142].ENA
 enable => IQ[141].ENA
 enable => IQ[140].ENA
 enable => IQ[139].ENA
@@ -2426,6 +2430,7 @@ D[138] => IQ[138].DATAIN
 D[139] => IQ[139].DATAIN
 D[140] => IQ[140].DATAIN
 D[141] => IQ[141].DATAIN
+D[142] => IQ[142].DATAIN
 Q[0] <= IQ[0].DB_MAX_OUTPUT_PORT_TYPE
 Q[1] <= IQ[1].DB_MAX_OUTPUT_PORT_TYPE
 Q[2] <= IQ[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -2568,6 +2573,7 @@ Q[138] <= IQ[138].DB_MAX_OUTPUT_PORT_TYPE
 Q[139] <= IQ[139].DB_MAX_OUTPUT_PORT_TYPE
 Q[140] <= IQ[140].DB_MAX_OUTPUT_PORT_TYPE
 Q[141] <= IQ[141].DB_MAX_OUTPUT_PORT_TYPE
+Q[142] <= IQ[142].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |testbench|top:dut|mips:mips1|datapath:dp|sl2:immsh
@@ -3830,6 +3836,7 @@ clock => IQ[67].CLK
 clock => IQ[68].CLK
 clock => IQ[69].CLK
 clock => IQ[70].CLK
+clock => IQ[71].CLK
 clear => IQ[0].ACLR
 clear => IQ[1].ACLR
 clear => IQ[2].ACLR
@@ -3901,6 +3908,8 @@ clear => IQ[67].ACLR
 clear => IQ[68].ACLR
 clear => IQ[69].ACLR
 clear => IQ[70].ACLR
+clear => IQ[71].ACLR
+enable => IQ[71].ENA
 enable => IQ[70].ENA
 enable => IQ[69].ENA
 enable => IQ[68].ENA
@@ -4043,6 +4052,7 @@ D[67] => IQ[67].DATAIN
 D[68] => IQ[68].DATAIN
 D[69] => IQ[69].DATAIN
 D[70] => IQ[70].DATAIN
+D[71] => IQ[71].DATAIN
 Q[0] <= IQ[0].DB_MAX_OUTPUT_PORT_TYPE
 Q[1] <= IQ[1].DB_MAX_OUTPUT_PORT_TYPE
 Q[2] <= IQ[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -4114,6 +4124,7 @@ Q[67] <= IQ[67].DB_MAX_OUTPUT_PORT_TYPE
 Q[68] <= IQ[68].DB_MAX_OUTPUT_PORT_TYPE
 Q[69] <= IQ[69].DB_MAX_OUTPUT_PORT_TYPE
 Q[70] <= IQ[70].DB_MAX_OUTPUT_PORT_TYPE
+Q[71] <= IQ[71].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |testbench|top:dut|mips:mips1|datapath:dp|mux2:resmux
@@ -4249,14 +4260,19 @@ y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 |testbench|top:dut|mips:mips1|datapath:dp|hazarddec:haz
 branch => enablepc.IN0
-branch_id => flushid.IN0
 branch_id => enablepc.IN1
+branch_id => flushid.IN1
+branch_ex => enablepc.IN1
+branch_ex => enableif.IN0
 branch_ex => flushid.IN1
-branch_ex => s_enable1.OUTPUTSELECT
-jump => s_r2.IN0
+pcsrc => enableif.IN1
+pcsrc_mem => enableif.IN1
+pcsrc_mem => flushid.IN1
+jump => s_r2.IN1
 jump => s_r1_rid1.IN0
 jump => s_r1_rex1.IN0
-memwrite => s_r2.IN1
+jumpid => flushid.IN1
+memwrite => s_r2.IN0
 alusrc => s_r2.IN1
 wid => s_r1_rid1.IN1
 wid => s_r2_rid1.IN1
@@ -4314,6 +4330,7 @@ rex[4] => Equal3.IN5
 rex[4] => Equal5.IN5
 enablepc <= enablepc.DB_MAX_OUTPUT_PORT_TYPE
 flushid <= flushid.DB_MAX_OUTPUT_PORT_TYPE
+enableif <= enableif.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |testbench|top:dut|imem:imem1

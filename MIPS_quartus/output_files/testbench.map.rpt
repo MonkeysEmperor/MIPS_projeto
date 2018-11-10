@@ -1,5 +1,5 @@
 Analysis & Synthesis report for testbench
-Fri Nov 09 23:15:27 2018
+Sat Nov 10 19:00:50 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -72,13 +72,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Nov 09 23:15:27 2018       ;
+; Analysis & Synthesis Status     ; Successful - Sat Nov 10 19:00:50 2018       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; testbench                                   ;
 ; Top-level Entity Name           ; testbench                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 398                                         ;
+; Total registers                 ; 404                                         ;
 ; Total pins                      ; 67                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,096                                       ;
@@ -237,16 +237,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 238       ;
+; Estimate of Logic utilization (ALMs needed) ; 246       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 261       ;
+; Combinational ALUT usage for logic          ; 273       ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 50        ;
-;     -- 5 input functions                    ; 25        ;
-;     -- 4 input functions                    ; 65        ;
-;     -- <=3 input functions                  ; 121       ;
+;     -- 6 input functions                    ; 65        ;
+;     -- 5 input functions                    ; 24        ;
+;     -- 4 input functions                    ; 29        ;
+;     -- <=3 input functions                  ; 155       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 398       ;
+; Dedicated logic registers                   ; 404       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 67        ;
 ; Total MLAB memory bits                      ; 0         ;
@@ -255,9 +255,9 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 494       ;
-; Total fan-out                               ; 3602      ;
-; Average fan-out                             ; 4.05      ;
+; Maximum fan-out                             ; 500       ;
+; Total fan-out                               ; 3666      ;
+; Average fan-out                             ; 4.04      ;
 +---------------------------------------------+-----------+
 
 
@@ -266,25 +266,24 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Entity Name     ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |testbench                                         ; 261 (15)            ; 398 (1)                   ; 4096              ; 0          ; 67   ; 0            ; |testbench                                                                                               ; testbench       ; work         ;
-;    |top:dut|                                       ; 246 (0)             ; 397 (0)                   ; 4096              ; 0          ; 0    ; 0            ; |testbench|top:dut                                                                                       ; top             ; work         ;
+; |testbench                                         ; 273 (15)            ; 404 (1)                   ; 4096              ; 0          ; 67   ; 0            ; |testbench                                                                                               ; testbench       ; work         ;
+;    |top:dut|                                       ; 258 (0)             ; 403 (0)                   ; 4096              ; 0          ; 0    ; 0            ; |testbench|top:dut                                                                                       ; top             ; work         ;
 ;       |dmem:dmem1|                                 ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |testbench|top:dut|dmem:dmem1                                                                            ; dmem            ; work         ;
 ;          |altsyncram:mem_rtl_0|                    ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |testbench|top:dut|dmem:dmem1|altsyncram:mem_rtl_0                                                       ; altsyncram      ; work         ;
 ;             |altsyncram_a3n1:auto_generated|       ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |testbench|top:dut|dmem:dmem1|altsyncram:mem_rtl_0|altsyncram_a3n1:auto_generated                        ; altsyncram_a3n1 ; work         ;
 ;       |imem:imem1|                                 ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|imem:imem1                                                                            ; imem            ; work         ;
-;       |mips:mips1|                                 ; 225 (0)             ; 397 (0)                   ; 2048              ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1                                                                            ; mips            ; work         ;
-;          |controller:cont|                         ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|controller:cont                                                            ; controller      ; work         ;
-;             |aludec:ad|                            ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|controller:cont|aludec:ad                                                  ; aludec          ; work         ;
-;             |maindec:md|                           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|controller:cont|maindec:md                                                 ; maindec         ; work         ;
-;          |datapath:dp|                             ; 221 (1)             ; 397 (0)                   ; 2048              ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp                                                                ; datapath        ; work         ;
+;       |mips:mips1|                                 ; 237 (0)             ; 403 (0)                   ; 2048              ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1                                                                            ; mips            ; work         ;
+;          |controller:cont|                         ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|controller:cont                                                            ; controller      ; work         ;
+;             |maindec:md|                           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|controller:cont|maindec:md                                                 ; maindec         ; work         ;
+;          |datapath:dp|                             ; 235 (2)             ; 403 (0)                   ; 2048              ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp                                                                ; datapath        ; work         ;
 ;             |adder:pcadd1|                         ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|adder:pcadd1                                                   ; adder           ; work         ;
 ;             |adder:pcadd2|                         ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|adder:pcadd2                                                   ; adder           ; work         ;
-;             |alu:mainalu|                          ; 112 (112)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|alu:mainalu                                                    ; alu             ; work         ;
-;             |hazarddec:haz|                        ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|hazarddec:haz                                                  ; hazarddec       ; work         ;
-;             |mux2:flush_id_mux|                    ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|mux2:flush_id_mux                                              ; mux2            ; work         ;
-;             |mux2:pcmux|                           ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|mux2:pcmux                                                     ; mux2            ; work         ;
+;             |alu:mainalu|                          ; 111 (111)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|alu:mainalu                                                    ; alu             ; work         ;
+;             |hazarddec:haz|                        ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|hazarddec:haz                                                  ; hazarddec       ; work         ;
+;             |mux2:flush_id_mux|                    ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|mux2:flush_id_mux                                              ; mux2            ; work         ;
+;             |mux2:pcmux|                           ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|mux2:pcmux                                                     ; mux2            ; work         ;
 ;             |mux2:resmux|                          ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|mux2:resmux                                                    ; mux2            ; work         ;
-;             |mux2:srcbmux|                         ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|mux2:srcbmux                                                   ; mux2            ; work         ;
+;             |mux2:srcbmux|                         ; 31 (31)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|mux2:srcbmux                                                   ; mux2            ; work         ;
 ;             |mux2:wrmux|                           ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|mux2:wrmux                                                     ; mux2            ; work         ;
 ;             |regfile:rf|                           ; 2 (2)               ; 131 (131)                 ; 2048              ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|regfile:rf                                                     ; regfile         ; work         ;
 ;                |altsyncram:mem_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|regfile:rf|altsyncram:mem_rtl_0                                ; altsyncram      ; work         ;
@@ -292,9 +291,9 @@ refer to the applicable agreement for further details.
 ;                |altsyncram:mem_rtl_1|              ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|regfile:rf|altsyncram:mem_rtl_1                                ; altsyncram      ; work         ;
 ;                   |altsyncram_blk1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|regfile:rf|altsyncram:mem_rtl_1|altsyncram_blk1:auto_generated ; altsyncram_blk1 ; work         ;
 ;             |registrador_n:ex_reg|                 ; 0 (0)               ; 74 (74)                   ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|registrador_n:ex_reg                                           ; registrador_n   ; work         ;
-;             |registrador_n:id_reg|                 ; 0 (0)               ; 90 (90)                   ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|registrador_n:id_reg                                           ; registrador_n   ; work         ;
+;             |registrador_n:id_reg|                 ; 0 (0)               ; 95 (95)                   ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|registrador_n:id_reg                                           ; registrador_n   ; work         ;
 ;             |registrador_n:if_reg|                 ; 0 (0)               ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|registrador_n:if_reg                                           ; registrador_n   ; work         ;
-;             |registrador_n:mem_reg|                ; 0 (0)               ; 70 (70)                   ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|registrador_n:mem_reg                                          ; registrador_n   ; work         ;
+;             |registrador_n:mem_reg|                ; 0 (0)               ; 71 (71)                   ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|registrador_n:mem_reg                                          ; registrador_n   ; work         ;
 ;             |registrador_n:pcreg|                  ; 0 (0)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|registrador_n:pcreg                                            ; registrador_n   ; work         ;
 ;             |signext:se|                           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |testbench|top:dut|mips:mips1|datapath:dp|signext:se                                                     ; signext         ; work         ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------+-----------------+--------------+
@@ -321,6 +320,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; top:dut|mips:mips1|datapath:dp|registrador_n:pcreg|IQ[1]             ; Merged with top:dut|mips:mips1|datapath:dp|registrador_n:pcreg|IQ[0]    ;
 ; top:dut|mips:mips1|datapath:dp|registrador_n:id_reg|IQ[103]          ; Merged with top:dut|mips:mips1|datapath:dp|registrador_n:id_reg|IQ[102] ;
 ; top:dut|mips:mips1|datapath:dp|registrador_n:if_reg|IQ[33]           ; Merged with top:dut|mips:mips1|datapath:dp|registrador_n:if_reg|IQ[32]  ;
+; top:dut|mips:mips1|datapath:dp|registrador_n:if_reg|IQ[26]           ; Merged with top:dut|mips:mips1|datapath:dp|registrador_n:if_reg|IQ[31]  ;
 ; top:dut|mips:mips1|datapath:dp|registrador_n:if_reg|IQ[19,20,24]     ; Merged with top:dut|mips:mips1|datapath:dp|registrador_n:if_reg|IQ[25]  ;
 ; top:dut|mips:mips1|datapath:dp|registrador_n:if_reg|IQ[7..10,14]     ; Merged with top:dut|mips:mips1|datapath:dp|registrador_n:if_reg|IQ[15]  ;
 ; top:dut|mips:mips1|datapath:dp|registrador_n:if_reg|IQ[5]            ; Merged with top:dut|mips:mips1|datapath:dp|registrador_n:if_reg|IQ[13]  ;
@@ -333,7 +333,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; top:dut|mips:mips1|datapath:dp|registrador_n:pcreg|IQ[0,8..30]       ; Lost fanout                                                             ;
 ; top:dut|mips:mips1|datapath:dp|registrador_n:id_reg|IQ[102,110..132] ; Lost fanout                                                             ;
 ; top:dut|mips:mips1|datapath:dp|registrador_n:if_reg|IQ[32,40..62]    ; Lost fanout                                                             ;
-; Total Number of Removed Registers = 109                              ;                                                                         ;
+; Total Number of Removed Registers = 110                              ;                                                                         ;
 +----------------------------------------------------------------------+-------------------------------------------------------------------------+
 
 
@@ -399,10 +399,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 398   ;
+; Total registers                              ; 404   ;
 ; Number of registers using Synchronous Clear  ; 68    ;
 ; Number of registers using Synchronous Load   ; 64    ;
-; Number of registers using Asynchronous Clear ; 268   ;
+; Number of registers using Asynchronous Clear ; 274   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 98    ;
 ; Number of registers using Preset             ; 0     ;
@@ -418,18 +418,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+------------------------------+------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |testbench|top:dut|mips:mips1|datapath:dp|registrador_n:pcreg|IQ[27] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; Yes        ; |testbench|top:dut|mips:mips1|datapath:dp|registrador_n:pcreg|IQ[28] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |testbench|top:dut|mips:mips1|datapath:dp|regfile:rf|rd2[3]          ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |testbench|top:dut|mips:mips1|datapath:dp|regfile:rf|rd1[1]          ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |testbench|top:dut|mips:mips1|controller:cont|aludec:ad|Mux1         ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |testbench|top:dut|mips:mips1|datapath:dp|alu:mainalu|Mux1           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |testbench|top:dut|mips:mips1|datapath:dp|registrador_n:pcreg|IQ[22]   ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; Yes        ; |testbench|top:dut|mips:mips1|datapath:dp|registrador_n:pcreg|IQ[25]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |testbench|top:dut|mips:mips1|datapath:dp|regfile:rf|rd2[1]            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |testbench|top:dut|mips:mips1|datapath:dp|regfile:rf|rd1[4]            ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |testbench|top:dut|mips:mips1|datapath:dp|registrador_n:id_reg|IQ[140] ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |testbench|top:dut|mips:mips1|datapath:dp|alu:mainalu|Mux0             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------+
@@ -514,7 +514,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                 ;
 +----------------+-------+----------------------------------------------------------------------+
-; width          ; 9     ; Signed Integer                                                       ;
+; width          ; 10    ; Signed Integer                                                       ;
 +----------------+-------+----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -524,7 +524,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                    ;
 +----------------+-------+-------------------------------------------------------------------------+
-; n              ; 142   ; Signed Integer                                                          ;
+; n              ; 143   ; Signed Integer                                                          ;
 +----------------+-------+-------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -554,7 +554,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                     ;
 +----------------+-------+--------------------------------------------------------------------------+
-; n              ; 71    ; Signed Integer                                                           ;
+; n              ; 72    ; Signed Integer                                                           ;
 +----------------+-------+--------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -813,14 +813,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "top:dut|mips:mips1|datapath:dp|registrador_n:id_reg"                                       ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; enable      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; q[141..138] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:dut|mips:mips1|datapath:dp|registrador_n:id_reg" ;
++--------+-------+----------+-----------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                             ;
++--------+-------+----------+-----------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                        ;
++--------+-------+----------+-----------------------------------------------------+
 
 
 +------------------------------------------------------------------------------+
@@ -867,24 +866,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 398                         ;
-;     CLR               ; 234                         ;
+; arriav_ff             ; 404                         ;
+;     CLR               ; 240                         ;
 ;     ENA               ; 64                          ;
 ;     ENA CLR           ; 30                          ;
 ;     ENA CLR SCLR      ; 4                           ;
 ;     SCLR SLD          ; 64                          ;
 ;     plain             ; 2                           ;
-; arriav_lcell_comb     ; 261                         ;
+; arriav_lcell_comb     ; 273                         ;
 ;     arith             ; 12                          ;
 ;         1 data inputs ; 6                           ;
 ;         2 data inputs ; 6                           ;
-;     normal            ; 217                         ;
+;     normal            ; 229                         ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 69                          ;
-;         4 data inputs ; 65                          ;
-;         5 data inputs ; 25                          ;
-;         6 data inputs ; 50                          ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 106                         ;
+;         4 data inputs ; 29                          ;
+;         5 data inputs ; 24                          ;
+;         6 data inputs ; 65                          ;
 ;     shared            ; 32                          ;
 ;         0 data inputs ; 1                           ;
 ;         3 data inputs ; 31                          ;
@@ -892,7 +891,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 96                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.10                        ;
-; Average LUT depth     ; 2.78                        ;
+; Average LUT depth     ; 2.74                        ;
 +-----------------------+-----------------------------+
 
 
@@ -911,12 +910,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Nov 09 23:14:59 2018
+    Info: Processing started: Sat Nov 10 19:00:28 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_projeto -c testbench
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file hazzarddec.vhd
-    Info (12022): Found design unit 1: hazarddec-hazarddec_arc File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/hazzarddec.vhd Line: 13
+    Info (12022): Found design unit 1: hazarddec-hazarddec_arc File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/hazzarddec.vhd Line: 14
     Info (12023): Found entity 1: hazarddec File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/hazzarddec.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file registrador_n.vhd
     Info (12022): Found design unit 1: registrador_n-registrador_n File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/registrador_n.vhd Line: 16
@@ -978,20 +977,20 @@ Info (12128): Elaborating entity "controller" for hierarchy "top:dut|mips:mips1|
 Info (12128): Elaborating entity "maindec" for hierarchy "top:dut|mips:mips1|controller:cont|maindec:md" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/controller.vhd Line: 31
 Info (12128): Elaborating entity "aludec" for hierarchy "top:dut|mips:mips1|controller:cont|aludec:ad" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/controller.vhd Line: 33
 Info (12128): Elaborating entity "datapath" for hierarchy "top:dut|mips:mips1|datapath:dp" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/mips.vhd Line: 45
-Info (12128): Elaborating entity "mux2" for hierarchy "top:dut|mips:mips1|datapath:dp|mux2:pcbrmux" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 97
-Info (12128): Elaborating entity "registrador_n" for hierarchy "top:dut|mips:mips1|datapath:dp|registrador_n:pcreg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 105
-Info (12128): Elaborating entity "adder" for hierarchy "top:dut|mips:mips1|datapath:dp|adder:pcadd1" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 111
-Info (12128): Elaborating entity "registrador_n" for hierarchy "top:dut|mips:mips1|datapath:dp|registrador_n:if_reg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 116
-Info (12128): Elaborating entity "mux2" for hierarchy "top:dut|mips:mips1|datapath:dp|mux2:wrmux" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 126
-Info (12128): Elaborating entity "regfile" for hierarchy "top:dut|mips:mips1|datapath:dp|regfile:rf" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 132
-Info (12128): Elaborating entity "signext" for hierarchy "top:dut|mips:mips1|datapath:dp|signext:se" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 139
-Info (12128): Elaborating entity "mux2" for hierarchy "top:dut|mips:mips1|datapath:dp|mux2:flush_id_mux" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 146
-Info (12128): Elaborating entity "registrador_n" for hierarchy "top:dut|mips:mips1|datapath:dp|registrador_n:id_reg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 158
-Info (12128): Elaborating entity "sl2" for hierarchy "top:dut|mips:mips1|datapath:dp|sl2:immsh" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 167
-Info (12128): Elaborating entity "alu" for hierarchy "top:dut|mips:mips1|datapath:dp|alu:mainalu" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 178
-Info (12128): Elaborating entity "registrador_n" for hierarchy "top:dut|mips:mips1|datapath:dp|registrador_n:ex_reg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 185
-Info (12128): Elaborating entity "registrador_n" for hierarchy "top:dut|mips:mips1|datapath:dp|registrador_n:mem_reg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 201
-Info (12128): Elaborating entity "hazarddec" for hierarchy "top:dut|mips:mips1|datapath:dp|hazarddec:haz" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 216
+Info (12128): Elaborating entity "mux2" for hierarchy "top:dut|mips:mips1|datapath:dp|mux2:pcbrmux" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 99
+Info (12128): Elaborating entity "registrador_n" for hierarchy "top:dut|mips:mips1|datapath:dp|registrador_n:pcreg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 107
+Info (12128): Elaborating entity "adder" for hierarchy "top:dut|mips:mips1|datapath:dp|adder:pcadd1" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 113
+Info (12128): Elaborating entity "registrador_n" for hierarchy "top:dut|mips:mips1|datapath:dp|registrador_n:if_reg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 118
+Info (12128): Elaborating entity "mux2" for hierarchy "top:dut|mips:mips1|datapath:dp|mux2:wrmux" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 128
+Info (12128): Elaborating entity "regfile" for hierarchy "top:dut|mips:mips1|datapath:dp|regfile:rf" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 134
+Info (12128): Elaborating entity "signext" for hierarchy "top:dut|mips:mips1|datapath:dp|signext:se" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 141
+Info (12128): Elaborating entity "mux2" for hierarchy "top:dut|mips:mips1|datapath:dp|mux2:flush_id_mux" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 149
+Info (12128): Elaborating entity "registrador_n" for hierarchy "top:dut|mips:mips1|datapath:dp|registrador_n:id_reg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 161
+Info (12128): Elaborating entity "sl2" for hierarchy "top:dut|mips:mips1|datapath:dp|sl2:immsh" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 170
+Info (12128): Elaborating entity "alu" for hierarchy "top:dut|mips:mips1|datapath:dp|alu:mainalu" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 181
+Info (12128): Elaborating entity "registrador_n" for hierarchy "top:dut|mips:mips1|datapath:dp|registrador_n:ex_reg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 188
+Info (12128): Elaborating entity "registrador_n" for hierarchy "top:dut|mips:mips1|datapath:dp|registrador_n:mem_reg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 204
+Info (12128): Elaborating entity "hazarddec" for hierarchy "top:dut|mips:mips1|datapath:dp|hazarddec:haz" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 219
 Info (12128): Elaborating entity "imem" for hierarchy "top:dut|imem:imem1" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/top.vhd Line: 36
 Warning (10541): VHDL Signal Declaration warning at imem.vhd(13): used implicit default value for signal "memoria" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/imem.vhd Line: 13
 Info (12128): Elaborating entity "dmem" for hierarchy "top:dut|dmem:dmem1" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/top.vhd Line: 37
@@ -1088,15 +1087,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 72 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 760 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 773 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 65 output pins
-    Info (21061): Implemented 597 logic cells
+    Info (21061): Implemented 610 logic cells
     Info (21064): Implemented 96 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4877 megabytes
-    Info: Processing ended: Fri Nov 09 23:15:27 2018
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:53
+    Info: Peak virtual memory: 4879 megabytes
+    Info: Processing ended: Sat Nov 10 19:00:50 2018
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:45
 
 

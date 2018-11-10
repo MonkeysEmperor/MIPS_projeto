@@ -5,3 +5,5 @@ ActiveDocument=1
 TemplateId=0
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\MIPS_design\src/aludec.vhd|]
 TemplateId=0
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\MIPS_design\src/testbench.vhd|]
+TemplateId=0
