@@ -9,6 +9,7 @@ C:\Aldec\Active-HDL-Student-Edition\vlib\ieee/src/numeric_std_unsigned.vhdl=S
 C:\Aldec\Active-HDL-Student-Edition\vlib\ieee/src/numeric_std_unsigned-body.vhdl=S
 C:\Aldec\Active-HDL-Student-Edition\vlib\ieee/src/arith_p.vhd=S
 C:\Aldec\Active-HDL-Student-Edition\vlib\ieee/src/arith_b.vhd=S
+C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline/src/hazzarddec.vhd=S
 C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline/src/mux2.vhd=S
 C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline/src/registrador_n.vhd=S
 C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline/src/alu.vhd=S
@@ -16,7 +17,6 @@ C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline/src/adder
 C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline/src/sl2.vhd=S
 C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline/src/signext.vhd=S
 C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline/src/regfile.vhd=S
-C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline/src/flopr.vhd=S
 C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline/src/aludec.vhd=S
 C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline/src/maindec.vhd=S
 C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_pipeline/src/datapath.vhd=S

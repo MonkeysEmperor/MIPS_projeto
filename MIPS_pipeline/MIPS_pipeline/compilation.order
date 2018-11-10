@@ -1,12 +1,12 @@
-.\src\imem.vhd
+.\src\dmem.vhd
 .\src\regfile.vhd
 .\src\signext.vhd
 .\src\sl2.vhd
 .\src\registrador_n.vhd
-.\src\mux2.vhd
 .\src\maindec.vhd
-.\src\dmem.vhd
-.\src\flopr.vhd
+.\src\mux2.vhd
+.\src\imem.vhd
+.\src\hazzarddec.vhd
 .\src\alu.vhd
 .\src\aludec.vhd
 .\src\adder.vhd

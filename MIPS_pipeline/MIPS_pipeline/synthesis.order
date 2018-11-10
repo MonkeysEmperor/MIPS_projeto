@@ -4,7 +4,6 @@ i<>.\src\aludec.vhd
 i<>.\src\controller.vhd
 i<>.\src\datapath.vhd
 i<>.\src\dmem.vhd
-i<>.\src\flopr.vhd
 i<>.\src\imem.vhd
 i<>.\src\maindec.vhd
 i<>.\src\mips.vhd
@@ -15,3 +14,4 @@ i<>.\src\signext.vhd
 i<>.\src\sl2.vhd
 i<>.\src\testbench.vhd
 i<>.\src\top.vhd
+i<>.\src\hazzarddec.vhd

@@ -1,5 +1,5 @@
 Flow report for testbench
-Fri Nov 09 13:01:23 2018
+Fri Nov 09 23:17:20 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Nov 09 13:01:08 2018       ;
+; Flow Status                     ; Successful - Fri Nov 09 23:17:05 2018       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; testbench                                   ;
 ; Top-level Entity Name           ; testbench                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 181 / 56,480 ( < 1 % )                      ;
-; Total registers                 ; 389                                         ;
+; Logic utilization (in ALMs)     ; 188 / 56,480 ( < 1 % )                      ;
+; Total registers                 ; 416                                         ;
 ; Total pins                      ; 67 / 268 ( 25 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,096 / 7,024,640 ( < 1 % )                 ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/09/2018 12:59:05 ;
+; Start date & time ; 11/09/2018 23:15:00 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; testbench           ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 190016747820913.154177554505880        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 190016747820913.154181250004908        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -95,11 +95,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4878 MB             ; 00:00:43                           ;
-; Fitter               ; 00:01:27     ; 1.0                     ; 6444 MB             ; 00:02:26                           ;
-; Assembler            ; 00:00:11     ; 1.0                     ; 4838 MB             ; 00:00:11                           ;
-; Timing Analyzer      ; 00:00:14     ; 1.1                     ; 5224 MB             ; 00:00:14                           ;
-; Total                ; 00:02:13     ; --                      ; --                  ; 00:03:34                           ;
+; Analysis & Synthesis ; 00:00:27     ; 1.0                     ; 4877 MB             ; 00:00:52                           ;
+; Fitter               ; 00:01:22     ; 1.0                     ; 6442 MB             ; 00:02:18                           ;
+; Assembler            ; 00:00:12     ; 1.0                     ; 4835 MB             ; 00:00:12                           ;
+; Timing Analyzer      ; 00:00:14     ; 1.1                     ; 5224 MB             ; 00:00:15                           ;
+; Total                ; 00:02:15     ; --                      ; --                  ; 00:03:37                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

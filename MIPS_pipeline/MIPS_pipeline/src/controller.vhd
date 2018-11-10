@@ -10,7 +10,6 @@ entity controller is -- single cycle control decoder
        alucontrol:         out STD_LOGIC_VECTOR(2 downto 0));
 end;
 
-
 architecture struct of controller is
   component maindec
     port(op:                 in  STD_LOGIC_VECTOR(5 downto 0);

@@ -31,16 +31,18 @@ architecture struct of mips is
          pc:                buffer STD_LOGIC_VECTOR(31 downto 0);
          instr:             in STD_LOGIC_VECTOR(31 downto 0);
          aluout, writedata: buffer STD_LOGIC_VECTOR(31 downto 0);
-         readdata:          in  STD_LOGIC_VECTOR(31 downto 0));
+         readdata:          in  STD_LOGIC_VECTOR(31 downto 0);
+		 op, funct:         out std_logic_vector(5 downto 0));
   end component;
   
   signal memtoreg, alusrc, regdst, regwrite, jump, branch, s_c, s_memwrite: STD_LOGIC;
   signal alucontrol: STD_LOGIC_VECTOR(2 downto 0);
+  signal s_op, s_funct: std_logic_vector(5 downto 0);
 begin
-  cont: controller port map(instr(31 downto 26), instr(5 downto 0),
+  cont: controller port map(s_op, s_funct,
   							memtoreg, s_memwrite, branch, alusrc, s_c,
                             regdst, regwrite, jump, alucontrol);
   dp: datapath port map(clk, reset, s_c, memtoreg, branch, alusrc, regdst,
                         regwrite, jump, s_memwrite, memwrite, alucontrol, pc, instr,
-                        aluout, writedata, readdata);
+                        aluout, writedata, readdata, s_op, s_funct);
 end;

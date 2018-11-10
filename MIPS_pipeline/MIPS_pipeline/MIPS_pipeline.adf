@@ -38,15 +38,15 @@ MIPS_pipeline=.
 Active_lib=
 
 [Files]
-/imem.vhd=-1
+/dmem.vhd=-1
 /regfile.vhd=-1
 /signext.vhd=-1
 /sl2.vhd=-1
 /registrador_n.vhd=-1
-/mux2.vhd=-1
 /maindec.vhd=-1
-/dmem.vhd=-1
-/flopr.vhd=-1
+/mux2.vhd=-1
+/imem.vhd=-1
+/hazzarddec.vhd=-1
 /alu.vhd=-1
 /aludec.vhd=-1
 /adder.vhd=-1
@@ -55,17 +55,18 @@ Active_lib=
 /mips.vhd=-1
 /top.vhd=-1
 /testbench.vhd=-1
+/TestbenchSimulation.awc=-1
 
 [Files.Data]
-.\src\imem.vhd=VHDL Source Code
+.\src\dmem.vhd=VHDL Source Code
 .\src\regfile.vhd=VHDL Source Code
 .\src\signext.vhd=VHDL Source Code
 .\src\sl2.vhd=VHDL Source Code
 .\src\registrador_n.vhd=VHDL Source Code
-.\src\mux2.vhd=VHDL Source Code
 .\src\maindec.vhd=VHDL Source Code
-.\src\dmem.vhd=VHDL Source Code
-.\src\flopr.vhd=VHDL Source Code
+.\src\mux2.vhd=VHDL Source Code
+.\src\imem.vhd=VHDL Source Code
+.\src\hazzarddec.vhd=VHDL Source Code
 .\src\alu.vhd=VHDL Source Code
 .\src\aludec.vhd=VHDL Source Code
 .\src\adder.vhd=VHDL Source Code
@@ -74,4 +75,5 @@ Active_lib=
 .\src\mips.vhd=VHDL Source Code
 .\src\top.vhd=VHDL Source Code
 .\src\testbench.vhd=VHDL Source Code
+.\src\TestbenchSimulation.awc=Accelerated Waveform Configuration
 
