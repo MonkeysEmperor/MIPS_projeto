@@ -14,10 +14,10 @@ begin
 	s_1 <= X"ffff" & a;	
 	
 	with a(15) select
-		s_temp 	<= s_1 when '1',
-						s_0 when others;
+		s_temp 	<= s_1 		when '1', 
+						s_0 		when '0';
 	
-	with c select	
-		y <= 	s_0 when '1', 
-				s_temp when others;
+	with c select
+		y 			<= s_0 		when '1',
+						s_temp	when '0';
 end;

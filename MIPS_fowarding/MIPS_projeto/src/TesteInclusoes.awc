@@ -1,0 +1,47 @@
+<config>
+    <version>
+        2.1
+    </version>
+    <comment>
+    </comment>
+    <databases>
+        <database id="">*virtual*</database>
+        <database id="f8a9636154f9309bdf5bc1ab3b6c1100">wave.asdb</database>
+    </databases>
+    <signallists>
+        <signallist id="0">
+        <signal>/testbench/clk</signal>
+        <signal>/testbench/reset</signal>
+        <signal>/testbench/dut/mips1/pc</signal>
+        <signal>/testbench/dut/mips1/instr</signal>
+        <signal>/testbench/dut/mips1/dp/aluout</signal>
+        <signal>/testbench/writedata</signal>
+        <signal>/testbench/memwrite</signal>
+        <signal>/testbench/dut/mips1/readdata</signal>
+        </signallist>
+    </signallists>
+    <prefbases>
+        <prefbase id="0" >
+            <pref name="End Time" value="163389" />
+            <pref name="Start Time" value="0" />
+        </prefbase>
+    </prefbases>
+    <bookmarkbases>
+        <bookmarks id="0">
+        </bookmarks>
+    </bookmarkbases>
+    <cursorbases>
+        <cursors id="0">
+            <cursor value="125000" label="Cursor 1" locked="0" />
+        </cursors>
+    </cursorbases>
+    <measurementbases>
+    </measurementbases>
+    <commentbases>
+        <comments id="0">
+        </comments>
+    </commentbases>
+    <views>
+        <view signallist="0" propertybase="0" prefbase="0" type="1" bookmarks="0" cursors="0" measurements="-1" comments="-1" />
+    </views>
+</config>

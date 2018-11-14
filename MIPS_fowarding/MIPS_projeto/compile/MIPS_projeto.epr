@@ -1,0 +1,18 @@
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\dmem.vhd" VHDL MIPS_projeto 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\regfile.vhd" VHDL MIPS_projeto 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\signext.vhd" VHDL MIPS_projeto 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\sl2.vhd" VHDL MIPS_projeto 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\registrador_n.vhd" VHDL MIPS_projeto 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\registrador_1.vhd" VHDL MIPS_projeto 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\maindec.vhd" VHDL MIPS_projeto 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\mux2.vhd" VHDL MIPS_projeto 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\imem.vhd" VHDL MIPS_projeto 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\alu.vhd" VHDL MIPS_projeto 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\aludec.vhd" VHDL MIPS_projeto 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\adder.vhd" VHDL MIPS_projeto 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\datapath.vhd" VHDL MIPS_projeto 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\controller.vhd" VHDL MIPS_projeto 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\mips.vhd" VHDL MIPS_projeto 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\top.vhd" VHDL MIPS_projeto 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\testbench.vhd" VHDL MIPS_projeto 1 0 0 -02 -08
+. . 0 0 0
