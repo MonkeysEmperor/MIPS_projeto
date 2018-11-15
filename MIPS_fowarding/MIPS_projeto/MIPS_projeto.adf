@@ -64,6 +64,7 @@ Selected=
 /top.vhd=-1
 /testbench.vhd=-1
 /memfile.dat=-1
+/fowardingdemuc.vhd=-1
 
 [Files.Data]
 .\src\dmem.vhd=VHDL Source Code
@@ -85,3 +86,4 @@ Selected=
 .\src\testbench.vhd=VHDL Source Code
 .\src\memfile.dat=External File
 
+.\src\fowardingdemuc.vhd=VHDL Source Code

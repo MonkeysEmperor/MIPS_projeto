@@ -1,5 +1,5 @@
 Analysis & Synthesis report for testbench
-Wed Nov 14 04:38:18 2018
+Thu Nov 15 02:58:53 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -23,24 +23,36 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  15. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:pcmux2
  16. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:pcmux3
  17. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|registrador_n:pcreg
- 18. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|registrador_n:IF_reg
- 19. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:wrmux
- 20. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:pcrecovermux
- 21. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|registrador_n:ID_reg
- 22. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:resmux
- 23. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:srcbmux
- 24. Parameter Settings for Inferred Entity Instance: dmem:dmem1|altsyncram:mem_rtl_0
- 25. altsyncram Parameter Settings by Entity Instance
- 26. Port Connectivity Checks: "mips:mips1|datapath:dp|alu:mainalu"
- 27. Port Connectivity Checks: "mips:mips1|datapath:dp|registrador_n:ID_reg"
- 28. Port Connectivity Checks: "mips:mips1|datapath:dp|registrador_1:previewreg"
- 29. Port Connectivity Checks: "mips:mips1|datapath:dp|registrador_n:pcreg"
- 30. Port Connectivity Checks: "mips:mips1|datapath:dp|mux2:pcmux2"
- 31. Port Connectivity Checks: "mips:mips1|datapath:dp|adder:pcadd1"
- 32. Port Connectivity Checks: "mips:mips1"
- 33. Post-Synthesis Netlist Statistics for Top Partition
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
+ 18. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:flushifmux
+ 19. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|registrador_n:IF_reg
+ 20. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:wrmux
+ 21. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:pcrecovermux
+ 22. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:flushidmux
+ 23. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|registrador_n:ID_reg
+ 24. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:afowaerdingmux1
+ 25. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:aforwardingmux2
+ 26. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:bfowaerdingmux1
+ 27. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:bforwardingmux2
+ 28. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:srcbmux
+ 29. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:flushexmux
+ 30. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|registrador_n:EX_reg
+ 31. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|registrador_n:MEM_reg
+ 32. Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:resmux
+ 33. Parameter Settings for Inferred Entity Instance: dmem:dmem1|altsyncram:mem_rtl_0
+ 34. altsyncram Parameter Settings by Entity Instance
+ 35. Port Connectivity Checks: "mips:mips1|datapath:dp|registrador_n:MEM_reg"
+ 36. Port Connectivity Checks: "mips:mips1|datapath:dp|registrador_n:EX_reg"
+ 37. Port Connectivity Checks: "mips:mips1|datapath:dp|mux2:flushexmux"
+ 38. Port Connectivity Checks: "mips:mips1|datapath:dp|adder:pcrecoveradder"
+ 39. Port Connectivity Checks: "mips:mips1|datapath:dp|registrador_n:ID_reg"
+ 40. Port Connectivity Checks: "mips:mips1|datapath:dp|mux2:flushidmux"
+ 41. Port Connectivity Checks: "mips:mips1|datapath:dp|mux2:flushifmux"
+ 42. Port Connectivity Checks: "mips:mips1|datapath:dp|mux2:pcmux2"
+ 43. Port Connectivity Checks: "mips:mips1|datapath:dp|adder:pcadd1"
+ 44. Port Connectivity Checks: "mips:mips1"
+ 45. Post-Synthesis Netlist Statistics for Top Partition
+ 46. Elapsed Time Per Partition
+ 47. Analysis & Synthesis Messages
 
 
 
@@ -66,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Nov 14 04:38:18 2018       ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov 15 02:58:53 2018       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; testbench                                   ;
 ; Top-level Entity Name           ; top                                         ;
@@ -260,102 +272,522 @@ refer to the applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                          ;
-+-------------------------------------------------------------------------------+---------------------------------------------+
-; Register name                                                                 ; Reason for Removal                          ;
-+-------------------------------------------------------------------------------+---------------------------------------------+
-; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[19,20,24,25]                   ; Stuck at GND due to stuck port data_in      ;
-; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[0,1]                            ; Stuck at GND due to stuck port data_in      ;
-; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[32,33]                         ; Stuck at GND due to stuck port data_in      ;
-; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[0..18,21..23,27..29,31,34..62] ; Stuck at GND due to stuck port clock_enable ;
-; mips:mips1|datapath:dp|registrador_1:previewreg|IQ                            ; Stuck at GND due to stuck port data_in      ;
-; mips:mips1|datapath:dp|regfile:rf|wc                                          ; Lost fanout                                 ;
-; mips:mips1|datapath:dp|regfile:rf|rd2[0..31]                                  ; Stuck at GND due to stuck port sclear       ;
-; mips:mips1|datapath:dp|regfile:rf|rd1[0..31]                                  ; Stuck at GND due to stuck port sclear       ;
-; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[2..30]                          ; Lost fanout                                 ;
-; Total Number of Removed Registers = 158                                       ;                                             ;
-+-------------------------------------------------------------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                             ;
++------------------------------------------------------------------+---------------------------------------------+
+; Register name                                                    ; Reason for Removal                          ;
++------------------------------------------------------------------+---------------------------------------------+
+; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[19,20,24,25]      ; Stuck at GND due to stuck port data_in      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[143..145,147]     ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[104]              ; Stuck at GND due to stuck port data_in      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[151]              ; Stuck at GND due to stuck port data_in      ;
+; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[102,103,106]      ; Stuck at GND due to stuck port data_in      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[5..36]            ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[69,70]           ; Stuck at GND due to stuck port data_in      ;
+; mips:mips1|datapath:dp|registrador_1:previewreg|IQ               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[31]               ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[37..68]          ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[60..62]           ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|regfile:rf|wc                             ; Stuck at GND due to stuck port data_in      ;
+; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[0,1]               ; Stuck at GND due to stuck port data_in      ;
+; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[32,33]            ; Stuck at GND due to stuck port data_in      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[37]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[0]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[38]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[1]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[39]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[2]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[40]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[3]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[41]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[4]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[42]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[5]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[43]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[6]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[44]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[7]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[45]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[8]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[46]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[9]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[47]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[10]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[48]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[11]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[49]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[12]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[50]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[13]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[51]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[14]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[52]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[15]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[53]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[16]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[54]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[17]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[55]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[18]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[56]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[19]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[57]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[20]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[58]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[21]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[59]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[22]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[60]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[23]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[61]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[24]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[62]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[25]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[63]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[26]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[64]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[27]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[65]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[28]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[66]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[29]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[67]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[30]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[68]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd2[31]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[69]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[0]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[70,148,149]       ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[1]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[71]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[2]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[72]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[3]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[73]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[4]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[74]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[5]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[75]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[6]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[76]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[7]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[77]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[8]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[78]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[9]                         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[79]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[10]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[80]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[11]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[81]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[12]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[82]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[13]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[83]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[14]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[84]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[15]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[85]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[16]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[86]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[17]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[87]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[18]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[88]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[19]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[89]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[20]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[90]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[21]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[91]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[22]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[92]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[23]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[93]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[24]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[94]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[25]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[95]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[26]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[96]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[27]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[97]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[28]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[98]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[29]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[99]               ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[30]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[100]              ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|regfile:rf|rd1[31]                        ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[0,5..36]         ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[0]                ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[0]                ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[1]               ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[1]                ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[1]                ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[2]               ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[2]                ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[2]                ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[3]               ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[3]                ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[3]                ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[4]               ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[4]                ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[4]                ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[16..18,21..23,27] ; Lost fanout                                 ;
+; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[0,3,28,29]        ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[150]              ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[2..7]              ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[1,2,4..15,34..59] ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[8..30]             ; Stuck at GND due to stuck port clock_enable ;
+; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[5..68]            ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 411                          ;                                             ;
++------------------------------------------------------------------+---------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                               ;
-+----------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
-; Register name                                      ; Reason for Removal             ; Registers Removed due to This Register                                              ;
-+----------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
-; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[20] ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[5], mips:mips1|datapath:dp|regfile:rf|rd2[6], ;
-;                                                    ; due to stuck port data_in      ; mips:mips1|datapath:dp|regfile:rf|rd2[7], mips:mips1|datapath:dp|regfile:rf|rd2[8], ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[9],                                           ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[10],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[11],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[12],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[13],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[14],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[15],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[16],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[17],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[18],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[19],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[20],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[21],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[22],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[23],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[24],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[25],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[26],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[27],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[28],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[29],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[30],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd2[31],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[0], mips:mips1|datapath:dp|regfile:rf|rd1[1], ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[2], mips:mips1|datapath:dp|regfile:rf|rd1[3], ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[4], mips:mips1|datapath:dp|regfile:rf|rd1[5], ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[6], mips:mips1|datapath:dp|regfile:rf|rd1[7], ;
-;                                                    ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[2],                                   ;
-;                                                    ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[3]                                    ;
-; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[23] ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[9],                                           ;
-;                                                    ; due to stuck port clock_enable ; mips:mips1|datapath:dp|regfile:rf|rd1[10],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[11],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[12],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[13],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[14],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[15],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[16],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[17],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[18],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[19],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[20],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[21],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[22],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[23],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[24],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[25],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[26],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[27],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[28],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[29],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[30],                                          ;
-;                                                    ;                                ; mips:mips1|datapath:dp|regfile:rf|rd1[31]                                           ;
-; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[0]   ; Stuck at GND                   ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[32],                                 ;
-;                                                    ; due to stuck port data_in      ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[34],                                 ;
-;                                                    ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[35],                                 ;
-;                                                    ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[36],                                 ;
-;                                                    ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[37],                                 ;
-;                                                    ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[38],                                 ;
-;                                                    ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[39],                                 ;
-;                                                    ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[40],                                 ;
-;                                                    ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[41],                                 ;
-;                                                    ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[42],                                 ;
-;                                                    ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[4]                                    ;
-; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[0]  ; Stuck at GND                   ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[5],                                   ;
-;                                                    ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[6],                                   ;
-;                                                    ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[7]                                    ;
-; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[1]   ; Stuck at GND                   ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[33]                                  ;
-;                                                    ; due to stuck port data_in      ;                                                                                     ;
-; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[18] ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[8]                                            ;
-;                                                    ; due to stuck port clock_enable ;                                                                                     ;
-+----------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                 ;
++-----------------------------------------------------+--------------------------------+------------------------------------------------------+
+; Register name                                       ; Reason for Removal             ; Registers Removed due to This Register               ;
++-----------------------------------------------------+--------------------------------+------------------------------------------------------+
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[151] ; Stuck at GND                   ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[19],  ;
+;                                                     ; due to stuck port data_in      ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[20],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[35],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[18],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[17],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[16],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[15],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[14],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[13],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[12],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[11],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[10],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[9],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[8],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[7],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[6],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[5],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[22],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[23],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[24],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[25],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[21],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[26],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[27],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[28],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[29],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[30],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[36],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[31],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[32],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[33],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[34],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[37],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[38],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[39],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[40],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[41],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[42],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[43],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[44],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[45],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[46],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[47],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[48],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[49],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[50],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[51],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[52],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[53],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[54],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[55],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[56],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[57],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[58],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[59],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[60],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[61],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[62],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[63],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[64],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[65],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[66],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[67],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[68]   ;
+; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[103] ; Stuck at GND                   ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[70], ;
+;                                                     ; due to stuck port data_in      ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[67], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[68], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[45], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[46], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[47], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[48], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[49], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[50], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[51], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[52], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[53], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[54], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[55], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[56], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[57], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[58], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[59], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[60], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[61], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[62], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[63], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[64], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[65], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[66], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[13], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[14], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[15], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[16], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[17], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[18], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[19], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[20], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[21], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[22], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[23], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[24], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[25], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[26], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[27], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[28], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[29], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[30], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[31], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[32], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[33], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[34], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[35], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[36]  ;
+; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[106] ; Stuck at GND                   ; mips:mips1|datapath:dp|registrador_1:previewreg|IQ,  ;
+;                                                     ; due to stuck port data_in      ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[3],    ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[4],    ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[5],    ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[6],    ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[7],    ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[8],    ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[9],    ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[10],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[11],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[12],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[13],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[14],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[15],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[16],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[17],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[18],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[19],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[20],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[23],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[24],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[25],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[28],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[29],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[30]    ;
+; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[20]  ; Stuck at GND                   ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[31],  ;
+;                                                     ; due to stuck port data_in      ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[37], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[38], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[39], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[40], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[41], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[42], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[43], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[5],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[6],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[7],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[8],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[9],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[10], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[11], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[12], ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[27],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[16],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[17],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[18],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[23],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[22],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[21],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[22]    ;
+; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[0]    ; Stuck at GND                   ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[32],  ;
+;                                                     ; due to stuck port data_in      ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[2],    ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[34],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[35],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[36],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[37],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[38],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[5],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[39],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[6],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[40],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[7],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[41],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[8],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[42],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[9],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[10],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[11],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[12],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[13],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[14],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[15]   ;
+; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[102] ; Stuck at GND                   ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[69], ;
+;                                                     ; due to stuck port data_in      ; mips:mips1|datapath:dp|regfile:rf|wc,                ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[0],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[0],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[0],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[1],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[1],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[1],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[2],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[2],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[2],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[3],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[3],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[3],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:MEM_reg|IQ[4],  ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[4],   ;
+;                                                     ;                                ; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[4]    ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[65]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[28],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[33]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[66]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[29],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[34]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[67]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[30],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[35]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[45]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[8],            ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[13]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[37]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[0],            ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[5]    ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[38]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[1],            ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[6]    ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[39]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[2],            ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[7]    ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[40]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[3],            ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[8]    ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[41]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[4],            ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[9]    ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[42]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[5],            ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[10]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[43]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[6],            ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[11]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[44]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[7],            ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[12]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[68]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[31],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[36]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[46]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[9],            ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[14]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[47]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[10],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[15]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[48]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[11],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[16]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[49]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[12],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[17]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[50]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[13],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[18]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[51]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[14],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[19]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[52]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[15],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[20]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[53]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[16],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[21]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[54]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[17],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[22]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[55]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[18],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[23]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[56]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[19],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[24]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[57]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[20],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[25]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[58]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[21],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[26]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[59]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[22],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[27]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[60]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[23],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[28]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[61]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[24],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[29]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[62]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[25],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[30]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[63]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[26],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[31]   ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[64]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd2[27],           ;
+;                                                     ; due to stuck port clock_enable ; mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[32]   ;
+; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[19]  ; Stuck at GND                   ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[21]    ;
+;                                                     ; due to stuck port data_in      ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[25]  ; Stuck at GND                   ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[27]    ;
+;                                                     ; due to stuck port data_in      ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[24]  ; Stuck at GND                   ; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[26]    ;
+;                                                     ; due to stuck port data_in      ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:pcreg|IQ[1]    ; Stuck at GND                   ; mips:mips1|datapath:dp|registrador_n:IF_reg|IQ[33]   ;
+;                                                     ; due to stuck port data_in      ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[69]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[0]             ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[70]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[1]             ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[71]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[2]             ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[72]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[3]             ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[73]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[4]             ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[74]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[5]             ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[75]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[6]             ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[76]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[7]             ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[77]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[8]             ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[78]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[9]             ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[79]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[10]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[80]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[11]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[81]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[12]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[82]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[13]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[83]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[14]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[84]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[15]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[85]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[16]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[86]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[17]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[87]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[18]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[88]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[19]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[89]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[20]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[90]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[21]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[91]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[22]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[92]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[23]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[93]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[24]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[94]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[25]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[95]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[26]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[96]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[27]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[97]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[28]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[98]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[29]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[99]  ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[30]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
+; mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[100] ; Stuck at GND                   ; mips:mips1|datapath:dp|regfile:rf|rd1[31]            ;
+;                                                     ; due to stuck port clock_enable ;                                                      ;
++-----------------------------------------------------+--------------------------------+------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -382,18 +814,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------+----------------------+------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |top|mips:mips1|datapath:dp|registrador_n:pcreg|IQ[1]  ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|mips:mips1|datapath:dp|registrador_n:pcreg|IQ[29] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|mips:mips1|datapath:dp|registrador_n:pcreg|IQ[26] ;
-; 5:1                ; 22 bits   ; 66 LEs        ; 22 LEs               ; 44 LEs                 ; Yes        ; |top|mips:mips1|datapath:dp|registrador_n:pcreg|IQ[10] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|mips:mips1|controller:cont|aludec:ad|Mux1         ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |top|mips:mips1|datapath:dp|alu:mainalu|Mux22          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |top|mips:mips1|datapath:dp|registrador_n:EX_reg|IQ[54]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |top|mips:mips1|datapath:dp|registrador_n:ID_reg|IQ[150] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |top|mips:mips1|datapath:dp|registrador_n:pcreg|IQ[1]    ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|mips:mips1|datapath:dp|registrador_n:pcreg|IQ[28]   ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|mips:mips1|datapath:dp|registrador_n:pcreg|IQ[22]   ;
+; 5:1                ; 22 bits   ; 66 LEs        ; 22 LEs               ; 44 LEs                 ; Yes        ; |top|mips:mips1|datapath:dp|registrador_n:pcreg|IQ[5]    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; No         ; |top|mips:mips1|datapath:dp|mux2:aforwardingmux2|y[18]   ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |top|mips:mips1|datapath:dp|mux2:srcbmux|y[14]           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------+
@@ -445,6 +879,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:flushifmux ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; width          ; 6     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|registrador_n:IF_reg ;
 +----------------+-------+-----------------------------------------------------------------+
@@ -475,6 +919,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:flushidmux ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; width          ; 10    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|registrador_n:ID_reg ;
 +----------------+-------+-----------------------------------------------------------------+
@@ -485,13 +939,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:resmux ;
-+----------------+-------+--------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                   ;
-+----------------+-------+--------------------------------------------------------+
-; width          ; 32    ; Signed Integer                                         ;
-+----------------+-------+--------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:afowaerdingmux1 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:aforwardingmux2 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:bfowaerdingmux1 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:bforwardingmux2 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -502,6 +986,46 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------------+
 ; width          ; 32    ; Signed Integer                                          ;
 +----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:flushexmux ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; width          ; 5     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|registrador_n:EX_reg ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; n              ; 107   ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|registrador_n:MEM_reg ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; n              ; 71    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:mips1|datapath:dp|mux2:resmux ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -586,40 +1110,72 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+---------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mips:mips1|datapath:dp|alu:mainalu"                                                 ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; zero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "mips:mips1|datapath:dp|registrador_n:MEM_reg" ;
++--------+-------+----------+----------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                      ;
++--------+-------+----------+----------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                 ;
++--------+-------+----------+----------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mips:mips1|datapath:dp|registrador_n:ID_reg"                                        ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mips:mips1|datapath:dp|registrador_n:EX_reg"                                              ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; enable     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; q[101..69] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; q[105]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; Port Connectivity Checks: "mips:mips1|datapath:dp|registrador_1:previewreg" ;
-+--------+-------+----------+-------------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                         ;
-+--------+-------+----------+-------------------------------------------------+
-; enable ; Input ; Info     ; Stuck at VCC                                    ;
-+--------+-------+----------+-------------------------------------------------+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "mips:mips1|datapath:dp|mux2:flushexmux" ;
++------+-------+----------+------------------------------------------+
+; Port ; Type  ; Severity ; Details                                  ;
++------+-------+----------+------------------------------------------+
+; d1   ; Input ; Info     ; Stuck at GND                             ;
++------+-------+----------+------------------------------------------+
 
 
-+------------------------------------------------------------------------+
-; Port Connectivity Checks: "mips:mips1|datapath:dp|registrador_n:pcreg" ;
-+--------+-------+----------+--------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                    ;
-+--------+-------+----------+--------------------------------------------+
-; enable ; Input ; Info     ; Stuck at VCC                               ;
-+--------+-------+----------+--------------------------------------------+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "mips:mips1|datapath:dp|adder:pcrecoveradder" ;
++----------+-------+----------+-------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                   ;
++----------+-------+----------+-------------------------------------------+
+; b[31..3] ; Input ; Info     ; Stuck at GND                              ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND                              ;
++----------+-------+----------+-------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mips:mips1|datapath:dp|registrador_n:ID_reg"                                               ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; q[110..101] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; q[152]      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "mips:mips1|datapath:dp|mux2:flushidmux" ;
++----------+-------+----------+--------------------------------------+
+; Port     ; Type  ; Severity ; Details                              ;
++----------+-------+----------+--------------------------------------+
+; d1[7..0] ; Input ; Info     ; Stuck at VCC                         ;
+; d1[9..8] ; Input ; Info     ; Stuck at GND                         ;
++----------+-------+----------+--------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "mips:mips1|datapath:dp|mux2:flushifmux" ;
++------+-------+----------+------------------------------------------+
+; Port ; Type  ; Severity ; Details                                  ;
++------+-------+----------+------------------------------------------+
+; d1   ; Input ; Info     ; Stuck at VCC                             ;
++------+-------+----------+------------------------------------------+
 
 
 +----------------------------------------------------------------+
@@ -682,7 +1238,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Nov 14 04:37:59 2018
+    Info: Processing started: Thu Nov 15 02:58:32 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_projeto -c testbench
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -745,24 +1301,32 @@ Info (12128): Elaborating entity "controller" for hierarchy "mips:mips1|controll
 Info (12128): Elaborating entity "maindec" for hierarchy "mips:mips1|controller:cont|maindec:md" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/controller.vhd Line: 31
 Info (12128): Elaborating entity "aludec" for hierarchy "mips:mips1|controller:cont|aludec:ad" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/controller.vhd Line: 33
 Info (12128): Elaborating entity "datapath" for hierarchy "mips:mips1|datapath:dp" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/mips.vhd Line: 54
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(20): used implicit default value for signal "memwritepip" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 20
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(81): used implicit default value for signal "s_recover" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 81
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(81): used implicit default value for signal "s_result" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 81
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(87): object "s_id" assigned a value but never read File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 87
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(92): used implicit default value for signal "enableif" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 92
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(92): used implicit default value for signal "enableid" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 92
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(94): object "zero" assigned a value but never read File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 94
-Info (12128): Elaborating entity "adder" for hierarchy "mips:mips1|datapath:dp|adder:pcadd1" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 100
-Info (12128): Elaborating entity "mux2" for hierarchy "mips:mips1|datapath:dp|mux2:pcmux1" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 103
-Info (12128): Elaborating entity "registrador_n" for hierarchy "mips:mips1|datapath:dp|registrador_n:pcreg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 115
-Info (12128): Elaborating entity "registrador_n" for hierarchy "mips:mips1|datapath:dp|registrador_n:IF_reg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 122
-Info (12128): Elaborating entity "regfile" for hierarchy "mips:mips1|datapath:dp|regfile:rf" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 133
-Info (12128): Elaborating entity "mux2" for hierarchy "mips:mips1|datapath:dp|mux2:wrmux" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 143
-Info (12128): Elaborating entity "signext" for hierarchy "mips:mips1|datapath:dp|signext:se" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 150
-Info (12128): Elaborating entity "registrador_1" for hierarchy "mips:mips1|datapath:dp|registrador_1:previewreg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 153
-Info (12128): Elaborating entity "sl2" for hierarchy "mips:mips1|datapath:dp|sl2:immsh" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 157
-Info (12128): Elaborating entity "registrador_n" for hierarchy "mips:mips1|datapath:dp|registrador_n:ID_reg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 172
-Info (12128): Elaborating entity "alu" for hierarchy "mips:mips1|datapath:dp|alu:mainalu" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 186
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(84): used implicit default value for signal "s_recover" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 84
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(84): used implicit default value for signal "s_result" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 84
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(95): used implicit default value for signal "enablepc" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 95
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(95): used implicit default value for signal "enableid" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 95
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(96): used implicit default value for signal "flushif" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 96
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(96): used implicit default value for signal "flushid" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 96
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(96): used implicit default value for signal "flushex" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 96
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(107): used implicit default value for signal "s_ex_r1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 107
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(107): used implicit default value for signal "s_ex_r2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 107
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(107): used implicit default value for signal "s_mem_r1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 107
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(107): used implicit default value for signal "s_mem_r2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 107
+Info (12128): Elaborating entity "adder" for hierarchy "mips:mips1|datapath:dp|adder:pcadd1" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 111
+Info (12128): Elaborating entity "mux2" for hierarchy "mips:mips1|datapath:dp|mux2:pcmux1" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 114
+Info (12128): Elaborating entity "registrador_n" for hierarchy "mips:mips1|datapath:dp|registrador_n:pcreg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 126
+Info (12128): Elaborating entity "mux2" for hierarchy "mips:mips1|datapath:dp|mux2:flushifmux" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 131
+Info (12128): Elaborating entity "registrador_n" for hierarchy "mips:mips1|datapath:dp|registrador_n:IF_reg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 138
+Info (12128): Elaborating entity "regfile" for hierarchy "mips:mips1|datapath:dp|regfile:rf" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 149
+Info (12128): Elaborating entity "mux2" for hierarchy "mips:mips1|datapath:dp|mux2:wrmux" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 159
+Info (12128): Elaborating entity "signext" for hierarchy "mips:mips1|datapath:dp|signext:se" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 166
+Info (12128): Elaborating entity "registrador_1" for hierarchy "mips:mips1|datapath:dp|registrador_1:previewreg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 169
+Info (12128): Elaborating entity "sl2" for hierarchy "mips:mips1|datapath:dp|sl2:immsh" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 173
+Info (12128): Elaborating entity "mux2" for hierarchy "mips:mips1|datapath:dp|mux2:flushidmux" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 184
+Info (12128): Elaborating entity "registrador_n" for hierarchy "mips:mips1|datapath:dp|registrador_n:ID_reg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 193
+Info (12128): Elaborating entity "alu" for hierarchy "mips:mips1|datapath:dp|alu:mainalu" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 226
+Info (12128): Elaborating entity "registrador_n" for hierarchy "mips:mips1|datapath:dp|registrador_n:EX_reg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 238
+Info (12128): Elaborating entity "registrador_n" for hierarchy "mips:mips1|datapath:dp|registrador_n:MEM_reg" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/datapath.vhd Line: 253
 Info (12128): Elaborating entity "imem" for hierarchy "imem:imem1" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/top.vhd Line: 36
 Warning (10541): VHDL Signal Declaration warning at imem.vhd(13): used implicit default value for signal "memoria" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/imem.vhd Line: 13
 Info (12128): Elaborating entity "dmem" for hierarchy "dmem:dmem1" File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/top.vhd Line: 37
@@ -906,7 +1470,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "dataadr[30]" is stuck at GND File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/top.vhd Line: 8
     Warning (13410): Pin "dataadr[31]" is stuck at GND File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/top.vhd Line: 8
     Warning (13410): Pin "memwrite" is stuck at GND File: C:/Users/renan/Documents/FPGA/MIPS_projeto/MIPS_quartus/top.vhd Line: 9
-Info (17049): 30 registers lost all their fanouts during netlist optimizations.
+Info (17049): 190 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
@@ -915,10 +1479,10 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 67 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 65 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 114 warnings
-    Info: Peak virtual memory: 4874 megabytes
-    Info: Processing ended: Wed Nov 14 04:38:18 2018
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:40
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 118 warnings
+    Info: Peak virtual memory: 4870 megabytes
+    Info: Processing ended: Thu Nov 15 02:58:53 2018
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:43
 
 

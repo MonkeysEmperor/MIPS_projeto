@@ -37,7 +37,7 @@ architecture struct of mips is
 		   	
 			--dmem
 			memwritepip			: out std_logic;
-	       	aluout, writedata	: buffer STD_LOGIC_VECTOR(31 downto 0);
+	       	address, writedata	: buffer STD_LOGIC_VECTOR(31 downto 0);
 	       	readdata			: in STD_LOGIC_VECTOR(31 downto 0));
   end component;
   

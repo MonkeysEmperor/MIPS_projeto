@@ -18,7 +18,7 @@ entity datapath is  -- MIPS datapath
 	   	
 		--dmem
 		memwritepip			: out std_logic;
-       	aluout, writedata	: buffer STD_LOGIC_VECTOR(31 downto 0);
+       	address, writedata	: buffer STD_LOGIC_VECTOR(31 downto 0);
        	readdata			: in STD_LOGIC_VECTOR(31 downto 0));
 end;
 
@@ -72,29 +72,40 @@ architecture struct of datapath is
 				D: in STD_LOGIC;
 				Q: out STD_LOGIC);
 	end component;
-  
-	signal writereg										: STD_LOGIC_VECTOR( 4 downto 0);
-	signal signimm, signimmsh							: STD_LOGIC_VECTOR(31 downto 0);
-	signal srca, srcb, result							: STD_LOGIC_VECTOR(31 downto 0);
+  	
+	signal zero 				: std_logic;
+	signal writereg				: STD_LOGIC_VECTOR( 4 downto 0);
+	signal signimm, signimmsh	: STD_LOGIC_VECTOR(31 downto 0);
+	signal content1, content2	: STD_LOGIC_VECTOR(31 downto 0);
+	signal srca, srcb			: STD_LOGIC_VECTOR(31 downto 0);
+	signal wd, aluout			: STD_LOGIC_VECTOR(31 downto 0);
 	
 	--PC
-	signal s_preview, s_recover, s_result		: std_logic;
-	signal pcplus4, pcbranch, pcjump, pcrecover	: STD_LOGIC_VECTOR(31 downto 0); 
-	signal pc_aux1, pc_aux2, pcnext 			: STD_LOGIC_VECTOR(31 downto 0);  
+	signal s_preview, s_recover, s_result					: std_logic;
+	signal pcplus4, pcbranch, pcjump, pcrecover, pcrecover2	: STD_LOGIC_VECTOR(31 downto 0); 
+	signal pc_aux1, pc_aux2, pcnext 						: STD_LOGIC_VECTOR(31 downto 0);  
 	
 	--pipeline
 	signal s_if  : std_logic_vector( 63 downto 0);
 	signal s_id  : std_logic_vector(152 downto 0);
-	signal s_ex  : std_logic_vector(107 downto 0);
+	signal s_ex  : std_logic_vector(106 downto 0);
 	signal s_mem : std_logic_vector( 70 downto 0); 
 	
 	--hazard 
-	signal enablepc, enableif, enableid, flushif, flushid, flushex	: std_logic;
+	signal enablepc, enableif, enableid	: std_logic; 
+	signal flushif, flushid, flushex	: std_logic;
+	
 	constant c_flushif : std_logic_vector(5 downto 0) := "111111";
-	signal zero : std_logic;
+	constant c_flushid : std_logic_vector(9 downto 0) := "00" & X"FF";
+	constant c_flushex : std_logic_vector(4 downto 0) := "00000";
+	
+	signal s_flushif : std_logic_vector(5 downto 0);				  
+	signal s_flushid : std_logic_vector(9 downto 0);				  
+	signal s_flushex : std_logic_vector(4 downto 0);
 	
 	--fowarding
-	signal s_stall : std_logic;
+	signal s_stall, s_ex_r1, s_ex_r2, s_mem_r1, s_mem_r2 : std_logic;
+	signal s_a, s_b1, s_b2								 : std_logic_vector(31 downto 0);
 begin
 	
   	pcadd1: adder 
@@ -110,11 +121,16 @@ begin
 		
 	pcmux3 : mux2
 		generic map(32)
-		port map(pc_aux2, pcrecover, s_recover, pcnext);             			-- MUDAR AQUI DEPOIS!!!!
+		port map(pc_aux2, pcrecover, s_recover, pcnext);
 	
 	pcreg: registrador_n 
 		generic map(32) 
-		port map(clk, reset, '1', pcnext, pc);
+		port map(clk, reset, enablepc, pcnext, pc);
+	
+	--flush if
+	flushifmux : mux2
+		generic map(6)
+		port map(instr(31 downto 26), c_flushif, flushif, s_flushif);
 	
 	-----------------------------------------------------
 	-- pcplus4 (63 downto 32) | instr (31 downto 0);
@@ -122,7 +138,7 @@ begin
 	IF_reg : registrador_n
 		generic map(64)
 		port map(	clk, reset,	enableid,
-					pcplus4 & instr,
+					pcplus4 & s_flushif & instr(25 downto 0),
 					s_if);	
 	-----------------------------------------------------
 	
@@ -131,9 +147,9 @@ begin
   	
 	--reg
 	rf: regfile 
-	port map(	clk, regwrite, 
-				s_if(25 downto 21), s_if(20 downto 16), writereg, 
-				result, srca, writedata);				 -- MUDAR AQUI DEPOIS!!!!  
+	port map(	clk, s_mem(69), 
+				s_if(25 downto 21), s_if(20 downto 16), s_mem(4 downto 0), 
+				wd, content1, content2);				 					  
 	
 	--jump
  	pcjump <= pcplus4(31 downto 28) & s_if(25 downto 0) & "00";	
@@ -151,7 +167,7 @@ begin
 	
 	--branch
 	previewreg : registrador_1
-		port map(	clk, reset, '1', 											-- MUDAR AQUI DEPOIS!!!! 
+		port map(	clk, reset, s_ex(106), 											
 					s_result, s_preview);
 		
 	immsh: sl2 
@@ -163,6 +179,11 @@ begin
 	pcrecovermux : mux2
 		generic map(32)
 		port map(pcbranch, s_if(63 downto 32), s_preview, pcrecover);
+		
+	--flush id
+	flushidmux : mux2
+		generic map(10)
+		port map(jump & alusrc & alucontrol & branch & s_preview & memwrite & memtoreg & regwrite, c_flushid, flushid, s_flushid);
 	
 	-----------------------------------------------------
 	-- jump (152) | alusrc (151) | alucontrol (150 downto 148) || branch (147) | preview (146) | memwrite (145) || writesrc (144) | regwrite (143)
@@ -171,18 +192,73 @@ begin
 	
 	ID_reg : registrador_n
 		generic map(153)
-		port map(	clk, reset,	enableif,
-					jump & alusrc & alucontrol & branch & s_preview & memwrite & memtoreg & regwrite & pcrecover &
-					s_if(25 downto 16) & srca & writedata & signimm &writereg,
+		port map(	clk, reset,	enableid,
+					s_flushid & pcrecover &
+					s_if(25 downto 16) & content1 & content2 & signimm & writereg,
 					s_id);	
 	-----------------------------------------------------
-					
-  resmux: mux2 generic map(32) port map(aluout, readdata, 
-                                        memtoreg, result);
-
-  -- ALU logic
-  srcbmux: mux2 generic map(32) port map(writedata, signimm, alusrc, 
-                                         srcb);
-  mainalu: alu port map(srca, srcb, alucontrol, aluout, zero);
+	
+	pcrecoveradder : adder
+		port map(s_id(142 downto 111), X"0000000" & '0' & s_id(146) & "00", pcrecover2);
+	
+	--flowarding
+	afowaerdingmux1 : mux2
+		generic map(32)
+	   	port map(s_id(100 downto 69), wd, s_mem_r1, s_a);
+	
+	aforwardingmux2 : mux2
+		generic map(32)
+		port map(s_a, s_ex(36 downto 5), s_ex_r1, srca);
+	  
+	bfowaerdingmux1 : mux2
+		generic map(32)
+	   	port map(s_id(105 downto 101), wd, s_mem_r2, s_b1);
+	
+	bforwardingmux2 : mux2
+		generic map(32)
+		port map(s_b1, s_ex(36 downto 5), s_ex_r2, s_b2);	
+		
+	--ALU
+	srcbmux: mux2 
+		generic map(32) 
+		port map(s_b2, s_id(36 downto 5), s_id(151), srcb);	 
+		
+	mainalu: alu 
+		port map(srca, srcb, s_id(150 downto 148), aluout, zero);
+	
+	--flush ex
+	flushexmux : mux2
+		generic map(5)
+		port map(s_id(147 downto 143), c_flushex, flushex, s_flushex);
+	
+	-----------------------------------------------------
+	-- branch (106) | preview (105) | memwrite (104) || writesrc (103) | regwrite (102)
+	-- pcrecover (101 downto 70) | zero (69) | aluout (68 downto 37) | content2 (36 downto 5) | wr (4 downto 0)
+	
+	EX_reg : registrador_n
+		generic map(107)
+		port map(	clk, reset,	'1',
+					s_flushex & pcrecover2 & zero & aluout & s_id(68 downto 37) & s_id(4 downto 0),
+					s_ex);
+	-----------------------------------------------------
+	 
+	memwritepip	<= s_ex(104);
+	address		<= s_ex(68 downto 37);
+	writedata	<= s_ex(36 downto  5); 
+	
+	-----------------------------------------------------
+	-- writesrc (70) | regwrite (69)
+	-- readdata (68 downto 37) | aluout (36 downto 5) | wr (4 downto 0)
+	
+	MEM_reg : registrador_n
+		generic map(71)
+		port map(	clk, reset,	'1',
+					s_ex(103 downto 102) & readdata & s_ex(68 downto 37) & s_ex (4 downto 0),
+					s_mem);
+	-----------------------------------------------------
+	
+	resmux: mux2 
+		generic map(32) 
+		port map(s_mem(36 downto 5), s_mem(68 downto 37), s_mem(70), wd);
 end;
   

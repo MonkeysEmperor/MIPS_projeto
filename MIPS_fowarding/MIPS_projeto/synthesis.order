@@ -15,3 +15,4 @@ i<>.\src\sl2.vhd
 i<>.\src\testbench.vhd
 i<>.\src\top.vhd
 i<>.\src\registrador_1.vhd
+i<>.\src\fowardingdemuc.vhd

@@ -15,3 +15,4 @@
 .\src\mips.vhd
 .\src\top.vhd
 .\src\testbench.vhd
+.\src\fowardingdemuc.vhd
