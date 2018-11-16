@@ -16,3 +16,4 @@ i<>.\src\testbench.vhd
 i<>.\src\top.vhd
 i<>.\src\registrador_1.vhd
 i<>.\src\fowardingdemuc.vhd
+i<>.\src\hazarddemuc.vhd

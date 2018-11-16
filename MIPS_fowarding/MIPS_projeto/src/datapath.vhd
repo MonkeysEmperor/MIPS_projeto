@@ -1,5 +1,7 @@
 
-library IEEE; use IEEE.STD_LOGIC_1164.all; use IEEE.STD_LOGIC_ARITH.all;
+library IEEE; 
+use IEEE.STD_LOGIC_1164.all; 
+use IEEE.STD_LOGIC_ARITH.all;
 
 entity datapath is  -- MIPS datapath
   port(	clk, reset : in std_logic; 
@@ -18,7 +20,7 @@ entity datapath is  -- MIPS datapath
 	   	
 		--dmem
 		memwritepip			: out std_logic;
-       	address, writedata	: buffer STD_LOGIC_VECTOR(31 downto 0);
+       	address, writedata	: out STD_LOGIC_VECTOR(31 downto 0);
        	readdata			: in STD_LOGIC_VECTOR(31 downto 0));
 end;
 
@@ -72,6 +74,22 @@ architecture struct of datapath is
 				D: in STD_LOGIC;
 				Q: out STD_LOGIC);
 	end component;
+	
+	component fowardingdemuc is
+		port(	r1id, r2id									: in std_logic_vector(4 downto 0);
+				jumpid, memwriteid, regwriteid, alusrcid	: in std_logic;
+				rwex, rwmem									: in std_logic_vector(4 downto 0);
+				regwriteex, memtoregex, regwritemem			: in std_logic;
+				stall, exr1, exr2, memr1, memr2 			: buffer std_logic);
+	end component;	
+	
+	component hazarddemuc is
+		port(	jump, pcsrc, stall				: in  std_logic; 
+				branchex, previewex				: in  std_logic; 
+				enablepc, enableif, enableid	: out std_logic;
+				flushif, flushid, flushex		: out std_logic;
+				recover							: buffer std_logic);
+	end	component;
   	
 	signal zero 				: std_logic;
 	signal writereg				: STD_LOGIC_VECTOR( 4 downto 0);
@@ -81,31 +99,32 @@ architecture struct of datapath is
 	signal wd, aluout			: STD_LOGIC_VECTOR(31 downto 0);
 	
 	--PC
-	signal s_preview, s_recover, s_result					: std_logic;
+	signal preview, recover, pcsrc							: std_logic;
 	signal pcplus4, pcbranch, pcjump, pcrecover, pcrecover2	: STD_LOGIC_VECTOR(31 downto 0); 
 	signal pc_aux1, pc_aux2, pcnext 						: STD_LOGIC_VECTOR(31 downto 0);  
 	
 	--pipeline
 	signal s_if  : std_logic_vector( 63 downto 0);
-	signal s_id  : std_logic_vector(152 downto 0);
-	signal s_ex  : std_logic_vector(106 downto 0);
+	signal s_id  : std_logic_vector(153 downto 0);
+	signal s_ex  : std_logic_vector(107 downto 0);
 	signal s_mem : std_logic_vector( 70 downto 0); 
 	
 	--hazard 
 	signal enablepc, enableif, enableid	: std_logic; 
 	signal flushif, flushid, flushex	: std_logic;
 	
-	constant c_flushif : std_logic_vector(5 downto 0) := "111111";
-	constant c_flushid : std_logic_vector(9 downto 0) := "00" & X"FF";
-	constant c_flushex : std_logic_vector(4 downto 0) := "00000";
+	--flush
+	constant c_flushif : std_logic_vector( 5 downto 0) := "111111";
+	constant c_flushid : std_logic_vector(20 downto 0) := "0" & X"00000";
+	constant c_flushex : std_logic_vector( 5 downto 0) :=  "000000";
 	
-	signal s_flushif : std_logic_vector(5 downto 0);				  
-	signal s_flushid : std_logic_vector(9 downto 0);				  
-	signal s_flushex : std_logic_vector(4 downto 0);
+	signal s_flushif : std_logic_vector( 5 downto 0);				  
+	signal s_flushid : std_logic_vector(20 downto 0);				  
+	signal s_flushex : std_logic_vector( 5 downto 0);
 	
 	--fowarding
-	signal s_stall, s_ex_r1, s_ex_r2, s_mem_r1, s_mem_r2 : std_logic;
-	signal s_a, s_b1, s_b2								 : std_logic_vector(31 downto 0);
+	signal stall, s_ex_r1, s_ex_r2, s_mem_r1, s_mem_r2 	: std_logic;
+	signal s_a, s_b1, s_b2								: std_logic_vector(31 downto 0);
 begin
 	
   	pcadd1: adder 
@@ -113,7 +132,7 @@ begin
 	  
 	pcmux1 : mux2
 		generic map(32)
-		port map(pcplus4, pcbranch, branch and s_preview, pc_aux1);
+		port map(pcplus4, pcbranch, branch and preview, pc_aux1);
 		
 	pcmux2 : mux2
 		generic map(32)
@@ -121,7 +140,7 @@ begin
 		
 	pcmux3 : mux2
 		generic map(32)
-		port map(pc_aux2, pcrecover, s_recover, pcnext);
+		port map(pc_aux2, s_ex(101 downto 70), recover, pcnext);
 	
 	pcreg: registrador_n 
 		generic map(32) 
@@ -137,7 +156,7 @@ begin
 	
 	IF_reg : registrador_n
 		generic map(64)
-		port map(	clk, reset,	enableid,
+		port map(	clk, reset,	enableif,
 					pcplus4 & s_flushif & instr(25 downto 0),
 					s_if);	
 	-----------------------------------------------------
@@ -168,7 +187,7 @@ begin
 	--branch
 	previewreg : registrador_1
 		port map(	clk, reset, s_ex(106), 											
-					s_result, s_preview);
+					pcsrc, preview);
 		
 	immsh: sl2 
 		port map(signimm, signimmsh);
@@ -178,23 +197,24 @@ begin
 	
 	pcrecovermux : mux2
 		generic map(32)
-		port map(pcbranch, s_if(63 downto 32), s_preview, pcrecover);
+		port map(pcbranch, s_if(63 downto 32), preview, pcrecover);
 		
 	--flush id
 	flushidmux : mux2
-		generic map(10)
-		port map(jump & alusrc & alucontrol & branch & s_preview & memwrite & memtoreg & regwrite, c_flushid, flushid, s_flushid);
+		generic map(21)
+		port map(jump & alusrc & alucontrol & s_if(26) &branch & preview & memwrite & memtoreg & regwrite & s_if(25 downto 16), c_flushid, flushid, s_flushid);
 	
 	-----------------------------------------------------
-	-- jump (152) | alusrc (151) | alucontrol (150 downto 148) || branch (147) | preview (146) | memwrite (145) || writesrc (144) | regwrite (143)
+	-- jump (153) | alusrc (152) | alucontrol (151 downto 149) || 
+	-- op0 (148) | branch (147) | preview (146) | memwrite (145) || writesrc (144) | regwrite (143)
 	-- pcrecover (142 downto 111) | R1 (110 downto 106) | R2 (105 downto 101) | content1 (100 downto 69) | content2 (68 downto 37)
 	-- imediate (36 downto 5) | wr (4 downto 0)
 	
 	ID_reg : registrador_n
-		generic map(153)
+		generic map(154)
 		port map(	clk, reset,	enableid,
-					s_flushid & pcrecover &
-					s_if(25 downto 16) & content1 & content2 & signimm & writereg,
+					s_flushid(20 downto 10) & pcrecover &
+					s_flushid( 9 downto  0) & content1 & content2 & signimm & writereg,
 					s_id);	
 	-----------------------------------------------------
 	
@@ -208,43 +228,44 @@ begin
 	
 	aforwardingmux2 : mux2
 		generic map(32)
-		port map(s_a, s_ex(36 downto 5), s_ex_r1, srca);
+		port map(s_a, s_ex(68 downto 37), s_ex_r1, srca);
 	  
 	bfowaerdingmux1 : mux2
 		generic map(32)
-	   	port map(s_id(105 downto 101), wd, s_mem_r2, s_b1);
+	   	port map(s_id(68 downto 37), wd, s_mem_r2, s_b1);
 	
 	bforwardingmux2 : mux2
 		generic map(32)
-		port map(s_b1, s_ex(36 downto 5), s_ex_r2, s_b2);	
+		port map(s_b1, s_ex(68 downto 37), s_ex_r2, s_b2);	
 		
 	--ALU
 	srcbmux: mux2 
 		generic map(32) 
-		port map(s_b2, s_id(36 downto 5), s_id(151), srcb);	 
+		port map(s_b2, s_id(36 downto 5), s_id(152), srcb);	 
 		
 	mainalu: alu 
-		port map(srca, srcb, s_id(150 downto 148), aluout, zero);
+		port map(srca, srcb, s_id(151 downto 149), aluout, zero);
 	
 	--flush ex
 	flushexmux : mux2
-		generic map(5)
-		port map(s_id(147 downto 143), c_flushex, flushex, s_flushex);
+		generic map(6)
+		port map(s_id(148 downto 143), c_flushex, flushex, s_flushex);
 	
 	-----------------------------------------------------
-	-- branch (106) | preview (105) | memwrite (104) || writesrc (103) | regwrite (102)
+	-- op0 (107) | branch (106) | preview (105) | memwrite (104) || writesrc (103) | regwrite (102)
 	-- pcrecover (101 downto 70) | zero (69) | aluout (68 downto 37) | content2 (36 downto 5) | wr (4 downto 0)
 	
 	EX_reg : registrador_n
-		generic map(107)
+		generic map(108)
 		port map(	clk, reset,	'1',
-					s_flushex & pcrecover2 & zero & aluout & s_id(68 downto 37) & s_id(4 downto 0),
+					s_flushex & pcrecover2 & zero & aluout & s_b2 & s_id(4 downto 0),
 					s_ex);
 	-----------------------------------------------------
 	 
 	memwritepip	<= s_ex(104);
 	address		<= s_ex(68 downto 37);
-	writedata	<= s_ex(36 downto  5); 
+	writedata	<= s_ex(36 downto  5);
+	pcsrc		<= s_ex(106) and (s_ex(69) xor s_ex(107));
 	
 	-----------------------------------------------------
 	-- writesrc (70) | regwrite (69)
@@ -260,5 +281,23 @@ begin
 	resmux: mux2 
 		generic map(32) 
 		port map(s_mem(36 downto 5), s_mem(68 downto 37), s_mem(70), wd);
-end;
+					  
+	-----------------------------------------------------
+	--Fowarding
+	FWD : fowardingdemuc 
+		port map(	s_id(110 downto 106), s_id(105 downto 101),
+					s_id(153), s_id(145), s_id(143), s_id(152),
+					s_ex(4 downto 0), s_mem(4 downto 0),
+					s_ex(102), s_ex(103), s_mem(69),
+					stall, s_ex_r1, s_ex_r2, s_mem_r1, s_mem_r2);				  
+	-----------------------------------------------------
+	--Hazzard													 
+	
+	HAZ : hazarddemuc
+	port map(	jump, pcsrc, stall, 
+				s_ex(106), s_ex(105),
+				enablepc, enableif, enableid,
+				flushif, flushid, flushex,
+				recover);
+end struct;
   

@@ -1,31 +1,37 @@
 WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
-MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\dmem.vhd" 
-MESSAGE "Compile Entity "dmem"" 
-MESSAGE "Compile Architecture "behave" of Entity "dmem"" 
-MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\regfile.vhd" 
-MESSAGE "Compile Entity "regfile"" 
-MESSAGE "Compile Architecture "behave" of Entity "regfile"" 
-MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\signext.vhd" 
-MESSAGE "Compile Entity "signext"" 
-MESSAGE "Compile Architecture "behave" of Entity "signext"" 
-MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\sl2.vhd" 
-MESSAGE "Compile Entity "sl2"" 
-MESSAGE "Compile Architecture "behave" of Entity "sl2"" 
-MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\registrador_n.vhd" 
-MESSAGE "Compile Entity "registrador_n"" 
-MESSAGE "Compile Architecture "registrador_n" of Entity "registrador_n"" 
-MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\registrador_1.vhd" 
-MESSAGE "Compile Entity "registrador_1"" 
-MESSAGE "Compile Architecture "registrador_1" of Entity "registrador_1"" 
 MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\maindec.vhd" 
 MESSAGE "Compile Entity "maindec"" 
 MESSAGE "Compile Architecture "behave" of Entity "maindec"" 
+MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\registrador_n.vhd" 
+MESSAGE "Compile Entity "registrador_n"" 
+MESSAGE "Compile Architecture "registrador_n" of Entity "registrador_n"" 
+MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\sl2.vhd" 
+MESSAGE "Compile Entity "sl2"" 
+MESSAGE "Compile Architecture "behave" of Entity "sl2"" 
+MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\signext.vhd" 
+MESSAGE "Compile Entity "signext"" 
+MESSAGE "Compile Architecture "behave" of Entity "signext"" 
+MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\regfile.vhd" 
+MESSAGE "Compile Entity "regfile"" 
+MESSAGE "Compile Architecture "behave" of Entity "regfile"" 
+MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\registrador_1.vhd" 
+MESSAGE "Compile Entity "registrador_1"" 
+MESSAGE "Compile Architecture "registrador_1" of Entity "registrador_1"" 
 MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\mux2.vhd" 
 MESSAGE "Compile Entity "mux2"" 
 MESSAGE "Compile Architecture "behave" of Entity "mux2"" 
+MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\dmem.vhd" 
+MESSAGE "Compile Entity "dmem"" 
+MESSAGE "Compile Architecture "behave" of Entity "dmem"" 
+MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\hazarddemuc.vhd" 
+MESSAGE "Compile Entity "hazarddemuc"" 
+MESSAGE "Compile Architecture "hazarddemuc_arc" of Entity "hazarddemuc"" 
 MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\imem.vhd" 
 MESSAGE "Compile Entity "imem"" 
 MESSAGE "Compile Architecture "behave" of Entity "imem"" 
+MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\fowardingdemuc.vhd" 
+MESSAGE "Compile Entity "fowardingdemuc"" 
+MESSAGE "Compile Architecture "fowardingdemuc_arc" of Entity "fowardingdemuc"" 
 MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\alu.vhd" 
 MESSAGE "Compile Entity "alu"" 
 MESSAGE "Compile Architecture "behave" of Entity "alu"" 
@@ -36,8 +42,69 @@ MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_pr
 MESSAGE "Compile Entity "adder"" 
 MESSAGE "Compile Architecture "behave" of Entity "adder"" 
 MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\datapath.vhd" 
+BEGINPROGRESS C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\datapath.vhd
+UPDATEPROGRESS 1
 MESSAGE "Compile Entity "datapath"" 
+UPDATEPROGRESS 7
+UPDATEPROGRESS 8
 MESSAGE "Compile Architecture "struct" of Entity "datapath"" 
+UPDATEPROGRESS 10
+UPDATEPROGRESS 13
+UPDATEPROGRESS 15
+UPDATEPROGRESS 16
+UPDATEPROGRESS 18
+UPDATEPROGRESS 20
+UPDATEPROGRESS 23
+UPDATEPROGRESS 25
+UPDATEPROGRESS 27
+UPDATEPROGRESS 30
+UPDATEPROGRESS 31
+UPDATEPROGRESS 32
+UPDATEPROGRESS 33
+UPDATEPROGRESS 34
+UPDATEPROGRESS 35
+UPDATEPROGRESS 36
+UPDATEPROGRESS 37
+UPDATEPROGRESS 38
+UPDATEPROGRESS 39
+UPDATEPROGRESS 40
+UPDATEPROGRESS 41
+UPDATEPROGRESS 43
+UPDATEPROGRESS 44
+UPDATEPROGRESS 46
+UPDATEPROGRESS 47
+UPDATEPROGRESS 49
+UPDATEPROGRESS 51
+UPDATEPROGRESS 53
+UPDATEPROGRESS 54
+UPDATEPROGRESS 55
+UPDATEPROGRESS 57
+UPDATEPROGRESS 58
+UPDATEPROGRESS 60
+UPDATEPROGRESS 61
+UPDATEPROGRESS 63
+UPDATEPROGRESS 64
+UPDATEPROGRESS 65
+UPDATEPROGRESS 66
+UPDATEPROGRESS 70
+UPDATEPROGRESS 72
+UPDATEPROGRESS 74
+UPDATEPROGRESS 75
+UPDATEPROGRESS 76
+UPDATEPROGRESS 78
+UPDATEPROGRESS 79
+UPDATEPROGRESS 81
+UPDATEPROGRESS 82
+UPDATEPROGRESS 85
+UPDATEPROGRESS 87
+UPDATEPROGRESS 88
+UPDATEPROGRESS 90
+UPDATEPROGRESS 92
+UPDATEPROGRESS 94
+UPDATEPROGRESS 97
+UPDATEPROGRESS 99
+UPDATEPROGRESS 100
+ENDPROGRESS C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\datapath.vhd
 MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\controller.vhd" 
 MESSAGE "Compile Entity "controller"" 
 MESSAGE "Compile Architecture "struct" of Entity "controller"" 
@@ -50,8 +117,6 @@ MESSAGE "Compile Architecture "test" of Entity "top""
 MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\testbench.vhd" 
 MESSAGE "Compile Entity "testbench"" 
 MESSAGE "Compile Architecture "test" of Entity "testbench"" 
-MESSAGE "File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\fowardingdemuc.vhd" 
-WARNING COMP96_0003: "Source file "C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\fowardingdemuc.vhd" is empty."
 MESSAGE "Top-level unit(s) detected:" 
 MESSAGE "Entity => testbench" 
-SUCCESS "Compile success 0 Errors 1 Warnings  Analysis time :  0.2 [s]" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

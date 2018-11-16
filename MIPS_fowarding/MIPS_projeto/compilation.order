@@ -1,12 +1,14 @@
-.\src\dmem.vhd
-.\src\regfile.vhd
-.\src\signext.vhd
-.\src\sl2.vhd
-.\src\registrador_n.vhd
-.\src\registrador_1.vhd
 .\src\maindec.vhd
+.\src\registrador_n.vhd
+.\src\sl2.vhd
+.\src\signext.vhd
+.\src\regfile.vhd
+.\src\registrador_1.vhd
 .\src\mux2.vhd
+.\src\dmem.vhd
+.\src\hazarddemuc.vhd
 .\src\imem.vhd
+.\src\fowardingdemuc.vhd
 .\src\alu.vhd
 .\src\aludec.vhd
 .\src\adder.vhd
@@ -15,4 +17,3 @@
 .\src\mips.vhd
 .\src\top.vhd
 .\src\testbench.vhd
-.\src\fowardingdemuc.vhd

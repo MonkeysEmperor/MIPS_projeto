@@ -6,7 +6,7 @@
     </comment>
     <databases>
         <database id="">*virtual*</database>
-        <database id="f8a9636154f97a6cdf5b7736856b0c00">wave.asdb</database>
+        <database id="f8a9636154f9eb53ee5ba41dcb021000">wave.asdb</database>
     </databases>
     <signallists>
         <signallist id="0">
@@ -14,11 +14,23 @@
         <signal>/testbench/reset</signal>
         <signal>/testbench/dut/mips1/pc</signal>
         <signal>/testbench/dut/mips1/instr</signal>
+        <signal>/testbench/dut/mips1/dp/rf/ra1</signal>
+        <signal>/testbench/dut/mips1/dp/rf/rd1</signal>
+        <signal>/testbench/dut/mips1/dp/alusrc</signal>
+        <signal>/testbench/dut/mips1/dp/rf/ra2</signal>
+        <signal>/testbench/dut/mips1/dp/rf/rd2</signal>
+        <signal>/testbench/dut/mips1/dp/signimm</signal>
+        <signal>/testbench/dut/mips1/dp/preview</signal>
+        <signal>/testbench/dut/mips1/dp/mainalu/a</signal>
+        <signal>/testbench/dut/mips1/dp/mainalu/b</signal>
         <signal>/testbench/dut/mips1/dp/aluout</signal>
-        <signal>/testbench/dut/writedata</signal>
-        <signal>/testbench/dut/memwrite</signal>
-        <signal>/testbench/dut/mips1/cont/md/branch</signal>
-        <signal>/testbench/dut/mips1/readdata</signal>
+        <signal>/testbench/dut/mips1/dp/address</signal>
+        <signal>/testbench/dut/mips1/dp/memwritepip</signal>
+        <signal>/testbench/dut/mips1/dp/writedata</signal>
+        <signal>/testbench/dut/mips1/dp/readdata</signal>
+        <signal>/testbench/dut/mips1/dp/rf/wa3</signal>
+        <signal>/testbench/dut/mips1/dp/resmux/y</signal>
+        <signal>/testbench/dut/mips1/dp/s_mem(69)</signal>
         </signallist>
     </signallists>
     <prefbases>
@@ -34,7 +46,7 @@
     </bookmarkbases>
     <cursorbases>
         <cursors id="0">
-            <cursor value="104067" label="Cursor 1" locked="0" />
+            <cursor value="88500" label="Cursor 1" locked="0" />
         </cursors>
     </cursorbases>
     <measurementbases>
