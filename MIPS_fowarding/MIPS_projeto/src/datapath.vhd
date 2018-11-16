@@ -84,7 +84,7 @@ architecture struct of datapath is
 	end component;	
 	
 	component hazarddemuc is
-		port(	jump, pcsrc, stall				: in  std_logic; 
+		port(	jump, pcsrc, stall, alertmem	: in  std_logic; 
 				branchex, previewex				: in  std_logic; 
 				enablepc, enableif, enableid	: out std_logic;
 				flushif, flushid, flushex		: out std_logic;
@@ -107,11 +107,12 @@ architecture struct of datapath is
 	signal s_if  : std_logic_vector( 63 downto 0);
 	signal s_id  : std_logic_vector(153 downto 0);
 	signal s_ex  : std_logic_vector(107 downto 0);
-	signal s_mem : std_logic_vector( 70 downto 0); 
+	signal s_mem : std_logic_vector( 71 downto 0); 
 	
 	--hazard 
 	signal enablepc, enableif, enableid	: std_logic; 
 	signal flushif, flushid, flushex	: std_logic;
+	signal alert 						: std_logic;
 	
 	--flush
 	constant c_flushif : std_logic_vector( 5 downto 0) := "111111";
@@ -266,15 +267,16 @@ begin
 	address		<= s_ex(68 downto 37);
 	writedata	<= s_ex(36 downto  5);
 	pcsrc		<= s_ex(106) and (s_ex(69) xor s_ex(107));
+	alert		<= s_ex(106) and s_ex(105) and not pcsrc;
 	
 	-----------------------------------------------------
-	-- writesrc (70) | regwrite (69)
+	-- alert (71) | writesrc (70) | regwrite (69)
 	-- readdata (68 downto 37) | aluout (36 downto 5) | wr (4 downto 0)
 	
 	MEM_reg : registrador_n
-		generic map(71)
+		generic map(72)
 		port map(	clk, reset,	'1',
-					s_ex(103 downto 102) & readdata & s_ex(68 downto 37) & s_ex (4 downto 0),
+					alert & s_ex(103 downto 102) & readdata & s_ex(68 downto 37) & s_ex (4 downto 0),
 					s_mem);
 	-----------------------------------------------------
 	
@@ -294,7 +296,7 @@ begin
 	--Hazzard													 
 	
 	HAZ : hazarddemuc
-	port map(	jump, pcsrc, stall, 
+	port map(	jump, pcsrc, stall, s_mem(71), 
 				s_ex(106), s_ex(105),
 				enablepc, enableif, enableid,
 				flushif, flushid, flushex,

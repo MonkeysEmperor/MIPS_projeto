@@ -1,4 +1,4 @@
-168
+174
 ~E 1 "./../src/adder.vhd" 5 adder
 ~A 1 "./../src/adder.vhd" 10 behave
 ~E 1 "./../src/alu.vhd" 6 alu

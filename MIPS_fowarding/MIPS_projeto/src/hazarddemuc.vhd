@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.all;
 use IEEE.STD_LOGIC_ARITH.all;
 
 entity hazarddemuc is
-	port(	jump, pcsrc, stall				: in  std_logic; 
+	port(	jump, pcsrc, stall, alertmem	: in  std_logic; 
 			branchex, previewex				: in  std_logic; 
 			enablepc, enableif, enableid	: out std_logic;
 			flushif, flushid, flushex		: out std_logic;
