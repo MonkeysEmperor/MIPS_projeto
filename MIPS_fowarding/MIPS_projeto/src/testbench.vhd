@@ -20,9 +20,9 @@ begin
   -- Generate clock with 10 ns period
   process begin
     clk <= '1';
-    wait for 1.5 ns; 
+    wait for 5 ns; 
     clk <= '0';
-    wait for 1.5 ns;
+    wait for 5 ns;
   end process;
 
   -- Generate reset for first two clock cycles

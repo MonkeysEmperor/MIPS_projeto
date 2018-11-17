@@ -1,4 +1,4 @@
-174
+196
 ~E 1 "./../src/adder.vhd" 5 adder
 ~A 1 "./../src/adder.vhd" 10 behave
 ~E 1 "./../src/alu.vhd" 6 alu
@@ -16,7 +16,7 @@
 ~E 1 "./../src/fowardingdemuc.vhd" 6 fowardingdemuc
 ~A 1 "./../src/fowardingdemuc.vhd" 14 fowardingdemuc_arc
 ~E 1 "./../src/hazarddemuc.vhd" 6 hazarddemuc
-~A 1 "./../src/hazarddemuc.vhd" 14 hazarddemuc_arc
+~A 1 "./../src/hazarddemuc.vhd" 15 hazarddemuc_arc
 ~E 1 "./../src/imem.vhd" 6 imem
 ~A 1 "./../src/imem.vhd" 11 behave
 ~E 1 "./../src/maindec.vhd" 4 maindec

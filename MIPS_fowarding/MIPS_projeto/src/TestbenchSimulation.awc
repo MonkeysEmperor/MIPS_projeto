@@ -6,7 +6,7 @@
     </comment>
     <databases>
         <database id="">*virtual*</database>
-        <database id="f8a9636154f9eb53ee5ba41dcb021000">wave.asdb</database>
+        <database id="f8a9636154f95255ef5b5998b8060300">wave.asdb</database>
     </databases>
     <signallists>
         <signallist id="0">
@@ -46,7 +46,7 @@
     </bookmarkbases>
     <cursorbases>
         <cursors id="0">
-            <cursor value="88500" label="Cursor 1" locked="0" />
+            <cursor value="9620" label="Cursor 1" locked="0" />
         </cursors>
     </cursorbases>
     <measurementbases>
