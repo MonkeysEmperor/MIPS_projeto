@@ -17,3 +17,4 @@
 .\src\mips.vhd
 .\src\top.vhd
 .\src\testbench.vhd
+.\src\testbench2.vhd

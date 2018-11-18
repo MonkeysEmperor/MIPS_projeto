@@ -1,4 +1,4 @@
-196
+202
 ~E 1 "./../src/adder.vhd" 5 adder
 ~A 1 "./../src/adder.vhd" 10 behave
 ~E 1 "./../src/alu.vhd" 6 alu
@@ -37,5 +37,7 @@
 ~A 1 "./../src/sl2.vhd" 9 behave
 ~E 1 "./../src/testbench.vhd" 5 testbench
 ~A 1 "./../src/testbench.vhd" 7 test
+~E 1 "./../src/testbench2.vhd" 4 testbench2
+~A 1 "./../src/testbench2.vhd" 7 test
 ~E 1 "./../src/top.vhd" 5 top
 ~A 1 "./../src/top.vhd" 11 test

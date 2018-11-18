@@ -41,7 +41,7 @@ Active_lib=
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=testbench|test|0 
+HierarchyInformation=testbench|test|0 testbench2|test|0 
 ShowHide=ShowTopLevel
 Selected=
 
@@ -67,6 +67,7 @@ Selected=
 /testbench.vhd=-1
 /memfile.dat=-1
 /TestbenchSimulation.awc=-1
+/testbench2.vhd=-1
 
 [Files.Data]
 .\src\maindec.vhd=VHDL Source Code
@@ -90,4 +91,5 @@ Selected=
 .\src\testbench.vhd=VHDL Source Code
 .\src\memfile.dat=External File
 .\src\TestbenchSimulation.awc=Accelerated Waveform Configuration
+.\src\testbench2.vhd=VHDL Source Code
 

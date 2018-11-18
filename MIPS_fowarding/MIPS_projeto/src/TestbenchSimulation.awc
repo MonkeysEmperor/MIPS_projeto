@@ -6,47 +6,24 @@
     </comment>
     <databases>
         <database id="">*virtual*</database>
-        <database id="f8a9636154f95255ef5b5998b8060300">wave.asdb</database>
     </databases>
     <signallists>
         <signallist id="0">
-        <signal>/testbench/clk</signal>
-        <signal>/testbench/reset</signal>
-        <signal>/testbench/dut/mips1/pc</signal>
-        <signal>/testbench/dut/mips1/instr</signal>
-        <signal>/testbench/dut/mips1/dp/rf/ra1</signal>
-        <signal>/testbench/dut/mips1/dp/rf/rd1</signal>
-        <signal>/testbench/dut/mips1/dp/alusrc</signal>
-        <signal>/testbench/dut/mips1/dp/rf/ra2</signal>
-        <signal>/testbench/dut/mips1/dp/rf/rd2</signal>
-        <signal>/testbench/dut/mips1/dp/signimm</signal>
-        <signal>/testbench/dut/mips1/dp/preview</signal>
-        <signal>/testbench/dut/mips1/dp/mainalu/a</signal>
-        <signal>/testbench/dut/mips1/dp/mainalu/b</signal>
-        <signal>/testbench/dut/mips1/dp/aluout</signal>
-        <signal>/testbench/dut/mips1/dp/address</signal>
-        <signal>/testbench/dut/mips1/dp/memwritepip</signal>
-        <signal>/testbench/dut/mips1/dp/writedata</signal>
-        <signal>/testbench/dut/mips1/dp/readdata</signal>
-        <signal>/testbench/dut/mips1/dp/rf/wa3</signal>
-        <signal>/testbench/dut/mips1/dp/resmux/y</signal>
-        <signal>/testbench/dut/mips1/dp/s_mem(69)</signal>
         </signallist>
     </signallists>
     <prefbases>
         <prefbase id="0" >
-            <pref name="End Time" value="304737" />
-            <pref name="Start Time" value="126178" />
+            <pref name="End Time" value="3378000" />
+            <pref name="Start Time" value="0" />
         </prefbase>
     </prefbases>
     <bookmarkbases>
         <bookmarks id="0">
-            <bookmark value="480000"/>
         </bookmarks>
     </bookmarkbases>
     <cursorbases>
         <cursors id="0">
-            <cursor value="9620" label="Cursor 1" locked="0" />
+            <cursor value="0" label="Cursor 1" locked="0" />
         </cursors>
     </cursorbases>
     <measurementbases>
@@ -56,6 +33,6 @@
         </comments>
     </commentbases>
     <views>
-        <view signallist="0" propertybase="0" prefbase="-1" type="1" bookmarks="0" cursors="0" measurements="-1" comments="-1" />
+        <view signallist="0" propertybase="0" prefbase="0" type="1" bookmarks="0" cursors="0" measurements="-1" comments="-1" />
     </views>
 </config>

@@ -1,13 +1,13 @@
-Active-HDL 10.5.217.6767 2018-11-16 22:13:22
+Active-HDL 10.5.217.6767 2018-11-18 00:17:06
 
 Elaboration top modules:
-Architecture                  test(testbench)
+Architecture                  test(testbench2)
 
 
 ----------------------------------------------------------------------------------------------------------
 Entity         | Architecture       | Library      | Info | Compiler Version        | Compilation Options
 ----------------------------------------------------------------------------------------------------------
-testbench      | test               | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
+testbench2     | test               | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
 top            | test               | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
 mips           | struct             | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
 imem           | behave             | mips_projeto |      | 10.5.217.6767 (Windows) | -O3 -2008
@@ -48,7 +48,7 @@ std                                 | Standard VHDL library
 ----------------------------------------------------------------------------------------------------------
 
 
-Simulation Options: asim -O5 testbench test
+Simulation Options: asim -O5 testbench2 test
 
 
 The performance of simulation is reduced. Version Student Edition
