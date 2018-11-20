@@ -4,8 +4,7 @@ use IEEE.STD_LOGIC_1164.all;
 use IEEE.STD_LOGIC_ARITH.all;
 
 entity hazarddemuc is
-	port(	jump, jumpex, pcsrc				: in  std_logic;
-			stall, alertmem					: in  std_logic; 
+	port(	jump, pcsrc, stall, alertmem	: in  std_logic; 
 			branchex, previewex				: in  std_logic; 
 			enablepc, enableif, enableid	: out std_logic;
 			flushif, flushid, flushex		: out std_logic;
@@ -18,7 +17,7 @@ begin
 	enableif <= not stall;
 	enableid <= not stall;
 	
-	--recover <= (branchex and (previewex xor pcsrc)) or (alertmem and (jumpex or (branchex and pcsrc)));
+	--recover <= (branchex and (previewex xor pcsrc)) or (alertmem and ((branchex and pcsrc)));
 	recover <= (branchex and (previewex xor pcsrc));
 	
 	--flushif <= jump or recover or (alertmem and (jumpex or (branchex and pcsrc))); 
