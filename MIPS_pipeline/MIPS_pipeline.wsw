@@ -1,7 +1,5 @@
-[OPENDOC|Aldec.Hde.HdePlugIn.7|.\MIPS_pipeline\src/datapath.vhd|]
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\MIPS_design\src/hazzarddec.vhd|]
 TemplateId=0
-[OPENDOC|Aldec.Hde.HdePlugIn.7|.\MIPS_pipeline\src/hazzarddec.vhd|]
-TemplateId=0
-[OPENDOC|Aldec.WaveFormASDB.7|.\MIPS_pipeline\src/TestbenchSimulation.awc|]
+[OPENDOC|Aldec.WaveFormASDB.7|.\MIPS_design\src/TestbenchSimulation.awc|]
 TemplateId=1
 ActiveDocument=1

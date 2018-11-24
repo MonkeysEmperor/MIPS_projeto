@@ -1497,4 +1497,28 @@ acom -reorder -O3 -e 100 -work MIPS_projeto -2008  $dsn/src/maindec.vhd $dsn/src
 # File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\aludec.vhd
 # Compile Entity "aludec"
 # Compile Architecture "behave" of Entity "aludec"
-# File: C:\Users\renan\Documents\FPGA
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\adder.vhd
+# Compile Entity "adder"
+# Compile Architecture "behave" of Entity "adder"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\datapath.vhd
+# Compile Entity "datapath"
+# Compile Architecture "struct" of Entity "datapath"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "struct" of Entity "controller"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\mips.vhd
+# Compile Entity "mips"
+# Compile Architecture "struct" of Entity "mips"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\top.vhd
+# Compile Entity "top"
+# Compile Architecture "test" of Entity "top"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\testbench.vhd
+# Compile Entity "testbench"
+# Compile Architecture "test" of Entity "testbench"
+# File: C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_fowarding\MIPS_projeto\src\testbench2.vhd
+# Compile Entity "testbench2"
+# Compile Architecture "test" of Entity "testbench2"
+# Top-level unit(s) detected:
+# Entity => testbench2
+# Entity => testbench
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]

@@ -1,7 +1,7 @@
 [Version]
 Version=10.5
 [Designs]
-mips_pipeline=.\MIPS_pipeline\MIPS_pipeline.adf
+mips_design=.\MIPS_design\MIPS_design.adf
 [Browser]
 sort=order
 mode=none
@@ -9,4 +9,4 @@ mode=none
 order=1
 macro=
 [Expand]
-mips_pipeline=1
+mips_design=1

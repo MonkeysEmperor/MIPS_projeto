@@ -183,7 +183,7 @@ begin
 	                s_if(15 downto 11), 
 	                regdst, writereg);
 	
-	--imediate
+	--immediate
   	se: signext port map(s_if(15 downto 0),c, signimm);
 	
 	--branch
