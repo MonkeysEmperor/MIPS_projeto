@@ -1,0 +1,15 @@
+
+library IEEE; 
+use IEEE.STD_LOGIC_1164.all; 
+use IEEE.STD_LOGIC_ARITH.all;
+
+entity hazarddec is
+	port(	branch, branch_id, branch_ex		: in  std_logic;
+			jump, memwrite, alusrc, wid, wex	: in  std_logic;
+			r1, r2, rid, rex					: in  std_logic;
+			enablepc, flushid					: out std_logic);
+end hazarddec;
+
+architecture hazarddec_arc of hazarddec is
+begin
+end hazarddec_arc;

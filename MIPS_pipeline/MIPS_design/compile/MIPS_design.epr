@@ -1,0 +1,18 @@
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_design\src\adder.vhd" VHDL MIPS_design 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_design\src\alu.vhd" VHDL MIPS_design 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_design\src\aludec.vhd" VHDL MIPS_design 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_design\src\controller.vhd" VHDL MIPS_design 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_design\src\datapath.vhd" VHDL MIPS_design 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_design\src\dmem.vhd" VHDL MIPS_design 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_design\src\hazzarddec.vhd" VHDL MIPS_design 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_design\src\imem.vhd" VHDL MIPS_design 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_design\src\maindec.vhd" VHDL MIPS_design 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_design\src\mips.vhd" VHDL MIPS_design 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_design\src\mux2.vhd" VHDL MIPS_design 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_design\src\regfile.vhd" VHDL MIPS_design 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_design\src\registrador_n.vhd" VHDL MIPS_design 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_design\src\signext.vhd" VHDL MIPS_design 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_design\src\sl2.vhd" VHDL MIPS_design 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_design\src\testbench.vhd" VHDL MIPS_design 1 0 0 -02 -08
+"C:\Users\renan\Documents\FPGA\MIPS_projeto\MIPS_pipeline\MIPS_design\src\top.vhd" VHDL MIPS_design 1 0 0 -02 -08
+. . 0 0 0
